@@ -1,0 +1,2 @@
+* text=auto eol=lf
+*.js,*.mjs linguist-language=TypeScript

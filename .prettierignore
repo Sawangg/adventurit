@@ -1,0 +1,16 @@
+.husky
+.next
+.unlighthouse
+.vscode
+node_modules
+public
+src/db/migrations
+.env
+.eslintignore
+.gitattributes
+.gitignore
+.prettierignore
+LICENSE.md
+next-env.d.ts
+pnpm-lock.yaml
+README.md
