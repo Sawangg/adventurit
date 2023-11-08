@@ -1,15 +1,15 @@
 import Image from "next/image";
-import { getDictionnary, type Locale } from "@lib/getDictionnary";
+// import { getDictionnary, type Locale } from "@lib/getDictionnary";
 import { Scene } from "@modules/Scene";
 import { AspectRatio } from "@ui/AspectRatio";
 
-export default async function Home({ params }: { params: { lang: string } }) {
-  const dictionnary = await getDictionnary(params.lang as Locale);
+export default function Home(/*{ params }: { params: { lang: string } }*/) {
+  // const dictionnary = await getDictionnary(params.lang as Locale);
 
   return (
     <>
       <header>
-        <div className="w-8">
+        <div className="w-8 3xl:w-12">
           <AspectRatio ratio={1 / 1}>
             <Image src="/assets/SG.png" sizes="" alt="" fill />
           </AspectRatio>
