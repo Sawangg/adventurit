@@ -11,4 +11,5 @@ export const env = createEnv({
     NODE_ENV: process.env.NODE_ENV,
     DB_URL: process.env.DB_URL,
   },
+  skipValidation: !!process.env.SKIP_ENV_VALIDATION,
 });
