@@ -12,7 +12,6 @@
     "unlighthouse:dev": "pnpm dlx unlighthouse --site localhost:3000",
     "db:push": "drizzle-kit push:pg",
     "db:pull": "drizzle-kit introspect:pg",
-    "db:drop": "drizzle-kit drop",
     "db:studio": "drizzle-kit studio --host 127.0.0.1 --port 3001"
   },
   "dependencies": {
@@ -45,7 +44,6 @@
     "@typescript-eslint/eslint-plugin": "^6.10.0",
     "@typescript-eslint/parser": "^6.10.0",
     "autoprefixer": "^10.4.16",
-    "dotenv": "^16.3.1",
     "drizzle-kit": "^0.20.0",
     "eslint": "^8.53.0",
     "eslint-config-next": "^14.0.2",
