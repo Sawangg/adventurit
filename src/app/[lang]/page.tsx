@@ -1,26 +1,17 @@
-import Image from "next/image";
 // import { getDictionnary, type Locale } from "@lib/getDictionnary";
 import { Scene } from "@modules/Scene";
-import { AspectRatio } from "@ui/AspectRatio";
 
 export default function Home(/*{ params }: { params: { lang: string } }*/) {
   // const dictionnary = await getDictionnary(params.lang as Locale);
 
   return (
-    <>
-      <header>
-        <div className="w-8 3xl:w-12">
-          <AspectRatio ratio={1 / 1}>
-            <Image src="/assets/SG.png" sizes="" alt="" fill />
-          </AspectRatio>
-        </div>
-      </header>
-      <main>
+    <body className={`min-h-screen min-w-screen overflow-x-hidden`}>
+      <main className="h-screen">
         <Scene />
       </main>
-      <footer className="flex justify-end">
-        <button>Login</button>
+      <footer className="absolute bottom-4 left-4">
+        <button className="rounded-md bg-[var(--primary)] p-2 text-white"></button>
       </footer>
-    </>
+    </body>
   );
 }

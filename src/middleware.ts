@@ -1,5 +1,7 @@
 import { NextResponse, type NextRequest } from "next/server";
 import { match } from "@formatjs/intl-localematcher";
+import type { NextAuthRequest } from "next-auth/lib";
+import { auth } from "@lib/auth";
 import { defaultLocale, locales } from "@lib/constants";
 import { env } from "@src/env.mjs";
 
@@ -14,7 +16,7 @@ const getRequestLocale = (request: NextRequest) => {
   return match(languages, locales, defaultLocale);
 };
 
-export function middleware(request: NextRequest): NextResponse {
+export default auth((request: NextAuthRequest): NextResponse => {
   // Server action ignore
   if (request.headers.get("content-type")?.includes("multipart/form-data")) {
     return NextResponse.next();
@@ -41,20 +43,25 @@ export function middleware(request: NextRequest): NextResponse {
   request.headers.set("Content-Security-Policy", cspHeader.replace(/\s{2,}/g, " ").trim());
 
   // Localization
-  const pathname = request.nextUrl.pathname;
+  const { pathname } = request.nextUrl;
+  const locale = getRequestLocale(request);
   const pathnameIsMissingLocale = locales.every(
     (locale) => !pathname.startsWith(`/${locale}/`) && pathname !== `/${locale}`,
   );
 
   if (pathnameIsMissingLocale) {
-    const locale = getRequestLocale(request);
     return NextResponse.redirect(new URL(`/${locale}/${pathname}`, request.url));
+  }
+
+  // Admin routes protection
+  if (!request.auth && pathname.includes("admin") && !pathname.includes("login")) {
+    return NextResponse.redirect(new URL(`/${locale}/admin/login`, request.url));
   }
 
   return NextResponse.next({
     headers: request.headers,
   });
-}
+});
 
 export const config = {
   matcher: ["/((?!api|_next|.*\\..*).*)"],

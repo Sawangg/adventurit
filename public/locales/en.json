@@ -1,1 +1,5 @@
-{}
+{
+  "admin": {
+    "signout": "Sign out"
+  }
+}
