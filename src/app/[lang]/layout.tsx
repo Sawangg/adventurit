@@ -6,7 +6,7 @@ const inter = Inter({ subsets: ["latin"], variable: "--font-inter" });
 
 export const metadata: Metadata = {
   title: "SG — 2024",
-  description: "",
+  description: "Société Générale's Adventur'IT game",
 };
 
 export default function RootLayout({ children, params }: { children: React.ReactNode; params: { lang: string } }) {
