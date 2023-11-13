@@ -2,6 +2,10 @@
 @tailwind components;
 @tailwind utilities;
 
+:root {
+  --primary: #09090b;
+}
+
 body {
   text-rendering: optimizeSpeed;
 }

@@ -7,6 +7,12 @@ const nextConfig = {
   images: {
     dangerouslyAllowSVG: env.NODE_ENV !== "production" ? true : false,
     contentDispositionType: env.NODE_ENV !== "production" ? "attachment" : undefined,
+    remotePatterns: [
+      {
+        protocol: "https",
+        hostname: "avatars.githubusercontent.com",
+      },
+    ],
   },
 };
 

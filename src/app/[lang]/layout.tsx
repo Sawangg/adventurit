@@ -6,17 +6,16 @@ const inter = Inter({ subsets: ["latin"], variable: "--font-inter" });
 
 export const metadata: Metadata = {
   title: "SG — 2024",
-  description: "",
+  description: "Société Générale's Adventur'IT game",
 };
 
 export default function RootLayout({ children, params }: { children: React.ReactNode; params: { lang: string } }) {
   return (
-    <html lang={params.lang} className="overflow-x-hidden scroll-smooth bg-[#09090b]">
-      <body
-        className={`grid min-h-screen min-w-screen grid-rows-[auto_1fr_auto] overflow-x-hidden p-2 text-white ${inter.className}`}
-      >
-        {children}
-      </body>
+    <html
+      lang={params.lang}
+      className={`overflow-x-hidden scroll-smooth bg-[var(--primary)] text-white ${inter.className}`}
+    >
+      {children}
     </html>
   );
 }

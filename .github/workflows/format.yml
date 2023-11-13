@@ -5,6 +5,9 @@ on:
 
 env:
   DB_URL: fake
+  AUTH_SECRET: fake
+  AUTH_GITHUB_ID: fake
+  AUTH_GITHUB_SECRET: fake
 
 jobs:
   format:
