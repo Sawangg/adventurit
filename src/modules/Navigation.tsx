@@ -11,11 +11,7 @@ export default function Navigation() {
   };
 
   return (
-    <button
-      className="z-40 rounded-md bg-[var(--primary)] p-2 outline-none"
-      aria-label="Navigation"
-      onClick={toggleOpen}
-    >
+    <button className="z-40 rounded-md bg-[#09090b] p-2 outline-none" aria-label="Navigation" onClick={toggleOpen}>
       <svg width="24px" height="24px" viewBox="0 0 24 24">
         <motion.path
           initial="closed"

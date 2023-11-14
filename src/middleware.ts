@@ -43,7 +43,7 @@ export default auth((request: NextAuthRequest): NextResponse => {
   request.headers.set("Content-Security-Policy", cspHeader.replace(/\s{2,}/g, " ").trim());
 
   // Localization
-  const { pathname } = request.nextUrl;
+  const pathname = request.nextUrl.pathname.toLowerCase();
   const locale = getRequestLocale(request);
   const pathnameIsMissingLocale = locales.every(
     (locale) => !pathname.startsWith(`/${locale}/`) && pathname !== `/${locale}`,
