@@ -1,27 +1,32 @@
-import { useEffect, useState } from "react";
-import { Html, useGLTF } from "@react-three/drei";
+import { Suspense, useEffect, useState } from "react";
+import Image from "next/image";
+import { useGLTF } from "@react-three/drei";
 import { Canvas, useFrame } from "@react-three/fiber";
 import { AnimatePresence, motion } from "framer-motion";
 import { Vector3 } from "three";
 import { useMenu } from "@stores/useMenu";
+import { AspectRatio } from "@ui/AspectRatio";
 
 // Suspense with animation should be here for the 3d menu scene because it is the first scene the user is going to see
 export const MainMenu: React.FC = () => {
   const { currentMenu, setCurrentMenu } = useMenu();
-  const [vector, setVector] = useState(new Vector3(0, 0, 0));
+  const [vector, setVector] = useState(new Vector3(700, 100, 100));
 
   const handleAnyKeyDownOnce = () => {
-    setCurrentMenu("main");
+    handleSubMenus("main");
     window.removeEventListener("keydown", handleAnyKeyDownOnce);
   };
 
   const handleSubMenus = (menu: string) => {
     switch (menu) {
       case "settings":
-        setVector(new Vector3(100, 50, 100));
+        setVector(new Vector3(200, 100, 100));
         break;
       case "main":
-        setVector(new Vector3(0, 0, 0));
+        setVector(new Vector3(500, 100, 100));
+        break;
+      case "login":
+        setVector(new Vector3(200, 100, 200));
         break;
       default:
         break;
@@ -36,12 +41,14 @@ export const MainMenu: React.FC = () => {
   }, []);
 
   return (
-    // <Canvas camera={{ position: [0, 0, 0] }}>
-    <Canvas>
-      <ambientLight />
-      <ModelMenu cameraPosition={vector} />
-
-      <Html>
+    <>
+      <Canvas camera={{ position: [700, 100, 100] }} className="h-screen bg-[#98d8fc]">
+        <ambientLight />
+        <Suspense fallback={null}>
+          <ModelMenu position={[0, 0, 0]} cameraPosition={vector} />
+        </Suspense>
+      </Canvas>
+      <div className="absolute inset-0 flex items-center justify-center">
         <AnimatePresence>
           {currentMenu === "anykey" && (
             <motion.p
@@ -62,7 +69,7 @@ export const MainMenu: React.FC = () => {
               transition={{ duration: 0.7 }}
               className="flex items-center gap-x-12 text-lg uppercase text-white"
             >
-              <h1 className="text-4xl">Adventur&apos;IT</h1>
+              <h1 className="text-4xl font-bold">Adventur&apos;IT</h1>
               <motion.div
                 initial={{ opacity: 0, x: -10 }}
                 animate={{ opacity: 1, x: 0 }}
@@ -96,8 +103,18 @@ export const MainMenu: React.FC = () => {
             </motion.div>
           )}
         </AnimatePresence>
-      </Html>
-    </Canvas>
+      </div>
+      <footer className="absolute bottom-4 left-4">
+        <div className="flex items-center gap-x-2">
+          <div className="w-6">
+            <AspectRatio ratio={1 / 1}>
+              <Image src="/assets/SG.png" sizes="" alt="" fill />
+            </AspectRatio>
+          </div>
+          <p className="text-center text-sm text-white">Société Générale</p>
+        </div>
+      </footer>
+    </>
   );
 };
 
