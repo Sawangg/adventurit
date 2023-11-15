@@ -11,8 +11,8 @@
     "format:fix": "prettier --write \"**/*.{ts,tsx,mdx}\" --cache",
     "format:check": "prettier --check \"**/*.{ts,tsx,mdx}\" --cache",
     "unlighthouse:dev": "pnpm dlx unlighthouse --site localhost:3000",
-    "db:push": "drizzle-kit push:pg",
-    "db:pull": "drizzle-kit introspect:pg",
+    "db:push": "cross-env SKIP_ENV_VALIDATION=true drizzle-kit push:pg",
+    "db:pull": "cross-env SKIP_ENV_VALIDATION=true drizzle-kit introspect:pg",
     "db:studio": "cross-env SKIP_ENV_VALIDATION=true drizzle-kit studio --host 127.0.0.1 --port 3001"
   },
   "dependencies": {
