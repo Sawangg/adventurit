@@ -28,11 +28,10 @@ export default async function AdminLoginPage({ params }: { params: { lang: strin
 
   return (
     <body className="bg-black">
-      <header></header>
       <main className="grid h-screen place-items-center">
         <Card className="border-gray-800 bg-black">
           <CardHeader>
-            <CardTitle className="  text-white">{dictionnary.admin.login.connection}</CardTitle>
+            <CardTitle className="text-white">{dictionnary.admin.login.connection}</CardTitle>
             <CardDescription className="text-gray-500">{dictionnary.admin.login.choice}</CardDescription>
           </CardHeader>
           <CardContent className="grid grid-cols-2 gap-x-3 gap-y-2">

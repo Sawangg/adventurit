@@ -16,7 +16,6 @@
     "db:studio": "cross-env SKIP_ENV_VALIDATION=true drizzle-kit studio --host 127.0.0.1 --port 3001"
   },
   "dependencies": {
-    "@auth/core": "^0.18.1",
     "@formatjs/intl-localematcher": "^0.5.1",
     "@hookform/resolvers": "^3.3.2",
     "@radix-ui/react-aspect-ratio": "^1.0.3",
