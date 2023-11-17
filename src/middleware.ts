@@ -34,6 +34,7 @@ export default auth((request: NextAuthRequest): NextResponse => {
     font-src 'self';
     connect-src 'self';
     form-action 'self';
+    media-src 'self';
     object-src 'none';
     frame-ancestors 'none';
     base-uri 'none';

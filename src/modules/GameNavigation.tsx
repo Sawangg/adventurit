@@ -3,15 +3,17 @@
 import { useState } from "react";
 import { motion } from "framer-motion";
 
-export default function Navigation() {
+export type GameNavigationProps = React.DetailedHTMLProps<React.HTMLAttributes<HTMLButtonElement>, HTMLButtonElement>;
+
+export const GameNavigation: React.FC<GameNavigationProps> = () => {
   const [open, setOpen] = useState<boolean>(false);
 
-  const toggleOpen = () => {
-    setOpen(!open);
-  };
-
   return (
-    <button className="z-40 rounded-md bg-[#09090b] p-2 outline-none" aria-label="Navigation" onClick={toggleOpen}>
+    <button
+      className="z-40 rounded-md bg-[#09090b] p-2 outline-none"
+      aria-label="Navigation"
+      onClick={() => setOpen(!open)}
+    >
       <svg width="24px" height="24px" viewBox="0 0 24 24">
         <motion.path
           initial="closed"
@@ -38,4 +40,4 @@ export default function Navigation() {
       </svg>
     </button>
   );
-}
+};

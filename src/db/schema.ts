@@ -1,4 +1,5 @@
-import { boolean, index, integer, pgEnum, pgTable, serial, varchar } from "drizzle-orm/pg-core";
+import { boolean, index, integer, pgTable, serial, uuid, varchar } from "drizzle-orm/pg-core";
+import { difficultyEnum, typeEnum } from "@db/enum";
 
 // Users table
 export const users = pgTable("users", {
@@ -8,9 +9,6 @@ export const users = pgTable("users", {
   admin: boolean("admin").default(false).notNull(),
 });
 
-export const difficultyEnum = pgEnum("difficulty", ["easy", "medium", "hard"]);
-export const typeEnum = pgEnum("type", ["qcm", "program", "personality"]);
-
 // Questions table
 export const questions = pgTable("questions", {
   id: serial("id").primaryKey().notNull(),
@@ -19,14 +17,12 @@ export const questions = pgTable("questions", {
   type: typeEnum("type").notNull(),
 });
 
-// Game table
+// Games table
 export const games = pgTable(
   "games",
   {
-    id: serial("id").primaryKey().notNull(),
-    userId: integer("user_id")
-      .references(() => users.id)
-      .notNull(),
+    id: uuid("id").defaultRandom().primaryKey().notNull(),
+    userId: integer("user_id").references(() => users.id),
     progress: integer("progress").default(0).notNull(), // -1 if done else X where X is the question number
   },
   (table) => {
