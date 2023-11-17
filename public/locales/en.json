@@ -1,5 +1,15 @@
 {
   "admin": {
+    "login": {
+      "github": "GitHub",
+      "google": "Google",
+      "apple": "Apple",
+      "choice": "Choose a connection method",
+      "connection": "Sign in",
+      "division":"or sign in with",
+      "pass" : "Password"
+    },
+    
     "signout": "Sign out"
   }
 }

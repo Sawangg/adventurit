@@ -14,7 +14,7 @@ export default async function AdminHome({ params }: { params: { lang: string } }
   return (
     <body className="p-2">
       <header className="flex justify-between">
-        <div className="w-8 3xl:w-12">
+        <div className="3xl:w-12 w-8">
           <AspectRatio ratio={1 / 1}>
             <Image src="/assets/SG.png" sizes="" alt="" fill />
           </AspectRatio>

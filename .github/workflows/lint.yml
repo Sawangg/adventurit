@@ -8,6 +8,8 @@ env:
   AUTH_SECRET: fake
   AUTH_GITHUB_ID: fake
   AUTH_GITHUB_SECRET: fake
+  AUTH_GOOGLE_ID: fake
+  AUTH_GOOGLE_SECRET: fake
 
 jobs:
   format:
