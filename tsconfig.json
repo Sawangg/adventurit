@@ -25,7 +25,6 @@
       "@modules/*": ["./src/modules/*"],
       "@public/*": ["./public/*"],
       "@src/*": ["./src/*"],
-      "@stores/*": ["./src/stores/*"],
       "@styles/*": ["./src/styles/*"],
       "@ui/*": ["./src/ui/*"]
     },

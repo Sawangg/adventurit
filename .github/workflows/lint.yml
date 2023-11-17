@@ -4,12 +4,13 @@ on:
     branches: ["*"]
 
 env:
-  DB_URL: fake
-  AUTH_SECRET: fake
   AUTH_GITHUB_ID: fake
   AUTH_GITHUB_SECRET: fake
   AUTH_GOOGLE_ID: fake
   AUTH_GOOGLE_SECRET: fake
+  AUTH_SECRET: fake
+  BUNDLE_ANALYZE: fake
+  DB_URL: fake
 
 jobs:
   format:
