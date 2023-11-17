@@ -9,7 +9,7 @@ export default async function Home({ params }: { params: { lang: string } }) {
   const session = await auth();
 
   return (
-    <body className={`min-h-screen min-w-screen overflow-x-hidden`}>
+    <body className="min-h-screen min-w-screen overflow-x-hidden">
       <main className="h-screen">
         <MainMenu dictionnary={dictionnary} session={session} />
       </main>
@@ -17,7 +17,7 @@ export default async function Home({ params }: { params: { lang: string } }) {
         <div className="flex items-center gap-x-2">
           <figure className="w-6">
             <AspectRatio ratio={1 / 1}>
-              <Image src="/assets/SG.png" sizes="24px" alt="" fill />
+              <Image src="/assets/sg.png" sizes="24px" alt="" fill />
             </AspectRatio>
           </figure>
           <p className="text-center text-sm text-white">Sponsored by SG</p>
