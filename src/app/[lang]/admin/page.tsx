@@ -17,65 +17,49 @@ export default async function AdminHome({ params }: { params: { lang: string } }
   const number_of_tests = 28;
   const users = [
     {
-      name: "Cesar Ombredanen",
       email: "cesar.ombredane@test.com",
-      image: "",
       easy: Math.floor(Math.random() * 101),
       medium: Math.floor(Math.random() * 101),
       hard: Math.floor(Math.random() * 101),
     },
     {
-      name: "Leo Mercier",
       email: "leo.mercier@test.com",
-      image: "",
       easy: Math.floor(Math.random() * 101),
       medium: Math.floor(Math.random() * 101),
       hard: Math.floor(Math.random() * 101),
     },
     {
-      name: "Enzo Peudepiece",
       email: "enzo.peudepiece@test.com",
-      image: "",
       easy: Math.floor(Math.random() * 101),
       medium: Math.floor(Math.random() * 101),
       hard: Math.floor(Math.random() * 101),
     },
     {
-      name: "Sacha Mihman",
       email: "sacha.mihman@test.com",
-      image: "",
       easy: Math.floor(Math.random() * 101),
       medium: Math.floor(Math.random() * 101),
       hard: Math.floor(Math.random() * 101),
     },
     {
-      name: "Corentin Gauttier",
       email: "corentin.gauttier@test.com",
-      image: "",
       easy: Math.floor(Math.random() * 101),
       medium: Math.floor(Math.random() * 101),
       hard: Math.floor(Math.random() * 101),
     },
     {
-      name: "Test1",
-      email: "test.test@test.com",
-      image: "",
+      email: "test1.test@test.com",
       easy: Math.floor(Math.random() * 101),
       medium: Math.floor(Math.random() * 101),
       hard: Math.floor(Math.random() * 101),
     },
     {
-      name: "Test2",
-      email: "test.test@test.com",
-      image: "",
+      email: "test2.test@test.com",
       easy: Math.floor(Math.random() * 101),
       medium: Math.floor(Math.random() * 101),
       hard: Math.floor(Math.random() * 101),
     },
     {
-      name: "Test3",
-      email: "test.test@test.com",
-      image: "",
+      email: "test3.test@test.com",
       easy: Math.floor(Math.random() * 101),
       medium: Math.floor(Math.random() * 101),
       hard: Math.floor(Math.random() * 101),
@@ -169,17 +153,15 @@ export default async function AdminHome({ params }: { params: { lang: string } }
                         )
                         .slice(0, 5)
                         .map((user, index) => (
-                          <TableRow key={user.name}>
+                          <TableRow key={user.email}>
                             <TableCell>{index + 1}</TableCell>
                             <TableCell>
                               <div className="flex items-center">
                                 <Avatar className="h-9 w-9">
-                                  <AvatarImage src="" alt="Avatar" />
-                                  <AvatarFallback>{user.name.split(" ").map((name) => name[0])}</AvatarFallback>
+                                  <AvatarFallback>{user.email[0]}</AvatarFallback>
                                 </Avatar>
                                 <div className="ml-4 space-y-1">
-                                  <p className="text-sm font-medium leading-none">{user.name}</p>
-                                  <p className="text-sm text-muted-foreground">{user.email}</p>
+                                  <p className="text-sm font-medium leading-none">{user.email}</p>
                                 </div>
                               </div>
                             </TableCell>
@@ -208,7 +190,6 @@ export default async function AdminHome({ params }: { params: { lang: string } }
                   <Table>
                     <TableHeader>
                       <TableRow>
-                        <TableHead>Name</TableHead>
                         <TableHead>Email</TableHead>
                         <TableHead>Easy</TableHead>
                         <TableHead>Medium</TableHead>
@@ -218,8 +199,7 @@ export default async function AdminHome({ params }: { params: { lang: string } }
                     </TableHeader>
                     <TableBody>
                       {users.map((user) => (
-                        <TableRow key={user.name}>
-                          <TableCell>{user.name}</TableCell>
+                        <TableRow key={user.email}>
                           <TableCell>{user.email}</TableCell>
                           <TableCell className="text-green-600">{user.easy}%</TableCell>
                           <TableCell className="text-yellow-600">{user.medium}%</TableCell>
