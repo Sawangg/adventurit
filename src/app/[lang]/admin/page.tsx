@@ -1,9 +1,7 @@
-import Image from "next/image";
 import { redirect } from "next/navigation";
 import { isAdmin } from "@actions/isAdmin";
 import { auth, signOut } from "@lib/auth";
 import { getDictionnary, type Locale } from "@lib/getDictionnary";
-import { AspectRatio } from "@ui/AspectRatio";
 
 export default async function AdminHome({ params }: { params: { lang: string } }) {
   const dictionnary = await getDictionnary(params.lang as Locale);
@@ -13,23 +11,13 @@ export default async function AdminHome({ params }: { params: { lang: string } }
 
   return (
     <>
-      <header className="flex justify-between p-4">
-        <div></div>
-        <div className="flex items-center gap-4">
-          <p>{session?.user?.name}</p>
-          <div className="w-8">
-            <AspectRatio ratio={1 / 1}>
-              <Image src={session!.user!.image!} className="rounded-full" sizes="32px" alt="" fill />
-            </AspectRatio>
-          </div>
-        </div>
-      </header>
       <main className="p-4">
         <form
           action={async () => {
             "use server";
             await signOut();
           }}
+          className="absolute bottom-4 right-4"
         >
           <button>{dictionnary.admin.signout}</button>
         </form>
