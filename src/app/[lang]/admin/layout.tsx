@@ -26,7 +26,7 @@ export default async function AdminLayout({ children }: { children: React.ReactN
         </header>
       )}
       {children}
-      <footer className="absolute bottom-4 left-4">
+      <footer className="fixed bottom-4 left-4">
         <div className="flex items-center gap-x-2">
           <figure className="w-6">
             <AspectRatio ratio={1 / 1}>
