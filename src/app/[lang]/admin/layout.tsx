@@ -1,13 +1,22 @@
 import type { Metadata } from "next";
 import Image from "next/image";
-import { auth } from "@lib/auth";
+import { auth, signOut } from "@lib/auth";
+import { getDictionnary, type Locale } from "@lib/getDictionnary";
 import { AspectRatio } from "@ui/AspectRatio";
+import { Button } from "@ui/button";
 
 export const metadata: Metadata = {
   title: "Adventur'IT admin — SG",
 };
 
-export default async function AdminLayout({ children }: { children: React.ReactNode }) {
+export default async function AdminLayout({
+  children,
+  params,
+}: {
+  children: React.ReactNode;
+  params: { lang: string };
+}) {
+  const dictionnary = await getDictionnary(params.lang as Locale);
   const session = await auth();
 
   return (
@@ -26,8 +35,8 @@ export default async function AdminLayout({ children }: { children: React.ReactN
         </header>
       )}
       {children}
-      <footer className="fixed bottom-4 left-4">
-        <div className="flex items-center gap-x-2">
+      <footer>
+        <div className="fixed bottom-4 left-4 flex items-center gap-x-2">
           <figure className="w-6">
             <AspectRatio ratio={1 / 1}>
               <Image src="/assets/sg.png" sizes="24px" alt="" fill />
@@ -35,6 +44,15 @@ export default async function AdminLayout({ children }: { children: React.ReactN
           </figure>
           <p className="text-center text-sm">Sponsored by SG</p>
         </div>
+        <form
+          action={async () => {
+            "use server";
+            await signOut();
+          }}
+          className="fixed bottom-4 right-4"
+        >
+          <Button variant="link">{dictionnary.admin.signout}</Button>
+        </form>
       </footer>
     </body>
   );

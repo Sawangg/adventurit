@@ -1,15 +1,13 @@
+import Link from "next/link";
 import { redirect } from "next/navigation";
 import { isAdmin } from "@actions/isAdmin";
-import { auth, signOut } from "@lib/auth";
-import { getDictionnary, type Locale } from "@lib/getDictionnary";
-import { Avatar, AvatarFallback, AvatarImage } from "@ui/avatar";
-import { Button } from "@ui/button";
+import { auth } from "@lib/auth";
+import { Avatar, AvatarFallback } from "@ui/avatar";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@ui/card";
 import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@ui/table";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@ui/tabs";
 
-export default async function AdminHome({ params }: { params: { lang: string } }) {
-  const dictionnary = await getDictionnary(params.lang as Locale);
+export default async function AdminHomePage({ params }: { params: { lang: string } }) {
   const session = await auth();
   const admin = await isAdmin(session!.user!.email!);
   if (!admin) return redirect("/");
@@ -17,48 +15,56 @@ export default async function AdminHome({ params }: { params: { lang: string } }
   const number_of_tests = 28;
   const users = [
     {
+      id: 1,
       email: "cesar.ombredane@test.com",
       easy: Math.floor(Math.random() * 101),
       medium: Math.floor(Math.random() * 101),
       hard: Math.floor(Math.random() * 101),
     },
     {
+      id: 2,
       email: "leo.mercier@test.com",
       easy: Math.floor(Math.random() * 101),
       medium: Math.floor(Math.random() * 101),
       hard: Math.floor(Math.random() * 101),
     },
     {
+      id: 3,
       email: "enzo.peudepiece@test.com",
       easy: Math.floor(Math.random() * 101),
       medium: Math.floor(Math.random() * 101),
       hard: Math.floor(Math.random() * 101),
     },
     {
+      id: 4,
       email: "sacha.mihman@test.com",
       easy: Math.floor(Math.random() * 101),
       medium: Math.floor(Math.random() * 101),
       hard: Math.floor(Math.random() * 101),
     },
     {
+      id: 5,
       email: "corentin.gauttier@test.com",
       easy: Math.floor(Math.random() * 101),
       medium: Math.floor(Math.random() * 101),
       hard: Math.floor(Math.random() * 101),
     },
     {
+      id: 6,
       email: "test1.test@test.com",
       easy: Math.floor(Math.random() * 101),
       medium: Math.floor(Math.random() * 101),
       hard: Math.floor(Math.random() * 101),
     },
     {
+      id: 7,
       email: "test2.test@test.com",
       easy: Math.floor(Math.random() * 101),
       medium: Math.floor(Math.random() * 101),
       hard: Math.floor(Math.random() * 101),
     },
     {
+      id: 8,
       email: "test3.test@test.com",
       easy: Math.floor(Math.random() * 101),
       medium: Math.floor(Math.random() * 101),
@@ -169,9 +175,7 @@ export default async function AdminHome({ params }: { params: { lang: string } }
                             <TableCell className="text-yellow-600">{user.medium}%</TableCell>
                             <TableCell className="text-red-600">{user.hard}%</TableCell>
                             <TableCell className="text-right">
-                              <Button variant="outline" size="sm">
-                                See
-                              </Button>
+                              <Link href={`/${params.lang}/admin/${user.id}`}>See</Link>
                             </TableCell>
                           </TableRow>
                         ))}
@@ -205,9 +209,7 @@ export default async function AdminHome({ params }: { params: { lang: string } }
                           <TableCell className="text-yellow-600">{user.medium}%</TableCell>
                           <TableCell className="text-red-600">{user.hard}%</TableCell>
                           <TableCell className="text-right">
-                            <Button variant="outline" size="sm">
-                              See
-                            </Button>
+                            <Link href={`/${params.lang}/admin/${user.id}`}>See</Link>
                           </TableCell>
                         </TableRow>
                       ))}
@@ -218,15 +220,6 @@ export default async function AdminHome({ params }: { params: { lang: string } }
             </TabsContent>
           </Tabs>
         </div>
-        <form
-          action={async () => {
-            "use server";
-            await signOut();
-          }}
-          className="fixed bottom-4 right-4"
-        >
-          <Button variant="link">{dictionnary.admin.signout}</Button>
-        </form>
       </main>
     </>
   );
