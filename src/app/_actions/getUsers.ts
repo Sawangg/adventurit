@@ -19,9 +19,9 @@ const preparedUserGradesRequest = db
   .select({
     id: users.id,
     email: users.email,
-    easy: sql<number>`CAST(AVG(CASE WHEN ${questions.difficulty} = ${"easy"} THEN ${answers.grade} END) AS INT)`,
-    medium: sql<number>`CAST(AVG(CASE WHEN ${questions.difficulty} = ${"medium"} THEN ${answers.grade}  END) AS INT)`,
-    hard: sql<number>`CAST(AVG(CASE WHEN ${questions.difficulty} = ${"hard"} THEN ${answers.grade} END) AS INT)`,
+    easy: sql<number>`CAST(COALESCE(AVG(CASE WHEN ${questions.difficulty} = ${"easy"} THEN ${answers.grade} END), 0) AS INT)`,
+    medium: sql<number>`CAST(COALESCE(AVG(CASE WHEN ${questions.difficulty} = ${"medium"} THEN ${answers.grade}  END), 0) AS INT)`,
+    hard: sql<number>`CAST(COALESCE(AVG(CASE WHEN ${questions.difficulty} = ${"hard"} THEN ${answers.grade} END), 0) AS INT)`,
   })
   .from(users)
   .leftJoin(games, eq(users.id, games.userId))
@@ -32,6 +32,7 @@ const preparedUserGradesRequest = db
 
 export const getAllUsers = async (): Promise<AllUsersGrades> => {
   const requestResult = await preparedUserGradesRequest.execute();
+  if (!requestResult || requestResult.length === 0) throw new Error("No users found");
   const result = AllUsersGradesSchema.safeParse(requestResult);
   if (!result.success) throw new Error(result.error.message);
   return result.data;
