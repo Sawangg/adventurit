@@ -11,7 +11,7 @@ export type GameSceneProps = React.DetailedHTMLProps<React.HTMLAttributes<HTMLCa
 export const GameScene: React.FC<GameSceneProps> = () => {
   return (
     <>
-      <Canvas shadows camera={{ position: [400, 300, 100], fov: 70 }}>
+      <Canvas className="bg-blue-300" shadows camera={{ position: [400, 300, 100], fov: 70 }}>
         <ambientLight />
         <CameraControls enabled={true} verticalDragToForward={true} />
         <Suspense fallback={<LoadingScene />}>
@@ -26,8 +26,8 @@ export const GameScene: React.FC<GameSceneProps> = () => {
 };
 
 function ModelLevel(props: JSX.IntrinsicElements["mesh"]) {
-  const gltf = useGLTF("/scene/level/scene.gltf");
+  const gltf = useGLTF("/scene/level/island_7.gltf");
   return <primitive {...props} object={gltf.scene}></primitive>;
 }
 
-useGLTF.preload("/scene/level/scene.gltf");
+useGLTF.preload("/scene/level/island_7.gltf");

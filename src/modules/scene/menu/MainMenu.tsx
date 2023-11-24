@@ -1,13 +1,12 @@
 "use client";
 
 import { Suspense, useCallback, useEffect, useState } from "react";
-import { useRouter } from "next/navigation";
+import Link from "next/link";
 import { useGLTF } from "@react-three/drei";
 import { Canvas, useFrame } from "@react-three/fiber";
-import { createSelectSchema } from "drizzle-zod";
 import { AnimatePresence, motion } from "framer-motion";
 import type { Session } from "next-auth";
-import { games } from "@db/schema";
+import { startGame } from "@actions/startGame";
 import { afkTimeoutSeconds } from "@lib/constants";
 import type { Dictionnary } from "@lib/getDictionnary";
 import { createVector3 } from "@lib/utils";
@@ -20,7 +19,6 @@ export type MainMenuProps = React.DetailedHTMLProps<React.HTMLAttributes<HTMLDiv
 
 // Suspense with animation should be here for the 3d menu scene because it is the first scene the user is going to see
 export const MainMenu: React.FC<MainMenuProps> = ({ session }) => {
-  const router = useRouter();
   const [currentMenu, setCurrentMenu] = useState<string>("anykey");
   const defaultCameraPosition = createVector3([800, 200, 100]);
   const [cameraPosition, setCameraPosition] = useState(defaultCameraPosition);
@@ -39,9 +37,6 @@ export const MainMenu: React.FC<MainMenuProps> = ({ session }) => {
           break;
         case "settings":
           setCameraPosition(createVector3([200, 100, 100]));
-          break;
-        case "login":
-          setCameraPosition(createVector3([200, 100, 200]));
           break;
         default:
           break;
@@ -63,20 +58,6 @@ export const MainMenu: React.FC<MainMenuProps> = ({ session }) => {
     return () => window.removeEventListener("keydown", handleKeyDown);
   }, [currentMenu, handleMenus, timeoutId]);
 
-  const createGame = async () => {
-    const res = await fetch("/api/game/create", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify({ userId: 1 }),
-    });
-    const schema = createSelectSchema(games);
-    const result = schema.safeParse(await res.json());
-    if (!result.success) throw new Error(result.error.message);
-    router.push(`/game/${result.data.id}`);
-  };
-
   return (
     <>
       <Canvas camera={{ position: defaultCameraPosition }} className="h-screen bg-[#98d8fc]">
@@ -86,18 +67,20 @@ export const MainMenu: React.FC<MainMenuProps> = ({ session }) => {
         </Suspense>
       </Canvas>
 
-      <div className="absolute inset-0">
+      <div className="absolute inset-0 text-black">
         <AnimatePresence>
           {currentMenu === "anykey" && (
-            <motion.div
-              initial={{ opacity: 0, y: 10 }}
-              animate={{ opacity: 1, y: 0 }}
-              exit={{ opacity: 0 }}
-              transition={{ duration: 0.7, delay: 0.3 }}
-              className="flex h-full w-full items-center justify-center bg-black/50 backdrop-blur-sm"
-            >
-              <p className="w-max text-lg uppercase text-white">Press Any key to start</p>
-            </motion.div>
+            <div className="flex h-full w-full items-center justify-center bg-black/50 backdrop-blur-sm">
+              <motion.p
+                initial={{ opacity: 0, y: 10 }}
+                animate={{ opacity: 1, y: 0 }}
+                exit={{ opacity: 0 }}
+                transition={{ duration: 0.7, delay: 0.3 }}
+                className="w-max text-lg uppercase text-white"
+              >
+                Press Any key to start
+              </motion.p>
+            </div>
           )}
 
           {currentMenu === "main" && (
@@ -105,7 +88,7 @@ export const MainMenu: React.FC<MainMenuProps> = ({ session }) => {
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ duration: 0.7 }}
-              className="flex items-center gap-x-12 text-lg uppercase text-white"
+              className="flex items-center gap-x-12 text-lg uppercase"
             >
               <h1 className="text-4xl font-bold">Adventur&apos;IT</h1>
               <motion.div
@@ -115,22 +98,9 @@ export const MainMenu: React.FC<MainMenuProps> = ({ session }) => {
                 transition={{ delay: 0.5 }}
                 className="flex flex-col items-start gap-y-3"
               >
-                {session ? (
-                  <>
-                    <MainMenuButton className="uppercase" onClick={alert}>
-                      Continue
-                    </MainMenuButton>
-                  </>
-                ) : (
-                  <>
-                    <MainMenuButton className="uppercase" onClick={createGame}>
-                      Start
-                    </MainMenuButton>
-                    <MainMenuButton className="uppercase" onClick={() => handleMenus("login")}>
-                      Login
-                    </MainMenuButton>
-                  </>
-                )}
+                <form action={startGame}>
+                  <MainMenuButton className="uppercase">Start</MainMenuButton>
+                </form>
                 <MainMenuButton className="uppercase" onClick={() => handleMenus("settings")}>
                   Settings
                 </MainMenuButton>
@@ -161,24 +131,10 @@ export const MainMenu: React.FC<MainMenuProps> = ({ session }) => {
                 </div>
                 <div className="flex flex-col">
                   <h2 className="text-3xl">Language</h2>
-                  <button>FR</button>
-                  <button>EN</button>
+                  <Link href="/fr">FR</Link>
+                  <Link href="/en">EN</Link>
                 </div>
               </div>
-            </motion.div>
-          )}
-
-          {currentMenu === "login" && (
-            <motion.div
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              exit={{ opacity: 0 }}
-              transition={{ duration: 0.7, delay: 2 }}
-            >
-              <h1 className="text-3xl">Login</h1>
-              <MainMenuButton mouvement={0} onClick={() => handleMenus("main")}>
-                Back
-              </MainMenuButton>
             </motion.div>
           )}
         </AnimatePresence>

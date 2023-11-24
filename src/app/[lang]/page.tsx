@@ -20,7 +20,7 @@ export default async function Home({ params }: { params: { lang: string } }) {
               <Image src="/assets/sg.png" sizes="24px" alt="" fill />
             </AspectRatio>
           </figure>
-          <p className="text-center text-sm text-white">Sponsored by SG</p>
+          <p className="text-center text-sm text-black">Sponsored by SG</p>
         </div>
       </footer>
     </body>
