@@ -1,5 +1,7 @@
 import Link from "next/link";
 import { redirect } from "next/navigation";
+import { getGameNumber } from "@actions/getGames";
+import { getAllUsers } from "@actions/getUsers";
 import { isAdmin } from "@actions/isAdmin";
 import { auth } from "@lib/auth";
 import { Avatar, AvatarFallback } from "@ui/avatar";
@@ -12,65 +14,8 @@ export default async function AdminHomePage({ params }: { params: { lang: string
   const admin = await isAdmin(session!.user!.email!);
   if (!admin) return redirect("/");
 
-  const number_of_tests = 28;
-  const users = [
-    {
-      id: 1,
-      email: "cesar.ombredane@test.com",
-      easy: Math.floor(Math.random() * 101),
-      medium: Math.floor(Math.random() * 101),
-      hard: Math.floor(Math.random() * 101),
-    },
-    {
-      id: 2,
-      email: "leo.mercier@test.com",
-      easy: Math.floor(Math.random() * 101),
-      medium: Math.floor(Math.random() * 101),
-      hard: Math.floor(Math.random() * 101),
-    },
-    {
-      id: 3,
-      email: "enzo.peudepiece@test.com",
-      easy: Math.floor(Math.random() * 101),
-      medium: Math.floor(Math.random() * 101),
-      hard: Math.floor(Math.random() * 101),
-    },
-    {
-      id: 4,
-      email: "sacha.mihman@test.com",
-      easy: Math.floor(Math.random() * 101),
-      medium: Math.floor(Math.random() * 101),
-      hard: Math.floor(Math.random() * 101),
-    },
-    {
-      id: 5,
-      email: "corentin.gauttier@test.com",
-      easy: Math.floor(Math.random() * 101),
-      medium: Math.floor(Math.random() * 101),
-      hard: Math.floor(Math.random() * 101),
-    },
-    {
-      id: 6,
-      email: "test1.test@test.com",
-      easy: Math.floor(Math.random() * 101),
-      medium: Math.floor(Math.random() * 101),
-      hard: Math.floor(Math.random() * 101),
-    },
-    {
-      id: 7,
-      email: "test2.test@test.com",
-      easy: Math.floor(Math.random() * 101),
-      medium: Math.floor(Math.random() * 101),
-      hard: Math.floor(Math.random() * 101),
-    },
-    {
-      id: 8,
-      email: "test3.test@test.com",
-      easy: Math.floor(Math.random() * 101),
-      medium: Math.floor(Math.random() * 101),
-      hard: Math.floor(Math.random() * 101),
-    },
-  ];
+  const gameNumber = await getGameNumber();
+  const users = await getAllUsers();
 
   return (
     <>
@@ -91,7 +36,7 @@ export default async function AdminHomePage({ params }: { params: { lang: string
                     <CardTitle className="text-sm font-medium">Number of Games</CardTitle>
                   </CardHeader>
                   <CardContent>
-                    <div className="text-2xl font-bold">{number_of_tests}</div>
+                    <div className="text-2xl font-bold">{gameNumber}</div>
                     <p className="text-xs text-muted-foreground">Game played</p>
                   </CardContent>
                 </Card>
