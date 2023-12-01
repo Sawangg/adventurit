@@ -1,6 +1,8 @@
 import Image from "next/image";
 import { redirect } from "next/navigation";
-import { auth, signIn } from "@lib/auth";
+import { signInGithub } from "@actions/login/signInGithub";
+import { signInGoogle } from "@actions/login/signInGoogle";
+import { auth } from "@lib/auth";
 import { getDictionnary, type Locale } from "@lib/getDictionnary";
 import { AspectRatio } from "@ui/AspectRatio";
 import { Button } from "@ui/button";
@@ -12,20 +14,6 @@ export default async function AdminLoginPage({ params }: { params: { lang: strin
   const dictionnary = await getDictionnary(params.lang as Locale);
   const session = await auth();
   if (session) return redirect("/admin");
-
-  async function signInGithub() {
-    "use server";
-    const url = (await signIn("github", { redirect: false })) as string;
-    // TODO: Should be fixed after next-auth@5 is stable
-    redirect(url.replace("signin", "api/auth/signin"));
-  }
-
-  async function signInGoogle() {
-    "use server";
-    const url = (await signIn("google", { redirect: false })) as string;
-    // TODO: Should be fixed after next-auth@5 is stable
-    redirect(url.replace("signin", "api/auth/signin"));
-  }
 
   return (
     <main className="flex h-screen items-center justify-center">
