@@ -26,8 +26,8 @@ export const GameScene: React.FC<GameSceneProps> = () => {
 };
 
 function ModelLevel(props: JSX.IntrinsicElements["mesh"]) {
-  const gltf = useGLTF("/scene/level/island_7.gltf");
+  const gltf = useGLTF("/scene/level/scene.gltf");
   return <primitive {...props} object={gltf.scene}></primitive>;
 }
 
-useGLTF.preload("/scene/level/island_7.gltf");
+useGLTF.preload("/scene/level/scene.gltf");

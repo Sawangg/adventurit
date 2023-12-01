@@ -1,23 +1,15 @@
 "use server";
 
 import { redirect } from "next/navigation";
-import { createSelectSchema } from "drizzle-zod";
+import { db } from "@db/index";
+import { preparedUserEmail } from "@db/prepared/userEmail";
 import { games } from "@db/schema";
+import { auth } from "@lib/auth";
 
-const createGame = async () => {
-  const res = await fetch("/api/game/create", {
-    method: "POST",
-    headers: {
-      "Content-Type": "application/json",
-    },
-    body: JSON.stringify({ userId: 1 }),
-  });
-  const schema = createSelectSchema(games);
-  const result = schema.safeParse(await res.json());
-  if (!result.success) throw new Error(result.error.message);
-  redirect(`/game/${result.data.id}`);
-};
-
-export const startGame = () => {
-  console.log("ayo");
+export const startGame = async () => {
+  const session = await auth();
+  if (!session) throw new Error("Unauthorized");
+  const user = (await preparedUserEmail.execute({ email: session.user!.email }))[0];
+  const game = await db.insert(games).values({ userId: user.id }).returning();
+  redirect(`/fr/game/${game[0].id}`);
 };

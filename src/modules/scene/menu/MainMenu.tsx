@@ -5,7 +5,6 @@ import Link from "next/link";
 import { useGLTF } from "@react-three/drei";
 import { Canvas, useFrame } from "@react-three/fiber";
 import { AnimatePresence, motion } from "framer-motion";
-import type { Session } from "next-auth";
 import { startGame } from "@actions/startGame";
 import { afkTimeoutSeconds } from "@lib/constants";
 import type { Dictionnary } from "@lib/getDictionnary";
@@ -14,11 +13,10 @@ import { MainMenuButton } from "@modules/scene/menu/MainMenuButton";
 
 export type MainMenuProps = React.DetailedHTMLProps<React.HTMLAttributes<HTMLDivElement>, HTMLDivElement> & {
   dictionnary: Dictionnary;
-  session: Session | null;
 };
 
 // Suspense with animation should be here for the 3d menu scene because it is the first scene the user is going to see
-export const MainMenu: React.FC<MainMenuProps> = ({ session }) => {
+export const MainMenu: React.FC<MainMenuProps> = () => {
   const [currentMenu, setCurrentMenu] = useState<string>("anykey");
   const defaultCameraPosition = createVector3([800, 200, 100]);
   const [cameraPosition, setCameraPosition] = useState(defaultCameraPosition);
