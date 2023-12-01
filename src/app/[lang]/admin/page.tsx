@@ -12,13 +12,9 @@ export default async function AdminHome({ params }: { params: { lang: string } }
   if (!admin) return redirect("/");
 
   return (
-    <body className="p-2">
-      <header className="flex justify-between">
-        <div className="3xl:w-12 w-8">
-          <AspectRatio ratio={1 / 1}>
-            <Image src="/assets/SG.png" sizes="" alt="" fill />
-          </AspectRatio>
-        </div>
+    <>
+      <header className="flex justify-between p-4">
+        <div></div>
         <div className="flex items-center gap-4">
           <p>{session?.user?.name}</p>
           <div className="w-8">
@@ -28,7 +24,7 @@ export default async function AdminHome({ params }: { params: { lang: string } }
           </div>
         </div>
       </header>
-      <main>
+      <main className="p-4">
         <form
           action={async () => {
             "use server";
@@ -38,7 +34,6 @@ export default async function AdminHome({ params }: { params: { lang: string } }
           <button>{dictionnary.admin.signout}</button>
         </form>
       </main>
-      <footer></footer>
-    </body>
+    </>
   );
 }

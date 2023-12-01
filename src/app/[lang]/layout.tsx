@@ -5,7 +5,7 @@ import { Inter } from "next/font/google";
 const inter = Inter({ subsets: ["latin"], variable: "--font-inter" });
 
 export const metadata: Metadata = {
-  title: "SG — 2024",
+  title: "Adventur'IT — SG",
   description: "Société Générale's Adventur'IT game",
 };
 

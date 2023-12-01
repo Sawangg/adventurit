@@ -3,23 +3,25 @@ import { z } from "zod";
 
 export const env = createEnv({
   server: {
-    NODE_ENV: z.enum(["development", "test", "production"]).default("development"),
-    DB_URL: z.string(),
-    AUTH_SECRET: z.string(),
     AUTH_GITHUB_ID: z.string(),
     AUTH_GITHUB_SECRET: z.string(),
     AUTH_GOOGLE_ID: z.string(),
     AUTH_GOOGLE_SECRET: z.string(),
+    AUTH_SECRET: z.string(),
+    BUNDLE_ANALYZE: z.string().transform((value) => value === "true"),
+    DB_URL: z.string(),
+    NODE_ENV: z.enum(["development", "test", "production"]).default("development"),
   },
   client: {},
   runtimeEnv: {
-    NODE_ENV: process.env.NODE_ENV,
-    DB_URL: process.env.DB_URL,
-    AUTH_SECRET: process.env.AUTH_SECRET,
     AUTH_GITHUB_ID: process.env.AUTH_GITHUB_ID,
     AUTH_GITHUB_SECRET: process.env.AUTH_GITHUB_SECRET,
     AUTH_GOOGLE_ID: process.env.AUTH_GOOGLE_ID,
     AUTH_GOOGLE_SECRET: process.env.AUTH_GOOGLE_SECRET,
+    AUTH_SECRET: process.env.AUTH_SECRET,
+    BUNDLE_ANALYZE: process.env.BUNDLE_ANALYZE,
+    DB_URL: process.env.DB_URL,
+    NODE_ENV: process.env.NODE_ENV,
   },
   skipValidation: !!process.env.SKIP_ENV_VALIDATION,
 });

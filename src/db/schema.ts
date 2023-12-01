@@ -1,4 +1,7 @@
-import { boolean, index, integer, pgEnum, pgTable, serial, varchar } from "drizzle-orm/pg-core";
+import { boolean, index, integer, pgEnum, pgTable, serial, uuid, varchar } from "drizzle-orm/pg-core";
+
+export const difficultyEnum = pgEnum("difficulty", ["easy", "medium", "hard"]);
+export const typeEnum = pgEnum("type", ["qcm", "program", "personality"]);
 
 // Users table
 export const users = pgTable("users", {
@@ -8,9 +11,6 @@ export const users = pgTable("users", {
   admin: boolean("admin").default(false).notNull(),
 });
 
-export const difficultyEnum = pgEnum("difficulty", ["easy", "medium", "hard"]);
-export const typeEnum = pgEnum("type", ["qcm", "program", "personality"]);
-
 // Questions table
 export const questions = pgTable("questions", {
   id: serial("id").primaryKey().notNull(),
@@ -19,11 +19,11 @@ export const questions = pgTable("questions", {
   type: typeEnum("type").notNull(),
 });
 
-// Game table
+// Games table
 export const games = pgTable(
   "games",
   {
-    id: serial("id").primaryKey().notNull(),
+    id: uuid("id").defaultRandom().primaryKey().notNull(),
     userId: integer("user_id")
       .references(() => users.id)
       .notNull(),
@@ -46,7 +46,7 @@ export const answers = pgTable(
     questionId: integer("question_id")
       .references(() => questions.id)
       .notNull(),
-    gameId: integer("game_id")
+    gameId: uuid("game_id")
       .references(() => games.id)
       .notNull(),
   },
