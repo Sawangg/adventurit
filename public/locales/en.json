@@ -9,6 +9,14 @@
       "division":"or sign in with",
       "pass" : "Password"
     },
+    "user_detail": {
+      "all_games": "All games :",
+      "in_progress": "In progress...",
+      "question": "Question ",
+      "statement": "Statement :",
+      "answer": "Answer :",
+      "grade": "Grade : "
+    },
     "signout": "Sign out",
     "dashboard": "Dashboard",
     "users": "All users",

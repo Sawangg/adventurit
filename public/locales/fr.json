@@ -3,11 +3,19 @@
     "login": {
       "github": "Github",
       "google": "Google",
-      
+      "apple": "Apple",
       "choice": "Choisissez un moyen de connection",
       "connection" : "Se connecter",
       "division": "ou connectez-vous avec",
       "pass" : "Mot de passe"
+    },
+    "user_detail": {
+      "all_games": "Toutes les parties :",
+      "in_progress": "En cours...",
+      "question": "Question ",
+      "statement": "Intitulé :",
+      "answer": "Réponse :",
+      "grade": "Note : "
     },
     "signout": "Déconnexion",
     "dashboard": "Tableau de bord",
