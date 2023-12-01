@@ -1,5 +1,7 @@
-import { boolean, index, integer, pgTable, serial, uuid, varchar } from "drizzle-orm/pg-core";
-import { difficultyEnum, typeEnum } from "@db/enum";
+import { boolean, index, integer, pgEnum, pgTable, serial, uuid, varchar } from "drizzle-orm/pg-core";
+
+export const difficultyEnum = pgEnum("difficulty", ["easy", "medium", "hard"]);
+export const typeEnum = pgEnum("type", ["qcm", "program", "personality"]);
 
 // Users table
 export const users = pgTable("users", {
@@ -42,7 +44,7 @@ export const answers = pgTable(
     questionId: integer("question_id")
       .references(() => questions.id)
       .notNull(),
-    gameId: integer("game_id")
+    gameId: uuid("game_id")
       .references(() => games.id)
       .notNull(),
   },
