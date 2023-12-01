@@ -4,6 +4,7 @@ import { getGameNumber } from "@actions/getGames";
 import { getAllUsers } from "@actions/getUsers";
 import { isAdmin } from "@actions/isAdmin";
 import { auth } from "@lib/auth";
+import { getDictionnary, type Locale } from "@lib/getDictionnary";
 import { Avatar, AvatarFallback } from "@ui/avatar";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@ui/card";
 import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@ui/table";
@@ -14,6 +15,8 @@ export default async function AdminHomePage({ params }: { params: { lang: string
   const admin = await isAdmin(session!.user!.email!);
   if (!admin) return redirect("/");
 
+  const dictionnary = await getDictionnary(params.lang as Locale);
+
   const gameNumber = await getGameNumber();
   const users = await getAllUsers();
 
@@ -22,72 +25,72 @@ export default async function AdminHomePage({ params }: { params: { lang: string
       <main className="p-4">
         <div className="flex-1 space-y-4 p-8 pt-6">
           <div className="flex items-center justify-between space-y-2">
-            <h2 className="text-3xl font-bold tracking-tight">Dashboard</h2>
+            <h2 className="text-3xl font-bold tracking-tight">{dictionnary.admin.dashboard}</h2>
           </div>
           <Tabs defaultValue="dashboard" className="space-y-4">
             <TabsList>
-              <TabsTrigger value="dashboard">Dashboard</TabsTrigger>
-              <TabsTrigger value="users">All users</TabsTrigger>
+              <TabsTrigger value="dashboard">{dictionnary.admin.dashboard}</TabsTrigger>
+              <TabsTrigger value="users">{dictionnary.admin.users}</TabsTrigger>
             </TabsList>
             <TabsContent value="dashboard" className="space-y-4">
               <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-4">
                 <Card>
                   <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
-                    <CardTitle className="text-sm font-medium">Number of Games</CardTitle>
+                    <CardTitle className="text-sm font-medium">{dictionnary.admin.game_nb}</CardTitle>
                   </CardHeader>
                   <CardContent>
                     <div className="text-2xl font-bold">{gameNumber}</div>
-                    <p className="text-xs text-muted-foreground">Game played</p>
+                    <p className="text-xs text-muted-foreground">{dictionnary.admin.game_played}</p>
                   </CardContent>
                 </Card>
                 <Card>
                   <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
-                    <CardTitle className="text-sm font-medium">Easy</CardTitle>
+                    <CardTitle className="text-sm font-medium">{dictionnary.admin.easy}</CardTitle>
                   </CardHeader>
                   <CardContent>
                     <div className="text-2xl font-bold text-green-600">
                       {users.map((user) => user.easy).reduce((a, b) => a + b) / users.length}%
                     </div>
-                    <p className="text-xs text-muted-foreground">of right answers on easy question (1 point)</p>
+                    <p className="text-xs text-muted-foreground">{dictionnary.admin.easy_desc}</p>
                   </CardContent>
                 </Card>
                 <Card>
                   <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
-                    <CardTitle className="text-sm font-medium">Medium</CardTitle>
+                    <CardTitle className="text-sm font-medium">{dictionnary.admin.medium}</CardTitle>
                   </CardHeader>
                   <CardContent>
                     <div className="text-2xl font-bold text-yellow-600">
                       {users.map((user) => user.medium).reduce((a, b) => a + b) / users.length}%
                     </div>
-                    <p className="text-xs text-muted-foreground">of right answers on medium question (2 point)</p>
+                    <p className="text-xs text-muted-foreground">{dictionnary.admin.medium_desc}</p>
                   </CardContent>
                 </Card>
                 <Card>
                   <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
-                    <CardTitle className="text-sm font-medium">Hard</CardTitle>
+                    <CardTitle className="text-sm font-medium">{dictionnary.admin.hard}</CardTitle>
                   </CardHeader>
                   <CardContent>
                     <div className="text-2xl font-bold text-red-600">
                       {users.map((user) => user.hard).reduce((a, b) => a + b) / users.length}%
                     </div>
-                    <p className="text-xs text-muted-foreground">of right answers on hard question (3 point)</p>
+                    <p className="text-xs text-muted-foreground">{dictionnary.admin.hard_desc}</p>
                   </CardContent>
                 </Card>
               </div>
               <Card>
                 <CardHeader>
-                  <CardTitle>Top 5 users</CardTitle>
-                  <CardDescription>Best user to ever play the game</CardDescription>
+                  <CardTitle>{dictionnary.admin.top_5}</CardTitle>
+                  <CardDescription>{dictionnary.admin.top_5_desc}</CardDescription>
                 </CardHeader>
                 <CardContent>
                   <Table>
                     <TableHeader>
                       <TableRow>
-                        <TableHead className="w-[50px]">Rank</TableHead>
-                        <TableHead>User</TableHead>
-                        <TableHead className="w-[100px]">Easy</TableHead>
-                        <TableHead className="w-[100px]">Medium</TableHead>
-                        <TableHead className="w-[100px]">Hard</TableHead>
+                        <TableHead className="w-[50px]">{dictionnary.admin.rank}</TableHead>
+                        <TableHead>{dictionnary.admin.user}</TableHead>
+                        <TableHead className="w-[100px]">{dictionnary.admin.easy}</TableHead>
+                        <TableHead className="w-[100px]">{dictionnary.admin.medium}</TableHead>
+                        <TableHead className="w-[100px]">{dictionnary.admin.hard}</TableHead>
                         <TableHead></TableHead>
                       </TableRow>
                     </TableHeader>
@@ -120,7 +123,7 @@ export default async function AdminHomePage({ params }: { params: { lang: string
                             <TableCell className="text-yellow-600">{user.medium}%</TableCell>
                             <TableCell className="text-red-600">{user.hard}%</TableCell>
                             <TableCell className="text-right">
-                              <Link href={`/${params.lang}/admin/${user.id}`}>See</Link>
+                              <Link href={`/${params.lang}/admin/${user.id}`}>{dictionnary.admin.see}</Link>
                             </TableCell>
                           </TableRow>
                         ))}
@@ -132,17 +135,17 @@ export default async function AdminHomePage({ params }: { params: { lang: string
             <TabsContent value="users" className="space-y-4">
               <Card>
                 <CardHeader>
-                  <CardTitle>All users</CardTitle>
-                  <CardDescription>Here are all users and their grades</CardDescription>
+                  <CardTitle>{dictionnary.admin.users}</CardTitle>
+                  <CardDescription>{dictionnary.admin.users_desc}</CardDescription>
                 </CardHeader>
                 <CardContent>
                   <Table>
                     <TableHeader>
                       <TableRow>
-                        <TableHead>Email</TableHead>
-                        <TableHead>Easy</TableHead>
-                        <TableHead>Medium</TableHead>
-                        <TableHead>Hard</TableHead>
+                        <TableHead>{dictionnary.admin.email}</TableHead>
+                        <TableHead>{dictionnary.admin.easy}</TableHead>
+                        <TableHead>{dictionnary.admin.medium}</TableHead>
+                        <TableHead>{dictionnary.admin.hard}</TableHead>
                         <TableHead></TableHead>
                       </TableRow>
                     </TableHeader>
@@ -154,7 +157,7 @@ export default async function AdminHomePage({ params }: { params: { lang: string
                           <TableCell className="text-yellow-600">{user.medium}%</TableCell>
                           <TableCell className="text-red-600">{user.hard}%</TableCell>
                           <TableCell className="text-right">
-                            <Link href={`/${params.lang}/admin/${user.id}`}>See</Link>
+                            <Link href={`/${params.lang}/admin/${user.id}`}>{dictionnary.admin.see}</Link>
                           </TableCell>
                         </TableRow>
                       ))}
