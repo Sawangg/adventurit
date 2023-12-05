@@ -35,6 +35,7 @@ export const games = pgTable(
     };
   },
 );
+export type Game = typeof games.$inferSelect; // return type when queried
 
 // Answers table
 export const answers = pgTable(

@@ -17,11 +17,6 @@ const getRequestLocale = (request: NextRequest) => {
 };
 
 export default auth((request: NextAuthRequest): NextResponse => {
-  // Server action ignore
-  if (request.headers.get("content-type")?.includes("multipart/form-data")) {
-    return NextResponse.next();
-  }
-
   // Content Security Policy
   const nonce = Buffer.from(crypto.randomUUID()).toString("base64");
   const cspHeader = `
@@ -66,4 +61,5 @@ export default auth((request: NextAuthRequest): NextResponse => {
 
 export const config = {
   matcher: ["/((?!api|_next|.*\\..*).*)"],
+  runtime: "experimental-edge",
 };
