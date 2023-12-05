@@ -1,32 +1,51 @@
 "use client";
 
-import { Suspense, useRef } from "react";
+import { Suspense, useEffect, useRef } from "react";
 import { CameraControls } from "@react-three/drei";
 import { Canvas } from "@react-three/fiber";
+import { AnimatePresence } from "framer-motion";
+import { Dialog } from "@modules/Dialog";
 // import { CubeTextureLoader } from "three";
 import { LoadingScene } from "@modules/scene/LoadingScene";
 import { GameLevelModel } from "@modules/scene/model/GameLevelModel";
+import { useCommandStore } from "@src/stores/useCommandStore";
+import { useDialogStore } from "@src/stores/useDialogStore";
 
 export type GameSceneProps = React.DetailedHTMLProps<React.HTMLAttributes<HTMLCanvasElement>, HTMLCanvasElement>;
 
 export const GameScene: React.FC<GameSceneProps> = () => {
   const controls = useRef<CameraControls>(null);
+  const { add } = useCommandStore();
+  const { text } = useDialogStore();
+
+  useEffect(() => {
+    add([
+      { type: "dialog", args: ["Welcome to Adventur'IT !"] },
+      { type: "dialog", args: ["My name is Sacha I'll be your guide on your journey"] },
+    ]);
+  }, [add]);
 
   return (
-    <Canvas className="bg-blue-300" camera={{ position: [-60, 10, -70], fov: 70 }}>
-      <ambientLight intensity={0.8} />
-      <directionalLight
-        position={[0, 10, 0]}
-        shadow-mapSize-width={1024}
-        shadow-mapSize-height={1024}
-        shadow-camera-far={50}
-      />
-      <CameraControls ref={controls} enabled={true} verticalDragToForward={true} />
-      <Suspense fallback={<LoadingScene />}>
-        <GameLevelModel position={[0, 0, 0]} />
-      </Suspense>
-      {/* <SkyBox /> */}
-    </Canvas>
+    <>
+      <Canvas className="bg-blue-300" camera={{ position: [-60, 10, -70], fov: 70 }}>
+        <ambientLight intensity={0.8} />
+        <directionalLight position={[0, 10, 0]} />
+        <CameraControls ref={controls} enabled={true} verticalDragToForward={true} />
+        <Suspense fallback={<LoadingScene />}>
+          <GameLevelModel
+            position={[0, 0, 0]}
+            onClick={(e) => {
+              add([
+                { type: "dialog", args: [`Answer the next question ${e as string}`] },
+                { type: "question", args: ["qcm"] },
+              ]);
+            }}
+          />
+        </Suspense>
+        {/* <SkyBox /> */}
+      </Canvas>
+      <AnimatePresence>{text && <Dialog text={text} />}</AnimatePresence>
+    </>
   );
 };
 

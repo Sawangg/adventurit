@@ -27,7 +27,7 @@ export default auth((request: NextAuthRequest): NextResponse => {
     style-src 'self' 'unsafe-inline';
     img-src 'self' blob: data:;
     font-src 'self';
-    connect-src 'self';
+    connect-src 'self' blob:;
     form-action 'self';
     media-src 'self';
     object-src 'none';

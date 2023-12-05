@@ -1,5 +1,5 @@
 "use server";
 
-import type { Game } from "@db/schema";
+// import type { Game } from "@db/schema";
 
-export const updateGameProgression = async (game: Game) => {};
+// export const updateGameProgression = async (game: Game) => {};

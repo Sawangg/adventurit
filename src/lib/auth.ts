@@ -9,6 +9,7 @@ export const config = {
     GitHub({ clientId: env.AUTH_GITHUB_ID, clientSecret: env.AUTH_GITHUB_SECRET }),
     Google({ clientId: env.AUTH_GOOGLE_ID, clientSecret: env.AUTH_GOOGLE_SECRET }),
   ],
+  trustHost: true,
 } satisfies NextAuthConfig;
 
 // eslint-disable-next-line @typescript-eslint/unbound-method

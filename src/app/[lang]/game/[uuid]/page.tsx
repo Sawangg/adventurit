@@ -1,8 +1,8 @@
 import { redirect } from "next/navigation";
 import { getGame } from "@actions/game/getGame";
 import { auth } from "@lib/auth";
-import { GameDialog } from "@modules/GameDialog";
-import { GameNavigation } from "@modules/GameNavigation";
+// import { GameNavigation } from "@modules/GameNavigation";
+import { PauseScreen } from "@modules/PauseScreen";
 import { GameScene } from "@modules/scene/GameScene";
 
 export default async function Page({ params }: { params: { uuid: string } }) {
@@ -15,11 +15,9 @@ export default async function Page({ params }: { params: { uuid: string } }) {
     <body className="min-h-screen min-w-screen overflow-x-hidden">
       <main className="h-screen">
         <GameScene />
-        <GameDialog game={data.game} />
+        <PauseScreen />
       </main>
-      <footer className="absolute inset-x-4 bottom-4 w-full">
-        <GameNavigation />
-      </footer>
+      <footer className="absolute inset-x-4 bottom-4 w-full">{/* <GameNavigation /> */}</footer>
     </body>
   );
 }
