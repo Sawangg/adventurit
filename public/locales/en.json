@@ -9,7 +9,31 @@
       "division":"or sign in with",
       "pass" : "Password"
     },
-    
-    "signout": "Sign out"
+    "user_detail": {
+      "all_games": "All games :",
+      "in_progress": "In progress...",
+      "question": "Question ",
+      "statement": "Statement :",
+      "answer": "Answer :",
+      "grade": "Grade : "
+    },
+    "signout": "Sign out",
+    "dashboard": "Dashboard",
+    "users": "All users",
+    "game_nb": "Number of games",
+    "game_played": "Games played",
+    "easy": "Easy",
+    "easy_desc": "of right answers on easy question (1 point)",
+    "medium": "Medium",
+    "medium_desc": "of right answers on medium question (2 points)",
+    "hard": "Hard",
+    "hard_desc": "of right answers on hard question (3 points)",
+    "top_5": "Top 5 users",
+    "top_5_desc": "Best user to ever play the game",
+    "rank": "Rank",
+    "user": "User",
+    "see": "See",
+    "users_desc": "Here are all users and their grades",
+    "email": "Email"
   }
 }
