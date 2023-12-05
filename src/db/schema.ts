@@ -24,7 +24,9 @@ export const games = pgTable(
   "games",
   {
     id: uuid("id").defaultRandom().primaryKey().notNull(),
-    userId: integer("user_id").references(() => users.id),
+    userId: integer("user_id")
+      .references(() => users.id)
+      .notNull(),
     progress: integer("progress").default(0).notNull(), // -1 if done else X where X is the question number
   },
   (table) => {

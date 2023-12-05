@@ -43,15 +43,17 @@ export default async function AdminLayout({
           </figure>
           <p className="text-center text-sm">Sponsored by SG</p>
         </div>
-        <form
-          action={async () => {
-            "use server";
-            await signOut();
-          }}
-          className="fixed bottom-4 right-4"
-        >
-          <Button variant="link">{dictionnary.admin.signout}</Button>
-        </form>
+        {session && (
+          <form
+            action={async () => {
+              "use server";
+              await signOut();
+            }}
+            className="fixed bottom-4 right-4"
+          >
+            <Button variant="link">{dictionnary.admin.signout}</Button>
+          </form>
+        )}
       </footer>
     </body>
   );
