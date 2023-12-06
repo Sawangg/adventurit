@@ -1,7 +1,7 @@
 import { NextResponse, type NextRequest } from "next/server";
 import { match } from "@formatjs/intl-localematcher";
 import type { NextAuthRequest } from "next-auth/lib";
-import { auth } from "@lib/auth";
+import { authMiddleware } from "@lib/auth.config"; // TODO: change this to @lib/auth.ts once postgres.js supports edge runtime
 import { defaultLocale, locales } from "@lib/constants";
 import { env } from "@src/env.mjs";
 
@@ -16,7 +16,7 @@ const getRequestLocale = (request: NextRequest) => {
   return match(languages, locales, defaultLocale);
 };
 
-export default auth((request: NextAuthRequest): NextResponse => {
+export default authMiddleware((request: NextAuthRequest): NextResponse => {
   // Content Security Policy
   const nonce = Buffer.from(crypto.randomUUID()).toString("base64");
   const cspHeader = `

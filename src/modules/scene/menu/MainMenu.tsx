@@ -37,7 +37,7 @@ export const MainMenu: React.FC<MainMenuProps> = () => {
         case "anykey":
           break;
         case "main":
-          void controls.current!.truck(200, 0, true);
+          void controls.current?.truck(200, 0, true);
           break;
         case "settings":
           break;

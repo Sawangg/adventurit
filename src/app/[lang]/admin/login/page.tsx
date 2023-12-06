@@ -1,12 +1,13 @@
 import Image from "next/image";
 import { redirect } from "next/navigation";
+import { signInCredentials } from "@actions/login/signInCredentials";
 import { signInGithub } from "@actions/login/signInGithub";
 import { signInGoogle } from "@actions/login/signInGoogle";
 import { auth } from "@lib/auth";
 import { getDictionnary, type Locale } from "@lib/getDictionnary";
 import { AspectRatio } from "@ui/AspectRatio";
 import { Button } from "@ui/button";
-import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@ui/card";
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@ui/card";
 import { Input } from "@ui/input";
 import { Label } from "@ui/label";
 
@@ -58,19 +59,21 @@ export default async function AdminLoginPage({ params }: { params: { lang: strin
             </div>
           </div>
 
-          <div className="grid gap-2">
-            <Label htmlFor="email">Email</Label>
-            <Input id="email" type="email" placeholder="email@exemple.com" />
-          </div>
+          <form action={signInCredentials} className="grid gap-4">
+            <div className="grid gap-2">
+              <Label htmlFor="email">Email</Label>
+              <Input id="email" name="email" type="email" placeholder="email@exemple.com" required />
+            </div>
 
-          <div className="grid gap-2">
-            <Label htmlFor="password">{dictionnary.admin.login.pass}</Label>
-            <Input id="password" type="password" />
-          </div>
+            <div className="grid gap-2">
+              <Label htmlFor="password">{dictionnary.admin.login.pass}</Label>
+              <Input id="password" name="password" type="password" required />
+            </div>
+            <Button type="submit" className="w-full">
+              {dictionnary.admin.login.connection}
+            </Button>
+          </form>
         </CardContent>
-        <CardFooter>
-          <Button className="grow">{dictionnary.admin.login.connection}</Button>
-        </CardFooter>
       </Card>
     </main>
   );
