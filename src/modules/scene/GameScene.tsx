@@ -4,8 +4,8 @@ import { Suspense, useEffect, useRef } from "react";
 import { CameraControls } from "@react-three/drei";
 import { Canvas } from "@react-three/fiber";
 import { AnimatePresence } from "framer-motion";
-import { Dialog } from "@modules/Dialog";
 // import { CubeTextureLoader } from "three";
+import { Dialog } from "@modules/Dialog";
 import { LoadingScene } from "@modules/scene/LoadingScene";
 import { GameLevelModel } from "@modules/scene/model/GameLevelModel";
 import { useCommandStore } from "@src/stores/useCommandStore";
@@ -16,7 +16,7 @@ export type GameSceneProps = React.DetailedHTMLProps<React.HTMLAttributes<HTMLCa
 export const GameScene: React.FC<GameSceneProps> = () => {
   const controls = useRef<CameraControls>(null);
   const { add } = useCommandStore();
-  const { text } = useDialogStore();
+  const { text, options } = useDialogStore();
 
   useEffect(() => {
     add([
@@ -34,17 +34,23 @@ export const GameScene: React.FC<GameSceneProps> = () => {
         <Suspense fallback={<LoadingScene />}>
           <GameLevelModel
             position={[0, 0, 0]}
-            onClick={(e) => {
+            onClick={(_e) => {
               add([
-                { type: "dialog", args: [`Answer the next question ${e as string}`] },
-                { type: "question", args: ["qcm"] },
+                { type: "dialog", args: [`Answer the next question`] },
+                {
+                  type: "question",
+                  args: [
+                    "What is the Python code to check if a number is even",
+                    ["1) is_even = num % 2 == 1", "2) is_even = num % 2 == 0"],
+                  ],
+                },
               ]);
             }}
           />
         </Suspense>
         {/* <SkyBox /> */}
       </Canvas>
-      <AnimatePresence>{text && <Dialog text={text} />}</AnimatePresence>
+      <AnimatePresence>{text && <Dialog text={text} options={options} />}</AnimatePresence>
     </>
   );
 };

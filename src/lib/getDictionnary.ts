@@ -1,8 +1,9 @@
 import "server-only";
 
 const dictionnaries = {
-  en: () => import("@public/locales/en.json").then((module) => module.default),
-  fr: () => import("@public/locales/fr.json").then((module) => module.default),
+  // eslint-disable-next-line prettier/prettier
+  en: () => import("@public/locales/en.json", { with: { type: "json" }}).then((module) => module.default),
+  fr: () => import("@public/locales/fr.json", { with: { type: "json" }}).then((module) => module.default),
 };
 
 export type Locale = keyof typeof dictionnaries;

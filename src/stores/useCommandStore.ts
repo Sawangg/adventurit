@@ -21,9 +21,11 @@ export const useCommandStore = create<CommandState>()((set) => ({
     }),
   remove: () =>
     set((state) => {
+      const dialogStore = useDialogStore.getState();
+      dialogStore.setText("");
+      dialogStore.setOptions([]);
       const commands = state.commands.slice(1);
       if (commands[0]) commandHandler(commands[0]);
-      else commandHandler({ type: "clear", args: [] });
       return { commands: state.commands.slice(1) };
     }),
 }));
@@ -44,12 +46,11 @@ const commandHandler = (command: Command) => {
       console.log(command.args);
       break;
     case "question":
-      console.log(command.args);
-      break;
-    case "clear":
       {
         const dialogStore = useDialogStore.getState();
-        dialogStore.setText("");
+        dialogStore.setText(command.args[0] as string);
+        const options = command.args[1] as string[];
+        dialogStore.setOptions(options);
       }
       break;
     default:
