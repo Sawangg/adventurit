@@ -37,6 +37,7 @@ module.exports = {
     "plugin:jsx-a11y/recommended",
     "plugin:prettier/recommended",
     "plugin:tailwindcss/recommended",
+    "plugin:drizzle/recommended",
     "next/core-web-vitals",
   ],
   rules: {

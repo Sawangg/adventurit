@@ -13,7 +13,7 @@ export default function RootLayout({ children, params }: { children: React.React
   return (
     <html
       lang={params.lang}
-      className={`overflow-x-hidden scroll-smooth bg-[var(--primary)] text-white ${inter.className}`}
+      className={`overflow-hidden scroll-smooth bg-[var(--primary)] text-white ${inter.className}`}
     >
       {children}
     </html>

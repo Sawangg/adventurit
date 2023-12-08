@@ -3,7 +3,7 @@ import { getDictionnary, type Locale } from "@lib/getDictionnary";
 import { MainMenu } from "@modules/scene/menu/MainMenu";
 import { AspectRatio } from "@ui/AspectRatio";
 
-export default async function Home({ params }: { params: { lang: string } }) {
+export default async function Page({ params }: { params: { lang: string } }) {
   const dictionnary = await getDictionnary(params.lang as Locale);
 
   return (

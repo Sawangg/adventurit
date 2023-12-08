@@ -6,7 +6,7 @@ import { AspectRatio } from "@ui/AspectRatio";
 import { Button } from "@ui/button";
 
 export const metadata: Metadata = {
-  title: "Adventur'IT admin — SG",
+  title: "Adventur'IT — Admin",
 };
 
 export default async function AdminLayout({

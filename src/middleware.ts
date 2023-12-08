@@ -1,7 +1,7 @@
 import { NextResponse, type NextRequest } from "next/server";
 import { match } from "@formatjs/intl-localematcher";
 import type { NextAuthRequest } from "next-auth/lib";
-import { auth } from "@lib/auth";
+import { authMiddleware } from "@lib/auth.config"; // TODO: change this to @lib/auth.ts once postgres.js supports edge runtime
 import { defaultLocale, locales } from "@lib/constants";
 import { env } from "@src/env.mjs";
 
@@ -16,12 +16,7 @@ const getRequestLocale = (request: NextRequest) => {
   return match(languages, locales, defaultLocale);
 };
 
-export default auth((request: NextAuthRequest): NextResponse => {
-  // Server action ignore
-  if (request.headers.get("content-type")?.includes("multipart/form-data")) {
-    return NextResponse.next();
-  }
-
+export default authMiddleware((request: NextAuthRequest): NextResponse => {
   // Content Security Policy
   const nonce = Buffer.from(crypto.randomUUID()).toString("base64");
   const cspHeader = `
@@ -32,7 +27,7 @@ export default auth((request: NextAuthRequest): NextResponse => {
     style-src 'self' 'unsafe-inline';
     img-src 'self' blob: data:;
     font-src 'self';
-    connect-src 'self';
+    connect-src 'self' blob:;
     form-action 'self';
     media-src 'self';
     object-src 'none';
@@ -66,4 +61,5 @@ export default auth((request: NextAuthRequest): NextResponse => {
 
 export const config = {
   matcher: ["/((?!api|_next|.*\\..*).*)"],
+  runtime: "experimental-edge",
 };

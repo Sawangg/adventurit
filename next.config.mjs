@@ -5,8 +5,6 @@ import { env } from "./src/env.mjs";
 const nextConfig = {
   productionBrowserSourceMaps: true,
   images: {
-    dangerouslyAllowSVG: env.NODE_ENV !== "production" ? true : false,
-    contentDispositionType: env.NODE_ENV !== "production" ? "attachment" : undefined,
     remotePatterns: [
       {
         protocol: "https",

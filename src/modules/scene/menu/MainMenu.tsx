@@ -7,9 +7,9 @@ import { CameraControls, useGLTF } from "@react-three/drei";
 import { Canvas } from "@react-three/fiber";
 import { AnimatePresence, motion } from "framer-motion";
 import { useFormState } from "react-dom";
+import { startGame } from "@actions/game/startGame";
 import { signInGithub } from "@actions/login/signInGithub";
 import { signInGoogle } from "@actions/login/signInGoogle";
-import { startGame } from "@actions/startGame";
 import { afkTimeoutSeconds } from "@lib/constants";
 import type { Dictionnary } from "@lib/getDictionnary";
 import { createVector3 } from "@lib/utils";
@@ -27,7 +27,7 @@ export const MainMenu: React.FC<MainMenuProps> = () => {
   const [currentMenu, setCurrentMenu] = useState<string>("anykey");
   const defaultCameraPosition = createVector3([800, 200, 100]);
   const [timeoutId, setTimeoutId] = useState<NodeJS.Timeout | null>(null);
-  const [state, dispatch] = useFormState(startGame, null);
+  const [state, dispatch] = useFormState(startGame, { type: "ok" });
 
   const handleMenus = useCallback(
     (menu: string) => {
@@ -37,7 +37,7 @@ export const MainMenu: React.FC<MainMenuProps> = () => {
         case "anykey":
           break;
         case "main":
-          void controls.current!.truck(200, 0, true);
+          void controls.current?.truck(200, 0, true);
           break;
         case "settings":
           break;
@@ -74,7 +74,17 @@ export const MainMenu: React.FC<MainMenuProps> = () => {
       <div className="absolute inset-0 text-black">
         <AnimatePresence>
           {currentMenu === "anykey" && (
-            <div className="flex h-full w-full items-center justify-center bg-black/50 backdrop-blur-sm">
+            <div
+              className="flex h-full w-full items-center justify-center bg-black/50 backdrop-blur-sm"
+              onClick={() => {
+                handleMenus("main");
+              }}
+              onKeyDown={() => {
+                handleMenus("main");
+              }}
+              role="button"
+              tabIndex={0}
+            >
               <motion.p
                 initial={{ opacity: 0, y: 10 }}
                 animate={{ opacity: 1, y: 0 }}
