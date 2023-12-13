@@ -27,7 +27,7 @@ export const MainMenu: React.FC<MainMenuProps> = () => {
   const [currentMenu, setCurrentMenu] = useState<string>("anykey");
   const defaultCameraPosition = createVector3([800, 200, 100]);
   const [timeoutId, setTimeoutId] = useState<NodeJS.Timeout | null>(null);
-  const [state, dispatch] = useFormState(startGame, { type: "ok" });
+  const [state, formAction] = useFormState<{ message: string | null }>(startGame, { message: null });
 
   const handleMenus = useCallback(
     (menu: string) => {
@@ -35,18 +35,25 @@ export const MainMenu: React.FC<MainMenuProps> = () => {
 
       switch (menu) {
         case "anykey":
-          break;
-        case "main":
+          void controls.current?.dolly(-150, true);
           void controls.current?.truck(200, 0, true);
           break;
+        case "main":
+          if (currentMenu === "anykey") {
+            void controls.current?.dolly(150, true);
+            void controls.current?.truck(-200, 0, true);
+          }
+          if (currentMenu === "settings") void controls.current?.truck(200, 0, true);
+          break;
         case "settings":
+          if (currentMenu === "main") void controls.current?.truck(-200, 0, true);
           break;
         default:
           break;
       }
       setCurrentMenu(menu);
     },
-    [setCurrentMenu, timeoutId],
+    [currentMenu, timeoutId],
   );
 
   useEffect(() => {
@@ -71,7 +78,7 @@ export const MainMenu: React.FC<MainMenuProps> = () => {
         </Suspense>
       </Canvas>
 
-      <div className="absolute inset-0 text-black">
+      <div className="absolute inset-0 h-screen w-screen text-black">
         <AnimatePresence>
           {currentMenu === "anykey" && (
             <div
@@ -92,19 +99,28 @@ export const MainMenu: React.FC<MainMenuProps> = () => {
                 transition={{ duration: 0.7, delay: 0.3 }}
                 className="w-max text-lg uppercase text-white"
               >
-                Press Any key to start
+                Press Any key or Click to start
               </motion.p>
             </div>
           )}
-
           {currentMenu === "main" && (
             <motion.div
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ duration: 0.7 }}
-              className="flex items-center gap-x-12 text-lg uppercase"
+              className="flex h-full items-center gap-x-28 p-8 text-lg uppercase"
             >
-              <h1 className="text-4xl font-bold">Adventur&apos;IT</h1>
+              <div className="flex items-center">
+                <figure className="w-36">
+                  <AspectRatio ratio={1 / 1}>
+                    <Image src="/assets/logo.png" alt="" sizes="144px" fill />
+                  </AspectRatio>
+                </figure>
+                <div className="flex flex-col gap-y-2">
+                  <h1 className="text-7xl font-bold">Adventur&apos;IT</h1>
+                  <p className="text-sm">The interactive recrutment game</p>
+                </div>
+              </div>
               <motion.div
                 initial={{ opacity: 0, x: -10 }}
                 animate={{ opacity: 1, x: 0 }}
@@ -112,10 +128,11 @@ export const MainMenu: React.FC<MainMenuProps> = () => {
                 transition={{ delay: 0.5 }}
                 className="flex flex-col items-start gap-y-3"
               >
-                <form action={dispatch}>
-                  <MainMenuButton className="uppercase">Start</MainMenuButton>
+                <form action={formAction}>
+                  <MainMenuButton className="uppercase">Start Game</MainMenuButton>
                 </form>
-                {state && state?.type === "error" && (
+                {/* TODO: fix bug with state returning undefined instead of message */}
+                {state === undefined && (
                   <div className="absolute inset-0 flex h-full w-full items-center justify-center bg-black/50 backdrop-blur-sm">
                     <motion.div
                       initial={{ opacity: 0, y: 10 }}
@@ -163,17 +180,17 @@ export const MainMenu: React.FC<MainMenuProps> = () => {
               animate={{ opacity: 1 }}
               exit={{ opacity: 0 }}
               transition={{ duration: 0.7, delay: 2 }}
-              className="flex justify-around"
+              className="flex h-full items-center gap-x-28 p-8 pl-40 text-lg uppercase"
             >
-              <div>
-                <h1 className="text-7xl uppercase">Settings</h1>
-                <MainMenuButton mouvement={0} onClick={() => handleMenus("main")} className="uppercase">
+              <div className="gap-y-2">
+                <h1 className="text-7xl font-bold">Settings</h1>
+                <MainMenuButton mouvement={0} onClick={() => handleMenus("main")} className="text-sm uppercase">
                   Back
                 </MainMenuButton>
               </div>
 
               <div className="flex flex-col gap-y-4">
-                <div className="flex flex-col">
+                <div className="flex flex-col items-start">
                   <h2 className="text-3xl">Sound</h2>
                   <button>Music</button>
                   <button>Sounds</button>

@@ -10,7 +10,7 @@ export const startGame = async () => {
   const session = await auth();
   if (!session) {
     return {
-      type: "error",
+      message: "error",
     };
   }
   const user = (await preparedUserEmail.execute({ email: session.user!.email }))[0];
