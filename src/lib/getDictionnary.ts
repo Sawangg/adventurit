@@ -10,5 +10,5 @@ export type Dictionnary = Awaited<ReturnType<typeof getDictionnary>>;
 
 export const getDictionnary = async <T extends Locale>(locale: T) => {
   if (typeof dictionnaries[locale] === "function") return dictionnaries[locale]();
-  return null;
+  throw new Error(`Locale ${locale} not found`);
 };
