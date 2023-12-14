@@ -28,6 +28,7 @@ export const MainMenu: React.FC<MainMenuProps> = () => {
   const defaultCameraPosition = createVector3([800, 200, 100]);
   const [timeoutId, setTimeoutId] = useState<NodeJS.Timeout | null>(null);
   const [state, formAction] = useFormState<{ message: string | null }>(startGame, { message: null });
+  console.log(state);
 
   const handleMenus = useCallback(
     (menu: string) => {
@@ -108,7 +109,7 @@ export const MainMenu: React.FC<MainMenuProps> = () => {
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ duration: 0.7 }}
-              className="flex h-full items-center gap-x-28 p-8 text-lg"
+              className="flex h-full items-center gap-x-6 p-8 text-lg 3xl:gap-x-28"
             >
               <div className="flex items-center">
                 <figure className="w-36">
@@ -117,7 +118,7 @@ export const MainMenu: React.FC<MainMenuProps> = () => {
                   </AspectRatio>
                 </figure>
                 <div className="flex flex-col gap-y-2">
-                  <h1 className="text-7xl font-bold uppercase">Adventur&apos;IT</h1>
+                  <h1 className="text-6xl font-bold uppercase 3xl:text-7xl">Adventur&apos;IT</h1>
                   <p className="text-sm uppercase">The interactive recrutment game</p>
                 </div>
               </div>

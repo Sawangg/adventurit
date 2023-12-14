@@ -11,6 +11,9 @@ module.exports = {
       },
     },
     extend: {
+      screens: {
+        "3xl": "1920px",
+      },
       minWidth: {
         screen: "100vw",
       },
