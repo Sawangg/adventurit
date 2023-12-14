@@ -28,7 +28,6 @@ export const MainMenu: React.FC<MainMenuProps> = () => {
   const defaultCameraPosition = createVector3([800, 200, 100]);
   const [timeoutId, setTimeoutId] = useState<NodeJS.Timeout | null>(null);
   const [state, formAction] = useFormState<{ message: string | null }>(startGame, { message: null });
-  console.log(state);
 
   const handleMenus = useCallback(
     (menu: string) => {
@@ -132,8 +131,7 @@ export const MainMenu: React.FC<MainMenuProps> = () => {
                 <form action={formAction}>
                   <MainMenuButton className="uppercase">Start Game</MainMenuButton>
                 </form>
-                {/* TODO: fix bug with state returning undefined instead of message */}
-                {state === undefined && (
+                {state?.message === "error" && (
                   <div className="absolute inset-0 flex h-full w-full flex-col items-center justify-center gap-y-7 bg-black/50 text-white backdrop-blur-sm">
                     <div className="flex flex-col items-center gap-y-3">
                       <h1 className="text-6xl uppercase">Login</h1>
