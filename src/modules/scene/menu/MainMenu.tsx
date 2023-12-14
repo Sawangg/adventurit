@@ -108,7 +108,7 @@ export const MainMenu: React.FC<MainMenuProps> = () => {
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ duration: 0.7 }}
-              className="flex h-full items-center gap-x-28 p-8 text-lg uppercase"
+              className="flex h-full items-center gap-x-28 p-8 text-lg"
             >
               <div className="flex items-center">
                 <figure className="w-36">
@@ -117,8 +117,8 @@ export const MainMenu: React.FC<MainMenuProps> = () => {
                   </AspectRatio>
                 </figure>
                 <div className="flex flex-col gap-y-2">
-                  <h1 className="text-7xl font-bold">Adventur&apos;IT</h1>
-                  <p className="text-sm">The interactive recrutment game</p>
+                  <h1 className="text-7xl font-bold uppercase">Adventur&apos;IT</h1>
+                  <p className="text-sm uppercase">The interactive recrutment game</p>
                 </div>
               </div>
               <motion.div
@@ -133,13 +133,18 @@ export const MainMenu: React.FC<MainMenuProps> = () => {
                 </form>
                 {/* TODO: fix bug with state returning undefined instead of message */}
                 {state === undefined && (
-                  <div className="absolute inset-0 flex h-full w-full items-center justify-center bg-black/50 backdrop-blur-sm">
+                  <div className="absolute inset-0 flex h-full w-full flex-col items-center justify-center gap-y-7 bg-black/50 text-white backdrop-blur-sm">
+                    <div className="flex flex-col items-center gap-y-3">
+                      <h1 className="text-6xl uppercase">Login</h1>
+                      <p className="text-sm">Please login to continue</p>
+                    </div>
+
                     <motion.div
                       initial={{ opacity: 0, y: 10 }}
                       animate={{ opacity: 1, y: 0 }}
                       exit={{ opacity: 0 }}
                       transition={{ duration: 0.7, delay: 0.3 }}
-                      className="w-max text-lg uppercase text-white"
+                      className="flex w-max flex-col gap-y-4 text-lg uppercase"
                     >
                       <form action={signInGithub}>
                         <Button variant="outline" className="w-52 gap-x-2">

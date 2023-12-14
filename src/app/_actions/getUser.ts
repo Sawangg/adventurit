@@ -1,11 +1,11 @@
 import { z } from "zod";
-import { preparedUserAnswersRequest } from "@db/prepared/userAnswers";
-import { preparedUserGamesRequest } from "@db/prepared/userGames";
-import { preparedUserGradesRequest } from "@db/prepared/userGrades";
+import { preparedUserAnswers } from "@db/prepared/user/userAnswers";
+import { preparedUserGames } from "@db/prepared/user/userGames";
+import { preparedUserGrades } from "@db/prepared/user/userGrades";
 
 const UserSchema = z.object({
   id: z.string(),
-  email: z.string().email({ message: "invalid email" }),
+  email: z.string().email(),
   easy: z.number(),
   medium: z.number(),
   hard: z.number(),
@@ -17,9 +17,9 @@ const UserSchema = z.object({
         answers: z
           .array(
             z.object({
-              id: z.number(),
+              id: z.number().nullable(),
               statement: z.string().nullable(),
-              answer: z.string(),
+              answer: z.string().nullable(),
               difficulty: z.string().nullable(),
               grade: z.number().nullable(),
             }),
@@ -32,16 +32,16 @@ const UserSchema = z.object({
 export type User = z.infer<typeof UserSchema>;
 
 export const getUser = async (id: string): Promise<User> => {
-  const requestUserResult = await preparedUserGradesRequest.execute({ id });
+  const requestUserResult = await preparedUserGrades.execute({ id });
   if (!requestUserResult) throw new Error("User not found");
   const user: User = requestUserResult[0];
 
-  const requestGamesResult = await preparedUserGamesRequest.execute({ id });
+  const requestGamesResult = await preparedUserGames.execute({ id });
   if (!requestGamesResult) throw new Error("User games not found");
   user.games = requestGamesResult;
 
   for (const game of user.games) {
-    const requestAnswersResult = await preparedUserAnswersRequest.execute({ gameId: game.id });
+    const requestAnswersResult = await preparedUserAnswers.execute({ gameId: game.id });
     if (!requestAnswersResult) throw new Error("User answers not found");
     game.answers = requestAnswersResult;
   }

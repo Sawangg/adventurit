@@ -82,7 +82,7 @@ export default async function AdminUserPage({ params }: { params: { lang: string
                   ) : (
                     <Accordion key={game.id} type="single" collapsible>
                       {game.answers?.map((answer, idx) => (
-                        <AccordionItem value={answer.id.toString()} key={answer.id}>
+                        <AccordionItem value={idx.toString()} key={answer.id}>
                           <AccordionTrigger className="flex flex-row items-center justify-between space-y-0 pb-2">
                             <div className="text-sm font-medium">
                               {dictionnary.admin.user_detail.question + (idx + 1)} ({answer.difficulty})

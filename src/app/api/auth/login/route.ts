@@ -1,7 +1,7 @@
 import { NextResponse, type NextRequest } from "next/server";
 import type { User } from "next-auth";
 import { z } from "zod";
-import { preparedUserPassword } from "@db/prepared/preparedUserPassword";
+import { preparedUserPassword } from "@db/prepared/user/userPassword";
 
 const AuthSchema = z.object({
   email: z.string().email({ message: "invalid email" }).min(1, { message: "email is required" }),

@@ -20,11 +20,11 @@
     "paths": {
       "@actions/*": ["./src/app/_actions/*"],
       "@db/*": ["./src/db/*"],
-      "@hooks/*": ["./src/hooks/*"],
       "@lib/*": ["./src/lib/*"],
       "@modules/*": ["./src/modules/*"],
       "@public/*": ["./public/*"],
       "@src/*": ["./src/*"],
+      "@stores/*": ["./src/stores/*"],
       "@styles/*": ["./src/styles/*"],
       "@ui/*": ["./src/ui/*"]
     },

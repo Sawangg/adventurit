@@ -1,6 +1,6 @@
 "use server";
 
-import { preparedUserEmail } from "@db/prepared/userEmail";
+import { preparedUserEmail } from "@db/prepared/user/userEmail";
 
 export const isAdmin = async (email: string) => {
   const user = await preparedUserEmail.execute({ email });

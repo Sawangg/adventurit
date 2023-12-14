@@ -12,348 +12,436 @@ import type { GLTF } from "three-stdlib";
 
 type GLTFResult = GLTF & {
   nodes: {
-    ["sea_​​village900"]: THREE.Mesh;
-    ["sea_​​village899"]: THREE.Mesh;
-    ["sea_​​village898"]: THREE.Mesh;
-    ["sea_​​village897"]: THREE.Mesh;
-    ["sea_​​village896"]: THREE.Mesh;
-    ["sea_​​village895"]: THREE.Mesh;
-    ["sea_​​village894"]: THREE.Mesh;
-    ["sea_​​village893"]: THREE.Mesh;
-    ["sea_​​village892"]: THREE.Mesh;
-    ["sea_​​village891"]: THREE.Mesh;
-    ["sea_​​village890"]: THREE.Mesh;
-    ["sea_​​village889"]: THREE.Mesh;
-    ["sea_​​village888"]: THREE.Mesh;
-    ["sea_​​village887"]: THREE.Mesh;
-    ["sea_​​village886"]: THREE.Mesh;
-    ["sea_​​village885"]: THREE.Mesh;
-    ["sea_​​village884"]: THREE.Mesh;
-    ["sea_​​village883"]: THREE.Mesh;
-    ["sea_​​village882"]: THREE.Mesh;
-    ["sea_​​village881"]: THREE.Mesh;
-    ["sea_​​village880"]: THREE.Mesh;
-    ["sea_​​village879"]: THREE.Mesh;
-    ["sea_​​village878"]: THREE.Mesh;
-    ["sea_​​village877"]: THREE.Mesh;
-    ["sea_​​village876"]: THREE.Mesh;
-    ["sea_​​village875"]: THREE.Mesh;
-    ["sea_​​village874"]: THREE.Mesh;
-    ["sea_​​village873"]: THREE.Mesh;
-    ["sea_​​village872"]: THREE.Mesh;
-    ["sea_​​village871"]: THREE.Mesh;
-    ["sea_​​village870"]: THREE.Mesh;
-    ["sea_​​village869"]: THREE.Mesh;
-    ["sea_​​village868"]: THREE.Mesh;
-    ["sea_​​village867"]: THREE.Mesh;
-    ["sea_​​village866"]: THREE.Mesh;
-    ["sea_​​village865"]: THREE.Mesh;
-    ["sea_​​village864"]: THREE.Mesh;
-    ["sea_​​village863"]: THREE.Mesh;
-    ["sea_​​village862"]: THREE.Mesh;
-    ["sea_​​village861"]: THREE.Mesh;
-    ["sea_​​village860"]: THREE.Mesh;
-    ["sea_​​village859"]: THREE.Mesh;
-    ["sea_​​village858"]: THREE.Mesh;
-    ["sea_​​village857"]: THREE.Mesh;
-    ["sea_​​village856"]: THREE.Mesh;
-    ["sea_​​village855"]: THREE.Mesh;
-    ["sea_​​village854"]: THREE.Mesh;
-    ["sea_​​village853"]: THREE.Mesh;
-    ["sea_​​village852"]: THREE.Mesh;
-    ["sea_​​village851"]: THREE.Mesh;
-    ["sea_​​village850"]: THREE.Mesh;
-    ["sea_​​village849"]: THREE.Mesh;
-    ["sea_​​village848"]: THREE.Mesh;
-    ["sea_​​village847"]: THREE.Mesh;
-    ["sea_​​village846"]: THREE.Mesh;
-    ["sea_​​village845"]: THREE.Mesh;
-    ["sea_​​village844"]: THREE.Mesh;
-    ["sea_​​village843"]: THREE.Mesh;
-    ["sea_​​village842"]: THREE.Mesh;
-    ["sea_​​village841"]: THREE.Mesh;
-    ["sea_​​village840"]: THREE.Mesh;
-    ["sea_​​village839"]: THREE.Mesh;
-    ["sea_​​village838"]: THREE.Mesh;
-    ["sea_​​village837"]: THREE.Mesh;
-    ["sea_​​village836"]: THREE.Mesh;
-    ["sea_​​village835"]: THREE.Mesh;
-    ["sea_​​village834"]: THREE.Mesh;
-    ["sea_​​village833"]: THREE.Mesh;
-    ["sea_​​village832"]: THREE.Mesh;
-    ["sea_​​village831"]: THREE.Mesh;
-    ["sea_​​village830"]: THREE.Mesh;
-    ["sea_​​village829"]: THREE.Mesh;
-    ["sea_​​village828"]: THREE.Mesh;
-    ["sea_​​village827"]: THREE.Mesh;
-    ["sea_​​village826"]: THREE.Mesh;
-    ["sea_​​village825"]: THREE.Mesh;
-    ["sea_​​village824"]: THREE.Mesh;
-    ["sea_​​village823"]: THREE.Mesh;
-    ["sea_​​village822"]: THREE.Mesh;
-    ["sea_​​village821"]: THREE.Mesh;
-    ["sea_​​village820"]: THREE.Mesh;
-    ["sea_​​village819"]: THREE.Mesh;
-    ["sea_​​village818"]: THREE.Mesh;
-    ["sea_​​village817"]: THREE.Mesh;
-    ["sea_​​village816"]: THREE.Mesh;
-    ["sea_​​village815"]: THREE.Mesh;
-    ["sea_​​village814"]: THREE.Mesh;
-    ["sea_​​village813"]: THREE.Mesh;
-    ["sea_​​village812"]: THREE.Mesh;
-    ["sea_​​village811"]: THREE.Mesh;
-    ["sea_​​village810"]: THREE.Mesh;
-    ["sea_​​village809"]: THREE.Mesh;
-    ["sea_​​village808"]: THREE.Mesh;
-    ["sea_​​village807"]: THREE.Mesh;
-    ["sea_​​village806"]: THREE.Mesh;
-    ["sea_​​village805"]: THREE.Mesh;
-    ["sea_​​village804"]: THREE.Mesh;
-    ["sea_​​village803"]: THREE.Mesh;
-    ["sea_​​village802"]: THREE.Mesh;
-    ["sea_​​village801"]: THREE.Mesh;
-    ["sea_​​village800"]: THREE.Mesh;
-    ["sea_​​village799"]: THREE.Mesh;
-    ["sea_​​village798"]: THREE.Mesh;
-    ["sea_​​village797"]: THREE.Mesh;
-    island3_house_3: THREE.Mesh;
-    island3_house_2: THREE.Mesh;
-    ["sea_​​village794"]: THREE.Mesh;
-    island3_chapelle: THREE.Mesh;
-    ["sea_​​village792"]: THREE.Mesh;
-    ["sea_​​village791"]: THREE.Mesh;
-    ["sea_​​village790"]: THREE.Mesh;
-    ["sea_​​village789"]: THREE.Mesh;
-    ["sea_​​village788"]: THREE.Mesh;
-    ["sea_​​village787"]: THREE.Mesh;
-    ["sea_​​village786"]: THREE.Mesh;
-    ["sea_​​village785"]: THREE.Mesh;
-    ["sea_​​village784"]: THREE.Mesh;
-    ["sea_​​village783"]: THREE.Mesh;
-    ["sea_​​village782"]: THREE.Mesh;
-    ["sea_​​village781"]: THREE.Mesh;
-    ["sea_​​village780"]: THREE.Mesh;
-    ["sea_​​village779"]: THREE.Mesh;
-    ["sea_​​village778"]: THREE.Mesh;
-    ["sea_​​village777"]: THREE.Mesh;
-    ["sea_​​village776"]: THREE.Mesh;
-    ["sea_​​village775"]: THREE.Mesh;
-    ["sea_​​village774"]: THREE.Mesh;
-    ["sea_​​village773"]: THREE.Mesh;
-    ["sea_​​village772"]: THREE.Mesh;
-    ["sea_​​village771"]: THREE.Mesh;
-    ["sea_​​village770"]: THREE.Mesh;
-    ["sea_​​village769"]: THREE.Mesh;
-    ["sea_​​village768"]: THREE.Mesh;
-    ["sea_​​village762"]: THREE.Mesh;
-    ["sea_​​village761"]: THREE.Mesh;
-    ["sea_​​village760"]: THREE.Mesh;
-    ["sea_​​village759"]: THREE.Mesh;
-    ["sea_​​village758"]: THREE.Mesh;
-    ["sea_​​village662"]: THREE.Mesh;
-    ["sea_​​village661"]: THREE.Mesh;
-    ["sea_​​village660"]: THREE.Mesh;
-    ["sea_​​village659"]: THREE.Mesh;
-    ["sea_​​village658"]: THREE.Mesh;
-    ["sea_​​village657"]: THREE.Mesh;
-    ["sea_​​village656"]: THREE.Mesh;
-    ["sea_​​village655"]: THREE.Mesh;
-    ["sea_​​village654"]: THREE.Mesh;
-    ["sea_​​village653"]: THREE.Mesh;
-    ["sea_​​village652"]: THREE.Mesh;
-    ["sea_​​village651"]: THREE.Mesh;
-    ["sea_​​village650"]: THREE.Mesh;
-    ["sea_​​village649"]: THREE.Mesh;
-    ["sea_​​village648"]: THREE.Mesh;
-    ["sea_​​village647"]: THREE.Mesh;
-    ["sea_​​village646"]: THREE.Mesh;
-    ["sea_​​village645"]: THREE.Mesh;
-    ["sea_​​village644"]: THREE.Mesh;
-    ["sea_​​village643"]: THREE.Mesh;
-    ["sea_​​village642"]: THREE.Mesh;
-    ["sea_​​village641"]: THREE.Mesh;
-    ["sea_​​village640"]: THREE.Mesh;
-    ["sea_​​village639"]: THREE.Mesh;
-    ["sea_​​village638"]: THREE.Mesh;
-    ["sea_​​village637"]: THREE.Mesh;
-    ["sea_​​village636"]: THREE.Mesh;
-    ["sea_​​village635"]: THREE.Mesh;
-    ["sea_​​village634"]: THREE.Mesh;
-    ["sea_​​village633"]: THREE.Mesh;
-    ["sea_​​village632"]: THREE.Mesh;
-    ["sea_​​village631"]: THREE.Mesh;
-    ["sea_​​village630"]: THREE.Mesh;
-    ["sea_​​village629"]: THREE.Mesh;
-    ["sea_​​village628"]: THREE.Mesh;
-    ["sea_​​village627"]: THREE.Mesh;
-    ["sea_​​village626"]: THREE.Mesh;
-    ["sea_​​village625"]: THREE.Mesh;
-    ["sea_​​village622"]: THREE.Mesh;
-    ["sea_​​village621"]: THREE.Mesh;
-    ["sea_​​village620"]: THREE.Mesh;
-    ["sea_​​village619"]: THREE.Mesh;
-    ["sea_​​village618"]: THREE.Mesh;
-    ["sea_​​village617"]: THREE.Mesh;
-    ["sea_​​village616"]: THREE.Mesh;
-    ["sea_​​village602"]: THREE.Mesh;
-    ["sea_​​village599"]: THREE.Mesh;
-    ["sea_​​village598"]: THREE.Mesh;
-    ["sea_​​village597"]: THREE.Mesh;
-    ["sea_​​village596"]: THREE.Mesh;
-    ["sea_​​village595"]: THREE.Mesh;
-    ["sea_​​village594"]: THREE.Mesh;
-    ["sea_​​village593"]: THREE.Mesh;
-    ["sea_​​village592"]: THREE.Mesh;
-    ["sea_​​village591"]: THREE.Mesh;
-    ["sea_​​village590"]: THREE.Mesh;
-    ["sea_​​village589"]: THREE.Mesh;
-    ["sea_​​village543"]: THREE.Mesh;
-    ["sea_​​village542"]: THREE.Mesh;
-    ["sea_​​village531"]: THREE.Mesh;
-    ["sea_​​village530"]: THREE.Mesh;
-    ["sea_​​village525"]: THREE.Mesh;
-    ["sea_​​village524"]: THREE.Mesh;
-    ["sea_​​village398"]: THREE.Mesh;
-    ["sea_​​village397"]: THREE.Mesh;
-    ["sea_​​village396"]: THREE.Mesh;
-    ["sea_​​village395"]: THREE.Mesh;
-    ["sea_​​village394"]: THREE.Mesh;
-    ["sea_​​village393"]: THREE.Mesh;
-    ["sea_​​village392"]: THREE.Mesh;
-    ["sea_​​village391"]: THREE.Mesh;
-    ["sea_​​village390"]: THREE.Mesh;
-    ["sea_​​village389"]: THREE.Mesh;
-    ["sea_​​village388"]: THREE.Mesh;
-    ["sea_​​village387"]: THREE.Mesh;
-    ["sea_​​village386"]: THREE.Mesh;
-    ["sea_​​village385"]: THREE.Mesh;
-    ["sea_​​village384"]: THREE.Mesh;
-    ["sea_​​village383"]: THREE.Mesh;
-    ["sea_​​village382"]: THREE.Mesh;
-    ["sea_​​village381"]: THREE.Mesh;
-    ["sea_​​village380"]: THREE.Mesh;
-    ["sea_​​village379"]: THREE.Mesh;
-    ["sea_​​village378"]: THREE.Mesh;
-    ["sea_​​village377"]: THREE.Mesh;
-    ["sea_​​village376"]: THREE.Mesh;
-    ["sea_​​village375"]: THREE.Mesh;
-    ["sea_​​village374"]: THREE.Mesh;
-    ["sea_​​village373"]: THREE.Mesh;
-    ["sea_​​village372"]: THREE.Mesh;
-    ["sea_​​village371"]: THREE.Mesh;
-    ["sea_​​village370"]: THREE.Mesh;
-    ["sea_​​village342"]: THREE.Mesh;
-    ["sea_​​village341"]: THREE.Mesh;
-    ["sea_​​village340"]: THREE.Mesh;
-    ["sea_​​village339"]: THREE.Mesh;
-    ["sea_​​village338"]: THREE.Mesh;
-    ["sea_​​village337"]: THREE.Mesh;
-    ["sea_​​village336"]: THREE.Mesh;
-    ["sea_​​village335"]: THREE.Mesh;
-    ["sea_​​village334"]: THREE.Mesh;
-    ["sea_​​village333"]: THREE.Mesh;
-    ["sea_​​village332"]: THREE.Mesh;
-    ["sea_​​village331"]: THREE.Mesh;
-    ["sea_​​village330"]: THREE.Mesh;
-    ["sea_​​village329"]: THREE.Mesh;
-    ["sea_​​village327"]: THREE.Mesh;
-    ["sea_​​village326"]: THREE.Mesh;
-    ["sea_​​village325"]: THREE.Mesh;
-    ["sea_​​village324"]: THREE.Mesh;
-    ["sea_​​village323"]: THREE.Mesh;
-    ["sea_​​village322"]: THREE.Mesh;
-    ["sea_​​village321"]: THREE.Mesh;
-    ["sea_​​village320"]: THREE.Mesh;
-    ["sea_​​village319"]: THREE.Mesh;
-    ["sea_​​village318"]: THREE.Mesh;
-    ["sea_​​village317"]: THREE.Mesh;
-    ["sea_​​village316"]: THREE.Mesh;
-    ["sea_​​village315"]: THREE.Mesh;
-    ["sea_​​village314"]: THREE.Mesh;
-    ["sea_​​village313"]: THREE.Mesh;
-    ["sea_​​village312"]: THREE.Mesh;
-    island3_house_1: THREE.Mesh;
-    island3_eglise: THREE.Mesh;
-    ["sea_​​village214"]: THREE.Mesh;
-    ["sea_​​village213"]: THREE.Mesh;
-    ["sea_​​village212"]: THREE.Mesh;
-    ["sea_​​village211"]: THREE.Mesh;
-    ["sea_​​village210"]: THREE.Mesh;
-    ["sea_​​village208"]: THREE.Mesh;
-    ["sea_​​village207"]: THREE.Mesh;
-    ["sea_​​village206"]: THREE.Mesh;
-    ["sea_​​village122"]: THREE.Mesh;
-    ["sea_​​village121"]: THREE.Mesh;
-    ["sea_​​village120"]: THREE.Mesh;
-    ["sea_​​village119"]: THREE.Mesh;
-    ["sea_​​village117"]: THREE.Mesh;
-    ["sea_​​village116"]: THREE.Mesh;
-    ["sea_​​village115"]: THREE.Mesh;
-    ["sea_​​village114"]: THREE.Mesh;
-    ["sea_​​village113"]: THREE.Mesh;
-    ["sea_​​village112"]: THREE.Mesh;
-    ["sea_​​village111"]: THREE.Mesh;
-    ["sea_​​village090"]: THREE.Mesh;
-    ["sea_​​village079"]: THREE.Mesh;
-    ["sea_​​village078"]: THREE.Mesh;
-    ["sea_​​village045"]: THREE.Mesh;
-    ["sea_​​village039"]: THREE.Mesh;
-    ["sea_​​village724"]: THREE.Mesh;
-    ["sea_​​village723"]: THREE.Mesh;
-    ["sea_​​village722"]: THREE.Mesh;
-    ["sea_​​village721"]: THREE.Mesh;
-    ["sea_​​village720"]: THREE.Mesh;
-    ["sea_​​village719"]: THREE.Mesh;
-    ["sea_​​village416"]: THREE.Mesh;
-    ["sea_​​village415"]: THREE.Mesh;
-    island1_house_1: THREE.Mesh;
-    island1_house_2: THREE.Mesh;
-    ["sea_​​village222"]: THREE.Mesh;
-    ["sea_​​village167"]: THREE.Mesh;
-    ["sea_​​village166"]: THREE.Mesh;
-    ["sea_​​village165"]: THREE.Mesh;
-    ["sea_​​village164"]: THREE.Mesh;
-    ["sea_​​village163"]: THREE.Mesh;
-    ["sea_​​village162"]: THREE.Mesh;
-    ["sea_​​village161"]: THREE.Mesh;
-    ["sea_​​village160"]: THREE.Mesh;
-    ["sea_​​village159"]: THREE.Mesh;
-    ["sea_​​village158"]: THREE.Mesh;
-    ["sea_​​village157"]: THREE.Mesh;
-    ["sea_​​village156"]: THREE.Mesh;
-    ["sea_​​village027"]: THREE.Mesh;
-    ["sea_​​village026"]: THREE.Mesh;
-    ["sea_​​village025"]: THREE.Mesh;
-    ["sea_​​village024"]: THREE.Mesh;
+    ["sea_​​village752"]: THREE.Mesh;
+    ["sea_​​village751"]: THREE.Mesh;
+    ["sea_​​village750"]: THREE.Mesh;
+    ["sea_​​village749"]: THREE.Mesh;
+    ["sea_​​village748"]: THREE.Mesh;
+    ["sea_​​village747"]: THREE.Mesh;
+    ["sea_​​village615"]: THREE.Mesh;
+    ["sea_​​village614"]: THREE.Mesh;
+    ["sea_​​village613"]: THREE.Mesh;
+    ["sea_​​village612"]: THREE.Mesh;
+    ["sea_​​village611"]: THREE.Mesh;
+    ["sea_​​village610"]: THREE.Mesh;
+    ["sea_​​village609"]: THREE.Mesh;
+    ["sea_​​village608"]: THREE.Mesh;
+    ["sea_​​village607"]: THREE.Mesh;
+    ["sea_​​village606"]: THREE.Mesh;
+    ["sea_​​village605"]: THREE.Mesh;
+    ["sea_​​village604"]: THREE.Mesh;
+    ["sea_​​village603"]: THREE.Mesh;
+    ["sea_​​village588"]: THREE.Mesh;
+    ["sea_​​village587"]: THREE.Mesh;
+    ["sea_​​village586"]: THREE.Mesh;
+    ["sea_​​village585"]: THREE.Mesh;
+    ["sea_​​village584"]: THREE.Mesh;
+    ["sea_​​village583"]: THREE.Mesh;
+    ["sea_​​village582"]: THREE.Mesh;
+    ["sea_​​village581"]: THREE.Mesh;
+    ["sea_​​village580"]: THREE.Mesh;
+    ["sea_​​village578"]: THREE.Mesh;
+    ["sea_​​village577"]: THREE.Mesh;
+    ["sea_​​village576"]: THREE.Mesh;
+    ["sea_​​village575"]: THREE.Mesh;
+    ["sea_​​village574"]: THREE.Mesh;
+    ["sea_​​village573"]: THREE.Mesh;
+    ["sea_​​village572"]: THREE.Mesh;
+    ["sea_​​village571"]: THREE.Mesh;
+    ["sea_​​village570"]: THREE.Mesh;
+    ["sea_​​village569"]: THREE.Mesh;
+    ["sea_​​village568"]: THREE.Mesh;
+    ["sea_​​village567"]: THREE.Mesh;
+    ["sea_​​village566"]: THREE.Mesh;
+    ["sea_​​village565"]: THREE.Mesh;
+    ["sea_​​village564"]: THREE.Mesh;
+    ["sea_​​village563"]: THREE.Mesh;
+    ["sea_​​village562"]: THREE.Mesh;
+    ["sea_​​village561"]: THREE.Mesh;
+    ["sea_​​village560"]: THREE.Mesh;
+    ["sea_​​village559"]: THREE.Mesh;
+    ["sea_​​village558"]: THREE.Mesh;
+    ["sea_​​village557"]: THREE.Mesh;
+    ["sea_​​village556"]: THREE.Mesh;
+    ["sea_​​village555"]: THREE.Mesh;
+    ["sea_​​village554"]: THREE.Mesh;
+    ["sea_​​village553"]: THREE.Mesh;
+    ["sea_​​village552"]: THREE.Mesh;
+    ["sea_​​village551"]: THREE.Mesh;
+    ["sea_​​village550"]: THREE.Mesh;
+    ["sea_​​village549"]: THREE.Mesh;
+    ["sea_​​village548"]: THREE.Mesh;
+    ["sea_​​village547"]: THREE.Mesh;
+    ["sea_​​village546"]: THREE.Mesh;
+    ["sea_​​village545"]: THREE.Mesh;
+    ["sea_​​village544"]: THREE.Mesh;
+    ["sea_​​village539"]: THREE.Mesh;
+    ["sea_​​village538"]: THREE.Mesh;
+    ["sea_​​village537"]: THREE.Mesh;
+    ["sea_​​village536"]: THREE.Mesh;
+    ["sea_​​village535"]: THREE.Mesh;
+    ["sea_​​village534"]: THREE.Mesh;
+    ["sea_​​village533"]: THREE.Mesh;
+    ["sea_​​village532"]: THREE.Mesh;
+    ["sea_​​village529"]: THREE.Mesh;
+    ["sea_​​village528"]: THREE.Mesh;
+    ["sea_​​village523"]: THREE.Mesh;
+    ["sea_​​village522"]: THREE.Mesh;
+    ["sea_​​village521"]: THREE.Mesh;
+    ["sea_​​village520"]: THREE.Mesh;
+    ["sea_​​village519"]: THREE.Mesh;
+    ["sea_​​village518"]: THREE.Mesh;
+    ["sea_​​village517"]: THREE.Mesh;
+    ["sea_​​village516"]: THREE.Mesh;
+    ["sea_​​village515"]: THREE.Mesh;
+    ["sea_​​village514"]: THREE.Mesh;
+    ["sea_​​village513"]: THREE.Mesh;
+    ["sea_​​village512"]: THREE.Mesh;
+    ["sea_​​village511"]: THREE.Mesh;
+    ["sea_​​village510"]: THREE.Mesh;
+    ["sea_​​village509"]: THREE.Mesh;
+    ["sea_​​village508"]: THREE.Mesh;
+    ["sea_​​village507"]: THREE.Mesh;
+    ["sea_​​village506"]: THREE.Mesh;
+    ["sea_​​village505"]: THREE.Mesh;
+    ["sea_​​village504"]: THREE.Mesh;
+    ["sea_​​village503"]: THREE.Mesh;
+    ["sea_​​village502"]: THREE.Mesh;
+    ["sea_​​village501"]: THREE.Mesh;
+    ["sea_​​village500"]: THREE.Mesh;
+    ["sea_​​village499"]: THREE.Mesh;
+    ["sea_​​village498"]: THREE.Mesh;
+    ["sea_​​village497"]: THREE.Mesh;
+    ["sea_​​village496"]: THREE.Mesh;
+    ["sea_​​village495"]: THREE.Mesh;
+    ["sea_​​village494"]: THREE.Mesh;
+    ["sea_​​village493"]: THREE.Mesh;
+    ["sea_​​village492"]: THREE.Mesh;
+    ["sea_​​village491"]: THREE.Mesh;
+    ["sea_​​village490"]: THREE.Mesh;
+    ["sea_​​village489"]: THREE.Mesh;
+    ["sea_​​village488"]: THREE.Mesh;
+    ["sea_​​village487"]: THREE.Mesh;
+    ["sea_​​village486"]: THREE.Mesh;
+    ["sea_​​village485"]: THREE.Mesh;
+    ["sea_​​village484"]: THREE.Mesh;
+    ["sea_​​village483"]: THREE.Mesh;
+    ["sea_​​village482"]: THREE.Mesh;
+    ["sea_​​village481"]: THREE.Mesh;
+    ["sea_​​village480"]: THREE.Mesh;
+    ["sea_​​village479"]: THREE.Mesh;
+    ["sea_​​village478"]: THREE.Mesh;
+    ["sea_​​village477"]: THREE.Mesh;
+    ["sea_​​village476"]: THREE.Mesh;
+    ["sea_​​village475"]: THREE.Mesh;
+    ["sea_​​village474"]: THREE.Mesh;
+    ["sea_​​village472"]: THREE.Mesh;
+    ["sea_​​village471"]: THREE.Mesh;
+    ["sea_​​village470"]: THREE.Mesh;
+    ["sea_​​village469"]: THREE.Mesh;
+    ["sea_​​village468"]: THREE.Mesh;
+    ["sea_​​village467"]: THREE.Mesh;
+    ["sea_​​village466"]: THREE.Mesh;
+    ["sea_​​village465"]: THREE.Mesh;
+    ["sea_​​village464"]: THREE.Mesh;
+    ["sea_​​village463"]: THREE.Mesh;
+    ["sea_​​village462"]: THREE.Mesh;
+    ["sea_​​village461"]: THREE.Mesh;
+    ["sea_​​village460"]: THREE.Mesh;
+    ["sea_​​village459"]: THREE.Mesh;
+    ["sea_​​village458"]: THREE.Mesh;
+    ["sea_​​village457"]: THREE.Mesh;
+    ["sea_​​village456"]: THREE.Mesh;
+    ["sea_​​village455"]: THREE.Mesh;
+    ["sea_​​village454"]: THREE.Mesh;
+    ["sea_​​village453"]: THREE.Mesh;
+    ["sea_​​village452"]: THREE.Mesh;
+    ["sea_​​village451"]: THREE.Mesh;
+    ["sea_​​village450"]: THREE.Mesh;
+    ["sea_​​village447"]: THREE.Mesh;
+    ["sea_​​village446"]: THREE.Mesh;
+    ["sea_​​village445"]: THREE.Mesh;
+    ["sea_​​village444"]: THREE.Mesh;
+    ["sea_​​village443"]: THREE.Mesh;
+    ["sea_​​village442"]: THREE.Mesh;
+    ["sea_​​village441"]: THREE.Mesh;
+    ["sea_​​village440"]: THREE.Mesh;
+    ["sea_​​village439"]: THREE.Mesh;
+    ["sea_​​village369"]: THREE.Mesh;
+    ["sea_​​village368"]: THREE.Mesh;
+    ["sea_​​village367"]: THREE.Mesh;
+    ["sea_​​village366"]: THREE.Mesh;
+    ["sea_​​village365"]: THREE.Mesh;
+    ["sea_​​village364"]: THREE.Mesh;
+    ["sea_​​village363"]: THREE.Mesh;
+    ["sea_​​village362"]: THREE.Mesh;
+    ["sea_​​village361"]: THREE.Mesh;
+    ["sea_​​village360"]: THREE.Mesh;
+    ["sea_​​village359"]: THREE.Mesh;
+    ["sea_​​village358"]: THREE.Mesh;
+    ["sea_​​village357"]: THREE.Mesh;
+    ["sea_​​village356"]: THREE.Mesh;
+    ["sea_​​village355"]: THREE.Mesh;
+    ["sea_​​village354"]: THREE.Mesh;
+    ["sea_​​village353"]: THREE.Mesh;
+    ["sea_​​village352"]: THREE.Mesh;
+    ["sea_​​village351"]: THREE.Mesh;
+    ["sea_​​village350"]: THREE.Mesh;
+    ["sea_​​village349"]: THREE.Mesh;
+    ["sea_​​village348"]: THREE.Mesh;
+    ["sea_​​village347"]: THREE.Mesh;
+    ["sea_​​village346"]: THREE.Mesh;
+    ["sea_​​village345"]: THREE.Mesh;
+    ["sea_​​village344"]: THREE.Mesh;
+    ["sea_​​village343"]: THREE.Mesh;
+    ["sea_​​village328"]: THREE.Mesh;
+    ["sea_​​village308"]: THREE.Mesh;
+    ["sea_​​village307"]: THREE.Mesh;
+    ["sea_​​village306"]: THREE.Mesh;
+    ["sea_​​village305"]: THREE.Mesh;
+    ["sea_​​village304"]: THREE.Mesh;
+    ["sea_​​village303"]: THREE.Mesh;
+    ["sea_​​village302"]: THREE.Mesh;
+    ["sea_​​village301"]: THREE.Mesh;
+    ["sea_​​village300"]: THREE.Mesh;
+    ["sea_​​village299"]: THREE.Mesh;
+    ["sea_​​village298"]: THREE.Mesh;
+    ["sea_​​village297"]: THREE.Mesh;
+    ["sea_​​village296"]: THREE.Mesh;
+    ["sea_​​village295"]: THREE.Mesh;
+    ["sea_​​village294"]: THREE.Mesh;
+    ["sea_​​village293"]: THREE.Mesh;
+    ["sea_​​village292"]: THREE.Mesh;
+    ["sea_​​village291"]: THREE.Mesh;
+    ["sea_​​village290"]: THREE.Mesh;
+    ["sea_​​village289"]: THREE.Mesh;
+    ["sea_​​village288"]: THREE.Mesh;
+    ["sea_​​village287"]: THREE.Mesh;
+    ["sea_​​village285"]: THREE.Mesh;
+    ["sea_​​village284"]: THREE.Mesh;
+    ["sea_​​village283"]: THREE.Mesh;
+    ["sea_​​village282"]: THREE.Mesh;
+    ["sea_​​village281"]: THREE.Mesh;
+    ["sea_​​village280"]: THREE.Mesh;
+    ["sea_​​village279"]: THREE.Mesh;
+    ["sea_​​village278"]: THREE.Mesh;
+    ["sea_​​village277"]: THREE.Mesh;
+    ["sea_​​village276"]: THREE.Mesh;
+    ["sea_​​village275"]: THREE.Mesh;
+    ["sea_​​village273"]: THREE.Mesh;
+    ["sea_​​village272"]: THREE.Mesh;
+    ["sea_​​village267"]: THREE.Mesh;
+    ["sea_​​village266"]: THREE.Mesh;
+    ["sea_​​village265"]: THREE.Mesh;
+    ["sea_​​village264"]: THREE.Mesh;
+    ["sea_​​village263"]: THREE.Mesh;
+    ["sea_​​village262"]: THREE.Mesh;
+    ["sea_​​village261"]: THREE.Mesh;
+    ["sea_​​village260"]: THREE.Mesh;
+    ["sea_​​village257"]: THREE.Mesh;
+    ["sea_​​village256"]: THREE.Mesh;
+    ["sea_​​village253"]: THREE.Mesh;
+    big_island_maison1: THREE.Mesh;
+    ["sea_​​village251"]: THREE.Mesh;
+    big_island_maison3: THREE.Mesh;
+    big_island_maison2: THREE.Mesh;
+    ["sea_​​village248"]: THREE.Mesh;
+    ["sea_​​village247"]: THREE.Mesh;
+    big_island_maison5: THREE.Mesh;
+    ["sea_​​village245"]: THREE.Mesh;
+    ["sea_​​village244"]: THREE.Mesh;
+    ["sea_​​village243"]: THREE.Mesh;
+    big_island_maison3001: THREE.Mesh;
+    island2_maison2: THREE.Mesh;
+    island2_maison1: THREE.Mesh;
+    big_island_eglise: THREE.Mesh;
+    ["sea_​​village238"]: THREE.Mesh;
+    ["sea_​​village237"]: THREE.Mesh;
+    ["sea_​​village236"]: THREE.Mesh;
+    island1_barque: THREE.Mesh;
+    island4_maison: THREE.Mesh;
+    ["sea_​​village233"]: THREE.Mesh;
+    ["sea_​​village232"]: THREE.Mesh;
+    ["sea_​​village231"]: THREE.Mesh;
+    ["sea_​​village230"]: THREE.Mesh;
+    ["sea_​​village229"]: THREE.Mesh;
+    ["sea_​​village228"]: THREE.Mesh;
+    ["sea_​​village227"]: THREE.Mesh;
+    island5_maison: THREE.Mesh;
+    ["sea_​​village225"]: THREE.Mesh;
+    ["sea_​​village215"]: THREE.Mesh;
+    ["sea_​​village204"]: THREE.Mesh;
+    island1_pont: THREE.Mesh;
+    island_center_pont3: THREE.Mesh;
+    island_center_pont1: THREE.Mesh;
+    island5_pont: THREE.Mesh;
+    ["sea_​​village199"]: THREE.Mesh;
+    ["sea_​​village198"]: THREE.Mesh;
+    ["sea_​​village197"]: THREE.Mesh;
+    ["sea_​​village196"]: THREE.Mesh;
+    ["sea_​​village195"]: THREE.Mesh;
+    ["sea_​​village194"]: THREE.Mesh;
+    ["sea_​​village193"]: THREE.Mesh;
+    ["sea_​​village192"]: THREE.Mesh;
+    ["sea_​​village190"]: THREE.Mesh;
+    ["sea_​​village189"]: THREE.Mesh;
+    ["sea_​​village188"]: THREE.Mesh;
+    ["sea_​​village141"]: THREE.Mesh;
+    ["sea_​​village140"]: THREE.Mesh;
+    ["sea_​​village139"]: THREE.Mesh;
+    ["sea_​​village135"]: THREE.Mesh;
+    ["sea_​​village134"]: THREE.Mesh;
+    ["sea_​​village133"]: THREE.Mesh;
+    ["sea_​​village132"]: THREE.Mesh;
+    ["sea_​​village131"]: THREE.Mesh;
+    ["sea_​​village128"]: THREE.Mesh;
+    ["sea_​​village118"]: THREE.Mesh;
+    ["sea_​​village108"]: THREE.Mesh;
+    ["sea_​​village107"]: THREE.Mesh;
+    ["sea_​​village106"]: THREE.Mesh;
+    ["sea_​​village105"]: THREE.Mesh;
+    ["sea_​​village104"]: THREE.Mesh;
+    ["sea_​​village103"]: THREE.Mesh;
+    ["sea_​​village102"]: THREE.Mesh;
+    ["sea_​​village101"]: THREE.Mesh;
+    ["sea_​​village100"]: THREE.Mesh;
+    ["sea_​​village099"]: THREE.Mesh;
+    ["sea_​​village098"]: THREE.Mesh;
+    island4_pont: THREE.Mesh;
+    ["sea_​​village094"]: THREE.Mesh;
+    ["sea_​​village093"]: THREE.Mesh;
+    ["sea_​​village091"]: THREE.Mesh;
+    ["sea_​​village087"]: THREE.Mesh;
+    ["sea_​​village086"]: THREE.Mesh;
+    ["sea_​​village085"]: THREE.Mesh;
+    ["sea_​​village084"]: THREE.Mesh;
+    island_center_pont2: THREE.Mesh;
+    center_pont2: THREE.Mesh;
+    center_pont3001: THREE.Mesh;
+    center_pont3: THREE.Mesh;
+    ["sea_​​village077"]: THREE.Mesh;
+    ["sea_​​village076"]: THREE.Mesh;
+    ["sea_​​village074"]: THREE.Mesh;
+    ["sea_​​village073"]: THREE.Mesh;
+    ["sea_​​village070"]: THREE.Mesh;
+    ["sea_​​village068"]: THREE.Mesh;
+    ["sea_​​village067"]: THREE.Mesh;
+    ["sea_​​village066"]: THREE.Mesh;
+    ["sea_​​village065"]: THREE.Mesh;
+    island7_maison: THREE.Mesh;
+    ["sea_​​village063"]: THREE.Mesh;
+    ["sea_​​village062"]: THREE.Mesh;
+    ["sea_​​village061"]: THREE.Mesh;
+    ["sea_​​village060"]: THREE.Mesh;
+    ["sea_​​village059"]: THREE.Mesh;
+    ["sea_​​village058"]: THREE.Mesh;
+    ["sea_​​village057"]: THREE.Mesh;
+    ["sea_​​village056"]: THREE.Mesh;
+    ["sea_​​village055"]: THREE.Mesh;
+    ["sea_​​village054"]: THREE.Mesh;
+    ["sea_​​village053"]: THREE.Mesh;
+    ["sea_​​village052"]: THREE.Mesh;
+    ["sea_​​village051"]: THREE.Mesh;
+    ["sea_​​village050"]: THREE.Mesh;
+    ["sea_​​village049"]: THREE.Mesh;
+    ["sea_​​village048"]: THREE.Mesh;
+    ["sea_​​village047"]: THREE.Mesh;
+    ["sea_​​village046"]: THREE.Mesh;
+    ["sea_​​village043"]: THREE.Mesh;
+    ["sea_​​village042"]: THREE.Mesh;
+    ["sea_​​village041"]: THREE.Mesh;
+    ["sea_​​village040"]: THREE.Mesh;
+    ["sea_​​village037"]: THREE.Mesh;
+    ["sea_​​village036"]: THREE.Mesh;
+    ["sea_​​village035"]: THREE.Mesh;
+    island3_maison: THREE.Mesh;
+    ["sea_​​village017"]: THREE.Mesh;
+    ["sea_​​village016"]: THREE.Mesh;
+    ["sea_​​village015"]: THREE.Mesh;
+    ["sea_​​village014"]: THREE.Mesh;
+    ["sea_​​village013"]: THREE.Mesh;
+    ["sea_​​village012"]: THREE.Mesh;
+    ["sea_​​village011"]: THREE.Mesh;
+    ["sea_​​village010"]: THREE.Mesh;
+    ["sea_​​village009"]: THREE.Mesh;
+    ["sea_​​village008"]: THREE.Mesh;
+    island1_tonneau2: THREE.Mesh;
+    island1_tonneau1: THREE.Mesh;
+    ["sea_​​village004"]: THREE.Mesh;
+    ["sea_​​village003"]: THREE.Mesh;
+    ["sea_​​village002"]: THREE.Mesh;
+    island1_phare: THREE.Mesh;
+    island2_pont2: THREE.Mesh;
+    ["sea_​​village435"]: THREE.Mesh;
+    ["sea_​​village005"]: THREE.Mesh;
+    ["sea_​​village018"]: THREE.Mesh;
+    ["sea_​​village019"]: THREE.Mesh;
+    ["sea_​​village020"]: THREE.Mesh;
+    ["sea_​​village431"]: THREE.Mesh;
+    ["sea_​​village430"]: THREE.Mesh;
+    ["sea_​​village021"]: THREE.Mesh;
+    ["sea_​​village022"]: THREE.Mesh;
+    ["sea_​​village023"]: THREE.Mesh;
+    ["sea_​​village028"]: THREE.Mesh;
+    ["sea_​​village029"]: THREE.Mesh;
+    ["sea_​​village030"]: THREE.Mesh;
+    ["sea_​​village427"]: THREE.Mesh;
+    ["sea_​​village426"]: THREE.Mesh;
+    island6_pont: THREE.Mesh;
+    island7_pont: THREE.Mesh;
     ["sea_​​village733"]: THREE.Mesh;
     ["sea_​​village732"]: THREE.Mesh;
-    ["sea_​​village731"]: THREE.Mesh;
     ["sea_​​village730"]: THREE.Mesh;
     ["sea_​​village729"]: THREE.Mesh;
-    ["sea_​​village728"]: THREE.Mesh;
-    ["sea_​​village727"]: THREE.Mesh;
-    ["sea_​​village726"]: THREE.Mesh;
-    ["sea_​​village725"]: THREE.Mesh;
     ["sea_​​village425"]: THREE.Mesh;
     ["sea_​​village424"]: THREE.Mesh;
-    ["sea_​​village423"]: THREE.Mesh;
     ["sea_​​village422"]: THREE.Mesh;
     ["sea_​​village421"]: THREE.Mesh;
     ["sea_​​village420"]: THREE.Mesh;
     ["sea_​​village419"]: THREE.Mesh;
     ["sea_​​village418"]: THREE.Mesh;
     ["sea_​​village417"]: THREE.Mesh;
-    island_center_house: THREE.Mesh;
-    island1_2_pont: THREE.Mesh;
-    island2_3_pont: THREE.Mesh;
+    ["sea_​​village181"]: THREE.Mesh;
+    ["sea_​​village025"]: THREE.Mesh;
+    ["sea_​​village026"]: THREE.Mesh;
+    ["sea_​​village172"]: THREE.Mesh;
+    ["sea_​​village027"]: THREE.Mesh;
+    ["sea_​​village179"]: THREE.Mesh;
+    ["sea_​​village178"]: THREE.Mesh;
+    ["sea_​​village177"]: THREE.Mesh;
+    ["sea_​​village176"]: THREE.Mesh;
+    ["sea_​​village175"]: THREE.Mesh;
+    island6_maison: THREE.Mesh;
+    ["sea_​​village433"]: THREE.Mesh;
+    ["sea_​​village031"]: THREE.Mesh;
   };
   materials: {
-    ["low_poly_interior."]: THREE.MeshStandardMaterial;
-    ["low_poly_interior..001"]: THREE.MeshStandardMaterial;
-    ["low_poly_interior..002"]: THREE.MeshStandardMaterial;
-    ["low_poly_interior..007"]: THREE.MeshStandardMaterial;
-    ["low_poly_interior..008"]: THREE.MeshStandardMaterial;
-    ["low_poly_interior..009"]: THREE.MeshStandardMaterial;
+    ["low_poly_interior..004"]: THREE.MeshStandardMaterial;
+    ["low_poly_interior..011"]: THREE.MeshStandardMaterial;
+    ["low_poly_interior..012"]: THREE.MeshStandardMaterial;
+    ["low_poly_interior..013"]: THREE.MeshStandardMaterial;
+    ["low_poly_interior..014"]: THREE.MeshStandardMaterial;
+    ["low_poly_interior..015"]: THREE.MeshStandardMaterial;
+    ["low_poly_interior..016"]: THREE.MeshStandardMaterial;
+    ["low_poly_interior..018"]: THREE.MeshStandardMaterial;
+    ["low_poly_interior..020"]: THREE.MeshStandardMaterial;
+    ["low_poly_interior..022"]: THREE.MeshStandardMaterial;
+    ["low_poly_interior..023"]: THREE.MeshStandardMaterial;
+    ["low_poly_interior..024"]: THREE.MeshStandardMaterial;
+    ["low_poly_interior..025"]: THREE.MeshStandardMaterial;
+    ["low_poly_interior..026"]: THREE.MeshStandardMaterial;
+    ["low_poly_interior..027"]: THREE.MeshStandardMaterial;
+    ["low_poly_interior..028"]: THREE.MeshStandardMaterial;
+    ["low_poly_interior..029"]: THREE.MeshStandardMaterial;
+    ["low_poly_interior..030"]: THREE.MeshStandardMaterial;
+    ["low_poly_interior..031"]: THREE.MeshStandardMaterial;
+    ["low_poly_interior..032"]: THREE.MeshStandardMaterial;
+    ["low_poly_interior..033"]: THREE.MeshStandardMaterial;
+    ["low_poly_interior..034"]: THREE.MeshStandardMaterial;
+    ["low_poly_interior..035"]: THREE.MeshStandardMaterial;
+    ["low_poly_interior..036"]: THREE.MeshStandardMaterial;
+    ["low_poly_interior..037"]: THREE.MeshStandardMaterial;
+    ["low_poly_interior..038"]: THREE.MeshStandardMaterial;
   };
 };
 
@@ -366,1991 +454,754 @@ export const GameLevelModel: React.FC<GameLevelModelProps> = ({ onClick }) => {
 
   return (
     <group dispose={null}>
+      <mesh geometry={nodes["sea_​​village752"].geometry} material={materials["low_poly_interior..004"]} />
+      <mesh geometry={nodes["sea_​​village751"].geometry} material={materials["low_poly_interior..004"]} />
+      <mesh geometry={nodes["sea_​​village750"].geometry} material={materials["low_poly_interior..004"]} />
+      <mesh geometry={nodes["sea_​​village749"].geometry} material={materials["low_poly_interior..004"]} />
+      <mesh geometry={nodes["sea_​​village748"].geometry} material={materials["low_poly_interior..004"]} />
+      <mesh geometry={nodes["sea_​​village747"].geometry} material={materials["low_poly_interior..004"]} />
       <mesh
-        geometry={nodes["sea_​​village900"].geometry}
-        material={materials["low_poly_interior."]}
-        position={[-70.879, -69.255, -154.177]}
-        rotation={[0, 1.412, 0]}
+        geometry={nodes["sea_​​village615"].geometry}
+        material={materials["low_poly_interior..004"]}
+        position={[0, -0.464, 0]}
       />
+      <mesh geometry={nodes["sea_​​village614"].geometry} material={materials["low_poly_interior..004"]} />
       <mesh
-        geometry={nodes["sea_​​village899"].geometry}
-        material={materials["low_poly_interior."]}
-        position={[-70.879, -69.255, -154.177]}
-        rotation={[0, 1.412, 0]}
+        geometry={nodes["sea_​​village613"].geometry}
+        material={materials["low_poly_interior..004"]}
+        position={[0, -0.667, 0]}
       />
       <mesh
-        geometry={nodes["sea_​​village898"].geometry}
-        material={materials["low_poly_interior."]}
-        position={[-70.879, -69.255, -154.177]}
-        rotation={[0, 1.412, 0]}
+        geometry={nodes["sea_​​village612"].geometry}
+        material={materials["low_poly_interior..004"]}
+        position={[0, -0.685, 0]}
       />
       <mesh
-        geometry={nodes["sea_​​village897"].geometry}
-        material={materials["low_poly_interior."]}
-        position={[-70.879, -69.255, -154.177]}
-        rotation={[0, 1.412, 0]}
+        geometry={nodes["sea_​​village611"].geometry}
+        material={materials["low_poly_interior..004"]}
+        position={[0, -0.464, 0]}
       />
       <mesh
-        geometry={nodes["sea_​​village896"].geometry}
-        material={materials["low_poly_interior."]}
-        position={[-70.879, -69.255, -154.177]}
-        rotation={[0, 1.412, 0]}
+        geometry={nodes["sea_​​village610"].geometry}
+        material={materials["low_poly_interior..004"]}
+        position={[0, -0.685, 0]}
       />
       <mesh
-        geometry={nodes["sea_​​village895"].geometry}
-        material={materials["low_poly_interior."]}
-        position={[-70.879, -69.255, -154.177]}
-        rotation={[0, 1.412, 0]}
+        geometry={nodes["sea_​​village609"].geometry}
+        material={materials["low_poly_interior..004"]}
+        position={[0, -0.685, 0]}
       />
       <mesh
-        geometry={nodes["sea_​​village894"].geometry}
-        material={materials["low_poly_interior."]}
-        position={[-70.879, -69.255, -154.177]}
-        rotation={[0, 1.412, 0]}
+        geometry={nodes["sea_​​village608"].geometry}
+        material={materials["low_poly_interior..004"]}
+        position={[0, -0.464, 0]}
       />
       <mesh
-        geometry={nodes["sea_​​village893"].geometry}
-        material={materials["low_poly_interior."]}
-        position={[-70.879, -69.255, -154.177]}
-        rotation={[0, 1.412, 0]}
+        geometry={nodes["sea_​​village607"].geometry}
+        material={materials["low_poly_interior..004"]}
+        position={[0, -0.667, 0]}
       />
       <mesh
-        geometry={nodes["sea_​​village892"].geometry}
-        material={materials["low_poly_interior."]}
-        position={[-70.879, -69.255, -154.177]}
-        rotation={[0, 1.412, 0]}
+        geometry={nodes["sea_​​village606"].geometry}
+        material={materials["low_poly_interior..004"]}
+        position={[0, -0.685, 0]}
       />
       <mesh
-        geometry={nodes["sea_​​village891"].geometry}
-        material={materials["low_poly_interior."]}
-        position={[-70.879, -69.255, -154.177]}
-        rotation={[0, 1.412, 0]}
+        geometry={nodes["sea_​​village605"].geometry}
+        material={materials["low_poly_interior..004"]}
+        position={[0, -0.685, 0]}
       />
       <mesh
-        geometry={nodes["sea_​​village890"].geometry}
-        material={materials["low_poly_interior."]}
-        position={[-70.879, -69.255, -154.177]}
-        rotation={[0, 1.412, 0]}
+        geometry={nodes["sea_​​village604"].geometry}
+        material={materials["low_poly_interior..004"]}
+        position={[0, -0.685, 0]}
       />
       <mesh
-        geometry={nodes["sea_​​village889"].geometry}
-        material={materials["low_poly_interior."]}
-        position={[-70.879, -69.255, -154.177]}
-        rotation={[0, 1.412, 0]}
+        geometry={nodes["sea_​​village603"].geometry}
+        material={materials["low_poly_interior..004"]}
+        position={[0, -0.667, 0]}
       />
-      <mesh
-        geometry={nodes["sea_​​village888"].geometry}
-        material={materials["low_poly_interior."]}
-        position={[-70.879, -69.255, -154.177]}
-        rotation={[0, 1.412, 0]}
-      />
-      <mesh
-        geometry={nodes["sea_​​village887"].geometry}
-        material={materials["low_poly_interior."]}
-        position={[-70.879, -69.255, -154.177]}
-        rotation={[0, 1.412, 0]}
-      />
-      <mesh
-        geometry={nodes["sea_​​village886"].geometry}
-        material={materials["low_poly_interior."]}
-        position={[-70.879, -69.255, -154.177]}
-        rotation={[0, 1.412, 0]}
-      />
-      <mesh
-        geometry={nodes["sea_​​village885"].geometry}
-        material={materials["low_poly_interior."]}
-        position={[-70.879, -69.255, -154.177]}
-        rotation={[0, 1.412, 0]}
-      />
-      <mesh
-        geometry={nodes["sea_​​village884"].geometry}
-        material={materials["low_poly_interior."]}
-        position={[-70.879, -69.255, -154.177]}
-        rotation={[0, 1.412, 0]}
-      />
-      <mesh
-        geometry={nodes["sea_​​village883"].geometry}
-        material={materials["low_poly_interior."]}
-        position={[-70.879, -69.255, -154.177]}
-        rotation={[0, 1.412, 0]}
-      />
-      <mesh
-        geometry={nodes["sea_​​village882"].geometry}
-        material={materials["low_poly_interior."]}
-        position={[-70.879, -69.255, -154.177]}
-        rotation={[0, 1.412, 0]}
-      />
-      <mesh
-        geometry={nodes["sea_​​village881"].geometry}
-        material={materials["low_poly_interior."]}
-        position={[-70.879, -69.255, -154.177]}
-        rotation={[0, 1.412, 0]}
-      />
-      <mesh
-        geometry={nodes["sea_​​village880"].geometry}
-        material={materials["low_poly_interior."]}
-        position={[-70.879, -69.255, -154.177]}
-        rotation={[0, 1.412, 0]}
-      />
-      <mesh
-        geometry={nodes["sea_​​village879"].geometry}
-        material={materials["low_poly_interior."]}
-        position={[-70.879, -69.255, -154.177]}
-        rotation={[0, 1.412, 0]}
-      />
-      <mesh
-        geometry={nodes["sea_​​village878"].geometry}
-        material={materials["low_poly_interior."]}
-        position={[-70.879, -69.255, -154.177]}
-        rotation={[0, 1.412, 0]}
-      />
-      <mesh
-        geometry={nodes["sea_​​village877"].geometry}
-        material={materials["low_poly_interior."]}
-        position={[-70.879, -69.255, -154.177]}
-        rotation={[0, 1.412, 0]}
-      />
-      <mesh
-        geometry={nodes["sea_​​village876"].geometry}
-        material={materials["low_poly_interior."]}
-        position={[-70.879, -69.255, -154.177]}
-        rotation={[0, 1.412, 0]}
-      />
-      <mesh
-        geometry={nodes["sea_​​village875"].geometry}
-        material={materials["low_poly_interior."]}
-        position={[-70.879, -69.255, -154.177]}
-        rotation={[0, 1.412, 0]}
-      />
-      <mesh
-        geometry={nodes["sea_​​village874"].geometry}
-        material={materials["low_poly_interior."]}
-        position={[-70.879, -69.255, -154.177]}
-        rotation={[0, 1.412, 0]}
-      />
-      <mesh
-        geometry={nodes["sea_​​village873"].geometry}
-        material={materials["low_poly_interior."]}
-        position={[-70.879, -69.255, -154.177]}
-        rotation={[0, 1.412, 0]}
-      />
-      <mesh
-        geometry={nodes["sea_​​village872"].geometry}
-        material={materials["low_poly_interior."]}
-        position={[-70.879, -69.255, -154.177]}
-        rotation={[0, 1.412, 0]}
-      />
-      <mesh
-        geometry={nodes["sea_​​village871"].geometry}
-        material={materials["low_poly_interior."]}
-        position={[-70.879, -69.255, -154.177]}
-        rotation={[0, 1.412, 0]}
-      />
-      <mesh
-        geometry={nodes["sea_​​village870"].geometry}
-        material={materials["low_poly_interior."]}
-        position={[-70.879, -69.255, -154.177]}
-        rotation={[0, 1.412, 0]}
-      />
-      <mesh
-        geometry={nodes["sea_​​village869"].geometry}
-        material={materials["low_poly_interior."]}
-        position={[-70.879, -69.255, -154.177]}
-        rotation={[0, 1.412, 0]}
-      />
-      <mesh
-        geometry={nodes["sea_​​village868"].geometry}
-        material={materials["low_poly_interior."]}
-        position={[-70.879, -69.255, -154.177]}
-        rotation={[0, 1.412, 0]}
-      />
-      <mesh
-        geometry={nodes["sea_​​village867"].geometry}
-        material={materials["low_poly_interior."]}
-        position={[-70.879, -69.255, -154.177]}
-        rotation={[0, 1.412, 0]}
-      />
-      <mesh
-        geometry={nodes["sea_​​village866"].geometry}
-        material={materials["low_poly_interior."]}
-        position={[-70.879, -69.255, -154.177]}
-        rotation={[0, 1.412, 0]}
-      />
-      <mesh
-        geometry={nodes["sea_​​village865"].geometry}
-        material={materials["low_poly_interior."]}
-        position={[-70.879, -69.255, -154.177]}
-        rotation={[0, 1.412, 0]}
-      />
-      <mesh
-        geometry={nodes["sea_​​village864"].geometry}
-        material={materials["low_poly_interior."]}
-        position={[-70.879, -69.255, -154.177]}
-        rotation={[0, 1.412, 0]}
-      />
-      <mesh
-        geometry={nodes["sea_​​village863"].geometry}
-        material={materials["low_poly_interior."]}
-        position={[-70.879, -69.255, -154.177]}
-        rotation={[0, 1.412, 0]}
-      />
-      <mesh
-        geometry={nodes["sea_​​village862"].geometry}
-        material={materials["low_poly_interior."]}
-        position={[-70.879, -69.255, -154.177]}
-        rotation={[0, 1.412, 0]}
-      />
-      <mesh
-        geometry={nodes["sea_​​village861"].geometry}
-        material={materials["low_poly_interior."]}
-        position={[-70.879, -69.255, -154.177]}
-        rotation={[0, 1.412, 0]}
-      />
-      <mesh
-        geometry={nodes["sea_​​village860"].geometry}
-        material={materials["low_poly_interior."]}
-        position={[-70.879, -69.255, -154.177]}
-        rotation={[0, 1.412, 0]}
-      />
-      <mesh
-        geometry={nodes["sea_​​village859"].geometry}
-        material={materials["low_poly_interior."]}
-        position={[-70.879, -69.255, -154.177]}
-        rotation={[0, 1.412, 0]}
-      />
-      <mesh
-        geometry={nodes["sea_​​village858"].geometry}
-        material={materials["low_poly_interior."]}
-        position={[-70.879, -69.255, -154.177]}
-        rotation={[0, 1.412, 0]}
-      />
-      <mesh
-        geometry={nodes["sea_​​village857"].geometry}
-        material={materials["low_poly_interior."]}
-        position={[-70.879, -69.255, -154.177]}
-        rotation={[0, 1.412, 0]}
-      />
-      <mesh
-        geometry={nodes["sea_​​village856"].geometry}
-        material={materials["low_poly_interior."]}
-        position={[-70.879, -69.255, -154.177]}
-        rotation={[0, 1.412, 0]}
-      />
-      <mesh
-        geometry={nodes["sea_​​village855"].geometry}
-        material={materials["low_poly_interior."]}
-        position={[-70.879, -69.255, -154.177]}
-        rotation={[0, 1.412, 0]}
-      />
-      <mesh
-        geometry={nodes["sea_​​village854"].geometry}
-        material={materials["low_poly_interior."]}
-        position={[-70.879, -69.255, -154.177]}
-        rotation={[0, 1.412, 0]}
-      />
-      <mesh
-        geometry={nodes["sea_​​village853"].geometry}
-        material={materials["low_poly_interior."]}
-        position={[-70.879, -69.255, -154.177]}
-        rotation={[0, 1.412, 0]}
-      />
-      <mesh
-        geometry={nodes["sea_​​village852"].geometry}
-        material={materials["low_poly_interior."]}
-        position={[-70.879, -69.255, -154.177]}
-        rotation={[0, 1.412, 0]}
-      />
-      <mesh
-        geometry={nodes["sea_​​village851"].geometry}
-        material={materials["low_poly_interior."]}
-        position={[-70.879, -69.255, -154.177]}
-        rotation={[0, 1.412, 0]}
-      />
-      <mesh
-        geometry={nodes["sea_​​village850"].geometry}
-        material={materials["low_poly_interior."]}
-        position={[-70.879, -69.255, -154.177]}
-        rotation={[0, 1.412, 0]}
-      />
-      <mesh
-        geometry={nodes["sea_​​village849"].geometry}
-        material={materials["low_poly_interior."]}
-        position={[-70.879, -69.255, -154.177]}
-        rotation={[0, 1.412, 0]}
-      />
-      <mesh
-        geometry={nodes["sea_​​village848"].geometry}
-        material={materials["low_poly_interior."]}
-        position={[-70.879, -69.255, -154.177]}
-        rotation={[0, 1.412, 0]}
-      />
-      <mesh
-        geometry={nodes["sea_​​village847"].geometry}
-        material={materials["low_poly_interior."]}
-        position={[-70.879, -69.255, -154.177]}
-        rotation={[0, 1.412, 0]}
-      />
-      <mesh
-        geometry={nodes["sea_​​village846"].geometry}
-        material={materials["low_poly_interior."]}
-        position={[-70.879, -69.255, -154.177]}
-        rotation={[0, 1.412, 0]}
-      />
-      <mesh
-        geometry={nodes["sea_​​village845"].geometry}
-        material={materials["low_poly_interior."]}
-        position={[-70.879, -69.255, -154.177]}
-        rotation={[0, 1.412, 0]}
-      />
-      <mesh
-        geometry={nodes["sea_​​village844"].geometry}
-        material={materials["low_poly_interior."]}
-        position={[-70.879, -69.255, -154.177]}
-        rotation={[0, 1.412, 0]}
-      />
-      <mesh
-        geometry={nodes["sea_​​village843"].geometry}
-        material={materials["low_poly_interior."]}
-        position={[-70.879, -69.255, -154.177]}
-        rotation={[0, 1.412, 0]}
-      />
-      <mesh
-        geometry={nodes["sea_​​village842"].geometry}
-        material={materials["low_poly_interior."]}
-        position={[-70.879, -69.255, -154.177]}
-        rotation={[0, 1.412, 0]}
-      />
-      <mesh
-        geometry={nodes["sea_​​village841"].geometry}
-        material={materials["low_poly_interior."]}
-        position={[-70.879, -69.255, -154.177]}
-        rotation={[0, 1.412, 0]}
-      />
-      <mesh
-        geometry={nodes["sea_​​village840"].geometry}
-        material={materials["low_poly_interior."]}
-        position={[-70.879, -69.255, -154.177]}
-        rotation={[0, 1.412, 0]}
-      />
-      <mesh
-        geometry={nodes["sea_​​village839"].geometry}
-        material={materials["low_poly_interior."]}
-        position={[-70.879, -69.255, -154.177]}
-        rotation={[0, 1.412, 0]}
-      />
-      <mesh
-        geometry={nodes["sea_​​village838"].geometry}
-        material={materials["low_poly_interior."]}
-        position={[-70.879, -69.255, -154.177]}
-        rotation={[0, 1.412, 0]}
-      />
-      <mesh
-        geometry={nodes["sea_​​village837"].geometry}
-        material={materials["low_poly_interior."]}
-        position={[-70.879, -69.255, -154.177]}
-        rotation={[0, 1.412, 0]}
-      />
-      <mesh
-        geometry={nodes["sea_​​village836"].geometry}
-        material={materials["low_poly_interior."]}
-        position={[-70.879, -69.255, -154.177]}
-        rotation={[0, 1.412, 0]}
-      />
-      <mesh
-        geometry={nodes["sea_​​village835"].geometry}
-        material={materials["low_poly_interior."]}
-        position={[-70.879, -69.255, -154.177]}
-        rotation={[0, 1.412, 0]}
-      />
-      <mesh
-        geometry={nodes["sea_​​village834"].geometry}
-        material={materials["low_poly_interior."]}
-        position={[-70.879, -69.255, -154.177]}
-        rotation={[0, 1.412, 0]}
-      />
-      <mesh
-        geometry={nodes["sea_​​village833"].geometry}
-        material={materials["low_poly_interior."]}
-        position={[-70.879, -69.255, -154.177]}
-        rotation={[0, 1.412, 0]}
-      />
-      <mesh
-        geometry={nodes["sea_​​village832"].geometry}
-        material={materials["low_poly_interior."]}
-        position={[-70.879, -69.255, -154.177]}
-        rotation={[0, 1.412, 0]}
-      />
-      <mesh
-        geometry={nodes["sea_​​village831"].geometry}
-        material={materials["low_poly_interior."]}
-        position={[-70.879, -69.255, -154.177]}
-        rotation={[0, 1.412, 0]}
-      />
-      <mesh
-        geometry={nodes["sea_​​village830"].geometry}
-        material={materials["low_poly_interior."]}
-        position={[-70.879, -69.255, -154.177]}
-        rotation={[0, 1.412, 0]}
-      />
-      <mesh
-        geometry={nodes["sea_​​village829"].geometry}
-        material={materials["low_poly_interior."]}
-        position={[-70.879, -69.255, -154.177]}
-        rotation={[0, 1.412, 0]}
-      />
-      <mesh
-        geometry={nodes["sea_​​village828"].geometry}
-        material={materials["low_poly_interior."]}
-        position={[-70.879, -69.255, -154.177]}
-        rotation={[0, 1.412, 0]}
-      />
-      <mesh
-        geometry={nodes["sea_​​village827"].geometry}
-        material={materials["low_poly_interior."]}
-        position={[-70.879, -69.255, -154.177]}
-        rotation={[0, 1.412, 0]}
-      />
-      <mesh
-        geometry={nodes["sea_​​village826"].geometry}
-        material={materials["low_poly_interior."]}
-        position={[-70.879, -69.255, -154.177]}
-        rotation={[0, 1.412, 0]}
-      />
-      <mesh
-        geometry={nodes["sea_​​village825"].geometry}
-        material={materials["low_poly_interior."]}
-        position={[-70.879, -69.255, -154.177]}
-        rotation={[0, 1.412, 0]}
-      />
-      <mesh
-        geometry={nodes["sea_​​village824"].geometry}
-        material={materials["low_poly_interior."]}
-        position={[-70.879, -69.255, -154.177]}
-        rotation={[0, 1.412, 0]}
-      />
-      <mesh
-        geometry={nodes["sea_​​village823"].geometry}
-        material={materials["low_poly_interior."]}
-        position={[-70.879, -69.255, -154.177]}
-        rotation={[0, 1.412, 0]}
-      />
-      <mesh
-        geometry={nodes["sea_​​village822"].geometry}
-        material={materials["low_poly_interior."]}
-        position={[-70.879, -69.255, -154.177]}
-        rotation={[0, 1.412, 0]}
-      />
-      <mesh
-        geometry={nodes["sea_​​village821"].geometry}
-        material={materials["low_poly_interior."]}
-        position={[-70.879, -69.255, -154.177]}
-        rotation={[0, 1.412, 0]}
-      />
-      <mesh
-        geometry={nodes["sea_​​village820"].geometry}
-        material={materials["low_poly_interior."]}
-        position={[-70.879, -69.255, -154.177]}
-        rotation={[0, 1.412, 0]}
-      />
-      <mesh
-        geometry={nodes["sea_​​village819"].geometry}
-        material={materials["low_poly_interior."]}
-        position={[-70.879, -69.255, -154.177]}
-        rotation={[0, 1.412, 0]}
-      />
-      <mesh
-        geometry={nodes["sea_​​village818"].geometry}
-        material={materials["low_poly_interior."]}
-        position={[-70.879, -69.255, -154.177]}
-        rotation={[0, 1.412, 0]}
-      />
-      <mesh
-        geometry={nodes["sea_​​village817"].geometry}
-        material={materials["low_poly_interior."]}
-        position={[-70.879, -69.255, -154.177]}
-        rotation={[0, 1.412, 0]}
-      />
-      <mesh
-        geometry={nodes["sea_​​village816"].geometry}
-        material={materials["low_poly_interior."]}
-        position={[-70.879, -69.255, -154.177]}
-        rotation={[0, 1.412, 0]}
-      />
-      <mesh
-        geometry={nodes["sea_​​village815"].geometry}
-        material={materials["low_poly_interior."]}
-        position={[-70.879, -69.255, -154.177]}
-        rotation={[0, 1.412, 0]}
-      />
-      <mesh
-        geometry={nodes["sea_​​village814"].geometry}
-        material={materials["low_poly_interior."]}
-        position={[-70.879, -69.255, -154.177]}
-        rotation={[0, 1.412, 0]}
-      />
-      <mesh
-        geometry={nodes["sea_​​village813"].geometry}
-        material={materials["low_poly_interior."]}
-        position={[-70.879, -69.255, -154.177]}
-        rotation={[0, 1.412, 0]}
-      />
-      <mesh
-        geometry={nodes["sea_​​village812"].geometry}
-        material={materials["low_poly_interior."]}
-        position={[-70.879, -69.255, -154.177]}
-        rotation={[0, 1.412, 0]}
-      />
-      <mesh
-        geometry={nodes["sea_​​village811"].geometry}
-        material={materials["low_poly_interior."]}
-        position={[-70.879, -69.255, -154.177]}
-        rotation={[0, 1.412, 0]}
-      />
-      <mesh
-        geometry={nodes["sea_​​village810"].geometry}
-        material={materials["low_poly_interior."]}
-        position={[-70.879, -69.255, -154.177]}
-        rotation={[0, 1.412, 0]}
-      />
-      <mesh
-        geometry={nodes["sea_​​village809"].geometry}
-        material={materials["low_poly_interior."]}
-        position={[-70.879, -69.255, -154.177]}
-        rotation={[0, 1.412, 0]}
-      />
-      <mesh
-        geometry={nodes["sea_​​village808"].geometry}
-        material={materials["low_poly_interior."]}
-        position={[-70.879, -69.255, -154.177]}
-        rotation={[0, 1.412, 0]}
-      />
-      <mesh
-        geometry={nodes["sea_​​village807"].geometry}
-        material={materials["low_poly_interior."]}
-        position={[-70.879, -69.255, -154.177]}
-        rotation={[0, 1.412, 0]}
-      />
-      <mesh
-        geometry={nodes["sea_​​village806"].geometry}
-        material={materials["low_poly_interior."]}
-        position={[-70.879, -69.255, -154.177]}
-        rotation={[0, 1.412, 0]}
-      />
-      <mesh
-        geometry={nodes["sea_​​village805"].geometry}
-        material={materials["low_poly_interior."]}
-        position={[-70.879, -69.255, -154.177]}
-        rotation={[0, 1.412, 0]}
-      />
-      <mesh
-        geometry={nodes["sea_​​village804"].geometry}
-        material={materials["low_poly_interior."]}
-        position={[-70.879, -69.255, -154.177]}
-        rotation={[0, 1.412, 0]}
-      />
-      <mesh
-        geometry={nodes["sea_​​village803"].geometry}
-        material={materials["low_poly_interior."]}
-        position={[-70.879, -69.255, -154.177]}
-        rotation={[0, 1.412, 0]}
-      />
-      <mesh
-        geometry={nodes["sea_​​village802"].geometry}
-        material={materials["low_poly_interior."]}
-        position={[-70.879, -69.255, -154.177]}
-        rotation={[0, 1.412, 0]}
-      />
-      <mesh
-        geometry={nodes["sea_​​village801"].geometry}
-        material={materials["low_poly_interior."]}
-        position={[-70.879, -69.255, -154.177]}
-        rotation={[0, 1.412, 0]}
-      />
-      <mesh
-        geometry={nodes["sea_​​village800"].geometry}
-        material={materials["low_poly_interior."]}
-        position={[-70.879, -69.255, -154.177]}
-        rotation={[0, 1.412, 0]}
-      />
-      <mesh
-        geometry={nodes["sea_​​village799"].geometry}
-        material={materials["low_poly_interior."]}
-        position={[-70.879, -69.255, -154.177]}
-        rotation={[0, 1.412, 0]}
-      />
-      <mesh
-        geometry={nodes["sea_​​village798"].geometry}
-        material={materials["low_poly_interior."]}
-        position={[-70.879, -69.255, -154.177]}
-        rotation={[0, 1.412, 0]}
-      />
-      <mesh
-        geometry={nodes["sea_​​village797"].geometry}
-        material={materials["low_poly_interior."]}
-        position={[-70.879, -69.255, -154.177]}
-        rotation={[0, 1.412, 0]}
-      />
-      <mesh
-        geometry={nodes.island3_house_3.geometry}
-        material={materials["low_poly_interior."]}
-        position={[-70.879, -69.255, -154.177]}
-        rotation={[0, 1.412, 0]}
-      />
-      <mesh
-        geometry={nodes.island3_house_2.geometry}
-        material={materials["low_poly_interior."]}
-        position={[-70.879, -69.255, -154.177]}
-        rotation={[0, 1.412, 0]}
-      />
-      <mesh
-        geometry={nodes["sea_​​village794"].geometry}
-        material={materials["low_poly_interior."]}
-        position={[-70.879, -69.255, -154.177]}
-        rotation={[0, 1.412, 0]}
-      />
-      <mesh
-        geometry={nodes.island3_chapelle.geometry}
-        material={materials["low_poly_interior."]}
-        position={[-70.879, -69.255, -154.177]}
-        rotation={[0, 1.412, 0]}
-      />
-      <mesh
-        geometry={nodes["sea_​​village792"].geometry}
-        material={materials["low_poly_interior."]}
-        position={[-70.879, -69.255, -154.177]}
-        rotation={[0, 1.412, 0]}
-      />
-      <mesh
-        geometry={nodes["sea_​​village791"].geometry}
-        material={materials["low_poly_interior."]}
-        position={[-70.879, -69.255, -154.177]}
-        rotation={[0, 1.412, 0]}
-      />
-      <mesh
-        geometry={nodes["sea_​​village790"].geometry}
-        material={materials["low_poly_interior."]}
-        position={[-70.879, -69.255, -154.177]}
-        rotation={[0, 1.412, 0]}
-      />
-      <mesh
-        geometry={nodes["sea_​​village789"].geometry}
-        material={materials["low_poly_interior."]}
-        position={[-70.879, -69.255, -154.177]}
-        rotation={[0, 1.412, 0]}
-      />
-      <mesh
-        geometry={nodes["sea_​​village788"].geometry}
-        material={materials["low_poly_interior."]}
-        position={[-70.879, -69.255, -154.177]}
-        rotation={[0, 1.412, 0]}
-      />
-      <mesh
-        geometry={nodes["sea_​​village787"].geometry}
-        material={materials["low_poly_interior."]}
-        position={[-70.879, -69.255, -154.177]}
-        rotation={[0, 1.412, 0]}
-      />
-      <mesh
-        geometry={nodes["sea_​​village786"].geometry}
-        material={materials["low_poly_interior."]}
-        position={[-70.879, -69.255, -154.177]}
-        rotation={[0, 1.412, 0]}
-      />
-      <mesh
-        geometry={nodes["sea_​​village785"].geometry}
-        material={materials["low_poly_interior."]}
-        position={[-70.879, -69.255, -154.177]}
-        rotation={[0, 1.412, 0]}
-      />
-      <mesh
-        geometry={nodes["sea_​​village784"].geometry}
-        material={materials["low_poly_interior."]}
-        position={[-70.879, -69.255, -154.177]}
-        rotation={[0, 1.412, 0]}
-      />
-      <mesh
-        geometry={nodes["sea_​​village783"].geometry}
-        material={materials["low_poly_interior."]}
-        position={[-70.879, -69.255, -154.177]}
-        rotation={[0, 1.412, 0]}
-      />
-      <mesh
-        geometry={nodes["sea_​​village782"].geometry}
-        material={materials["low_poly_interior."]}
-        position={[-70.879, -69.255, -154.177]}
-        rotation={[0, 1.412, 0]}
-      />
-      <mesh
-        geometry={nodes["sea_​​village781"].geometry}
-        material={materials["low_poly_interior."]}
-        position={[-70.879, -69.255, -154.177]}
-        rotation={[0, 1.412, 0]}
-      />
-      <mesh
-        geometry={nodes["sea_​​village780"].geometry}
-        material={materials["low_poly_interior."]}
-        position={[-70.879, -69.255, -154.177]}
-        rotation={[0, 1.412, 0]}
-      />
-      <mesh
-        geometry={nodes["sea_​​village779"].geometry}
-        material={materials["low_poly_interior."]}
-        position={[-70.879, -69.255, -154.177]}
-        rotation={[0, 1.412, 0]}
-      />
-      <mesh
-        geometry={nodes["sea_​​village778"].geometry}
-        material={materials["low_poly_interior."]}
-        position={[-70.879, -69.255, -154.177]}
-        rotation={[0, 1.412, 0]}
-      />
-      <mesh
-        geometry={nodes["sea_​​village777"].geometry}
-        material={materials["low_poly_interior."]}
-        position={[-70.879, -69.255, -154.177]}
-        rotation={[0, 1.412, 0]}
-      />
-      <mesh
-        geometry={nodes["sea_​​village776"].geometry}
-        material={materials["low_poly_interior."]}
-        position={[-70.879, -69.255, -154.177]}
-        rotation={[0, 1.412, 0]}
-      />
-      <mesh
-        geometry={nodes["sea_​​village775"].geometry}
-        material={materials["low_poly_interior."]}
-        position={[-70.879, -69.255, -154.177]}
-        rotation={[0, 1.412, 0]}
-      />
-      <mesh
-        geometry={nodes["sea_​​village774"].geometry}
-        material={materials["low_poly_interior."]}
-        position={[-70.879, -69.255, -154.177]}
-        rotation={[0, 1.412, 0]}
-      />
-      <mesh
-        geometry={nodes["sea_​​village773"].geometry}
-        material={materials["low_poly_interior."]}
-        position={[-70.879, -69.255, -154.177]}
-        rotation={[0, 1.412, 0]}
-      />
-      <mesh
-        geometry={nodes["sea_​​village772"].geometry}
-        material={materials["low_poly_interior."]}
-        position={[-70.879, -69.255, -154.177]}
-        rotation={[0, 1.412, 0]}
-      />
-      <mesh
-        geometry={nodes["sea_​​village771"].geometry}
-        material={materials["low_poly_interior."]}
-        position={[-70.879, -69.255, -154.177]}
-        rotation={[0, 1.412, 0]}
-      />
-      <mesh
-        geometry={nodes["sea_​​village770"].geometry}
-        material={materials["low_poly_interior."]}
-        position={[-70.879, -69.255, -154.177]}
-        rotation={[0, 1.412, 0]}
-      />
-      <mesh
-        geometry={nodes["sea_​​village769"].geometry}
-        material={materials["low_poly_interior."]}
-        position={[-70.879, -69.255, -154.177]}
-        rotation={[0, 1.412, 0]}
-      />
-      <mesh
-        geometry={nodes["sea_​​village768"].geometry}
-        material={materials["low_poly_interior."]}
-        position={[-70.879, -69.255, -154.177]}
-        rotation={[0, 1.412, 0]}
-      />
-      <mesh
-        geometry={nodes["sea_​​village762"].geometry}
-        material={materials["low_poly_interior."]}
-        position={[-70.879, -69.255, -154.177]}
-        rotation={[0, 1.412, 0]}
-      />
-      <mesh
-        geometry={nodes["sea_​​village761"].geometry}
-        material={materials["low_poly_interior."]}
-        position={[-70.879, -69.255, -154.177]}
-        rotation={[0, 1.412, 0]}
-      />
-      <mesh
-        geometry={nodes["sea_​​village760"].geometry}
-        material={materials["low_poly_interior."]}
-        position={[-70.879, -69.255, -154.177]}
-        rotation={[0, 1.412, 0]}
-      />
-      <mesh
-        geometry={nodes["sea_​​village759"].geometry}
-        material={materials["low_poly_interior."]}
-        position={[-70.879, -69.255, -154.177]}
-        rotation={[0, 1.412, 0]}
-      />
-      <mesh
-        geometry={nodes["sea_​​village758"].geometry}
-        material={materials["low_poly_interior."]}
-        position={[-70.879, -69.255, -154.177]}
-        rotation={[0, 1.412, 0]}
-      />
-      <mesh
-        geometry={nodes["sea_​​village662"].geometry}
-        material={materials["low_poly_interior."]}
-        position={[-70.879, -69.255, -154.177]}
-        rotation={[0, 1.412, 0]}
-      />
-      <mesh
-        geometry={nodes["sea_​​village661"].geometry}
-        material={materials["low_poly_interior."]}
-        position={[-70.879, -69.255, -154.177]}
-        rotation={[0, 1.412, 0]}
-      />
-      <mesh
-        geometry={nodes["sea_​​village660"].geometry}
-        material={materials["low_poly_interior."]}
-        position={[-70.879, -69.255, -154.177]}
-        rotation={[0, 1.412, 0]}
-      />
-      <mesh
-        geometry={nodes["sea_​​village659"].geometry}
-        material={materials["low_poly_interior."]}
-        position={[-70.879, -69.255, -154.177]}
-        rotation={[0, 1.412, 0]}
-      />
-      <mesh
-        geometry={nodes["sea_​​village658"].geometry}
-        material={materials["low_poly_interior."]}
-        position={[-70.879, -69.255, -154.177]}
-        rotation={[0, 1.412, 0]}
-      />
-      <mesh
-        geometry={nodes["sea_​​village657"].geometry}
-        material={materials["low_poly_interior."]}
-        position={[-70.879, -69.255, -154.177]}
-        rotation={[0, 1.412, 0]}
-      />
-      <mesh
-        geometry={nodes["sea_​​village656"].geometry}
-        material={materials["low_poly_interior."]}
-        position={[-70.879, -69.255, -154.177]}
-        rotation={[0, 1.412, 0]}
-      />
-      <mesh
-        geometry={nodes["sea_​​village655"].geometry}
-        material={materials["low_poly_interior."]}
-        position={[-70.879, -69.255, -154.177]}
-        rotation={[0, 1.412, 0]}
-      />
-      <mesh
-        geometry={nodes["sea_​​village654"].geometry}
-        material={materials["low_poly_interior."]}
-        position={[-70.879, -69.255, -154.177]}
-        rotation={[0, 1.412, 0]}
-      />
-      <mesh
-        geometry={nodes["sea_​​village653"].geometry}
-        material={materials["low_poly_interior."]}
-        position={[-70.879, -69.255, -154.177]}
-        rotation={[0, 1.412, 0]}
-      />
-      <mesh
-        geometry={nodes["sea_​​village652"].geometry}
-        material={materials["low_poly_interior."]}
-        position={[-70.879, -69.255, -154.177]}
-        rotation={[0, 1.412, 0]}
-      />
-      <mesh
-        geometry={nodes["sea_​​village651"].geometry}
-        material={materials["low_poly_interior."]}
-        position={[-70.879, -69.255, -154.177]}
-        rotation={[0, 1.412, 0]}
-      />
-      <mesh
-        geometry={nodes["sea_​​village650"].geometry}
-        material={materials["low_poly_interior."]}
-        position={[-70.879, -69.255, -154.177]}
-        rotation={[0, 1.412, 0]}
-      />
-      <mesh
-        geometry={nodes["sea_​​village649"].geometry}
-        material={materials["low_poly_interior."]}
-        position={[-70.879, -69.255, -154.177]}
-        rotation={[0, 1.412, 0]}
-      />
-      <mesh
-        geometry={nodes["sea_​​village648"].geometry}
-        material={materials["low_poly_interior."]}
-        position={[-70.879, -69.255, -154.177]}
-        rotation={[0, 1.412, 0]}
-      />
-      <mesh
-        geometry={nodes["sea_​​village647"].geometry}
-        material={materials["low_poly_interior."]}
-        position={[-70.879, -69.255, -154.177]}
-        rotation={[0, 1.412, 0]}
-      />
-      <mesh
-        geometry={nodes["sea_​​village646"].geometry}
-        material={materials["low_poly_interior."]}
-        position={[-70.879, -69.255, -154.177]}
-        rotation={[0, 1.412, 0]}
-      />
-      <mesh
-        geometry={nodes["sea_​​village645"].geometry}
-        material={materials["low_poly_interior."]}
-        position={[-70.879, -69.255, -154.177]}
-        rotation={[0, 1.412, 0]}
-      />
-      <mesh
-        geometry={nodes["sea_​​village644"].geometry}
-        material={materials["low_poly_interior."]}
-        position={[-70.879, -69.255, -154.177]}
-        rotation={[0, 1.412, 0]}
-      />
-      <mesh
-        geometry={nodes["sea_​​village643"].geometry}
-        material={materials["low_poly_interior."]}
-        position={[-70.879, -69.255, -154.177]}
-        rotation={[0, 1.412, 0]}
-      />
-      <mesh
-        geometry={nodes["sea_​​village642"].geometry}
-        material={materials["low_poly_interior."]}
-        position={[-70.879, -69.255, -154.177]}
-        rotation={[0, 1.412, 0]}
-      />
-      <mesh
-        geometry={nodes["sea_​​village641"].geometry}
-        material={materials["low_poly_interior."]}
-        position={[-70.879, -69.255, -154.177]}
-        rotation={[0, 1.412, 0]}
-      />
-      <mesh
-        geometry={nodes["sea_​​village640"].geometry}
-        material={materials["low_poly_interior."]}
-        position={[-70.879, -69.255, -154.177]}
-        rotation={[0, 1.412, 0]}
-      />
-      <mesh
-        geometry={nodes["sea_​​village639"].geometry}
-        material={materials["low_poly_interior."]}
-        position={[-70.879, -69.255, -154.177]}
-        rotation={[0, 1.412, 0]}
-      />
-      <mesh
-        geometry={nodes["sea_​​village638"].geometry}
-        material={materials["low_poly_interior."]}
-        position={[-70.879, -69.255, -154.177]}
-        rotation={[0, 1.412, 0]}
-      />
-      <mesh
-        geometry={nodes["sea_​​village637"].geometry}
-        material={materials["low_poly_interior."]}
-        position={[-70.879, -69.255, -154.177]}
-        rotation={[0, 1.412, 0]}
-      />
-      <mesh
-        geometry={nodes["sea_​​village636"].geometry}
-        material={materials["low_poly_interior."]}
-        position={[-70.879, -69.255, -154.177]}
-        rotation={[0, 1.412, 0]}
-      />
-      <mesh
-        geometry={nodes["sea_​​village635"].geometry}
-        material={materials["low_poly_interior."]}
-        position={[-70.879, -69.255, -154.177]}
-        rotation={[0, 1.412, 0]}
-      />
-      <mesh
-        geometry={nodes["sea_​​village634"].geometry}
-        material={materials["low_poly_interior."]}
-        position={[-70.879, -69.255, -154.177]}
-        rotation={[0, 1.412, 0]}
-      />
-      <mesh
-        geometry={nodes["sea_​​village633"].geometry}
-        material={materials["low_poly_interior."]}
-        position={[-70.879, -69.255, -154.177]}
-        rotation={[0, 1.412, 0]}
-      />
-      <mesh
-        geometry={nodes["sea_​​village632"].geometry}
-        material={materials["low_poly_interior."]}
-        position={[-70.879, -69.255, -154.177]}
-        rotation={[0, 1.412, 0]}
-      />
-      <mesh
-        geometry={nodes["sea_​​village631"].geometry}
-        material={materials["low_poly_interior."]}
-        position={[-70.879, -69.255, -154.177]}
-        rotation={[0, 1.412, 0]}
-      />
-      <mesh
-        geometry={nodes["sea_​​village630"].geometry}
-        material={materials["low_poly_interior."]}
-        position={[-70.879, -69.255, -154.177]}
-        rotation={[0, 1.412, 0]}
-      />
-      <mesh
-        geometry={nodes["sea_​​village629"].geometry}
-        material={materials["low_poly_interior."]}
-        position={[-70.879, -69.255, -154.177]}
-        rotation={[0, 1.412, 0]}
-      />
-      <mesh
-        geometry={nodes["sea_​​village628"].geometry}
-        material={materials["low_poly_interior."]}
-        position={[-70.879, -69.255, -154.177]}
-        rotation={[0, 1.412, 0]}
-      />
-      <mesh
-        geometry={nodes["sea_​​village627"].geometry}
-        material={materials["low_poly_interior."]}
-        position={[-70.879, -69.255, -154.177]}
-        rotation={[0, 1.412, 0]}
-      />
-      <mesh
-        geometry={nodes["sea_​​village626"].geometry}
-        material={materials["low_poly_interior."]}
-        position={[-70.879, -69.255, -154.177]}
-        rotation={[0, 1.412, 0]}
-      />
-      <mesh
-        geometry={nodes["sea_​​village625"].geometry}
-        material={materials["low_poly_interior."]}
-        position={[-70.879, -69.255, -154.177]}
-        rotation={[0, 1.412, 0]}
-      />
-      <mesh
-        geometry={nodes["sea_​​village622"].geometry}
-        material={materials["low_poly_interior."]}
-        position={[-70.879, -69.255, -154.177]}
-        rotation={[0, 1.412, 0]}
-      />
-      <mesh
-        geometry={nodes["sea_​​village621"].geometry}
-        material={materials["low_poly_interior."]}
-        position={[-70.879, -69.255, -154.177]}
-        rotation={[0, 1.412, 0]}
-      />
-      <mesh
-        geometry={nodes["sea_​​village620"].geometry}
-        material={materials["low_poly_interior."]}
-        position={[-70.879, -69.255, -154.177]}
-        rotation={[0, 1.412, 0]}
-      />
-      <mesh
-        geometry={nodes["sea_​​village619"].geometry}
-        material={materials["low_poly_interior."]}
-        position={[-70.879, -69.255, -154.177]}
-        rotation={[0, 1.412, 0]}
-      />
-      <mesh
-        geometry={nodes["sea_​​village618"].geometry}
-        material={materials["low_poly_interior."]}
-        position={[-70.879, -69.255, -154.177]}
-        rotation={[0, 1.412, 0]}
-      />
-      <mesh
-        geometry={nodes["sea_​​village617"].geometry}
-        material={materials["low_poly_interior."]}
-        position={[-70.879, -69.255, -154.177]}
-        rotation={[0, 1.412, 0]}
-      />
-      <mesh
-        geometry={nodes["sea_​​village616"].geometry}
-        material={materials["low_poly_interior."]}
-        position={[-70.879, -69.255, -154.177]}
-        rotation={[0, 1.412, 0]}
-      />
-      <mesh
-        geometry={nodes["sea_​​village602"].geometry}
-        material={materials["low_poly_interior."]}
-        position={[-70.879, -69.255, -154.177]}
-        rotation={[0, 1.412, 0]}
-      />
-      <mesh
-        geometry={nodes["sea_​​village599"].geometry}
-        material={materials["low_poly_interior."]}
-        position={[-70.879, -69.255, -154.177]}
-        rotation={[0, 1.412, 0]}
-      />
-      <mesh
-        geometry={nodes["sea_​​village598"].geometry}
-        material={materials["low_poly_interior."]}
-        position={[-70.879, -69.255, -154.177]}
-        rotation={[0, 1.412, 0]}
-      />
-      <mesh
-        geometry={nodes["sea_​​village597"].geometry}
-        material={materials["low_poly_interior."]}
-        position={[-70.879, -69.255, -154.177]}
-        rotation={[0, 1.412, 0]}
-      />
-      <mesh
-        geometry={nodes["sea_​​village596"].geometry}
-        material={materials["low_poly_interior."]}
-        position={[-70.879, -69.255, -154.177]}
-        rotation={[0, 1.412, 0]}
-      />
-      <mesh
-        geometry={nodes["sea_​​village595"].geometry}
-        material={materials["low_poly_interior."]}
-        position={[-70.879, -69.255, -154.177]}
-        rotation={[0, 1.412, 0]}
-      />
-      <mesh
-        geometry={nodes["sea_​​village594"].geometry}
-        material={materials["low_poly_interior."]}
-        position={[-70.879, -69.255, -154.177]}
-        rotation={[0, 1.412, 0]}
-      />
-      <mesh
-        geometry={nodes["sea_​​village593"].geometry}
-        material={materials["low_poly_interior."]}
-        position={[-70.879, -69.255, -154.177]}
-        rotation={[0, 1.412, 0]}
-      />
-      <mesh
-        geometry={nodes["sea_​​village592"].geometry}
-        material={materials["low_poly_interior."]}
-        position={[-70.879, -69.255, -154.177]}
-        rotation={[0, 1.412, 0]}
-      />
-      <mesh
-        geometry={nodes["sea_​​village591"].geometry}
-        material={materials["low_poly_interior."]}
-        position={[-70.879, -69.255, -154.177]}
-        rotation={[0, 1.412, 0]}
-      />
-      <mesh
-        geometry={nodes["sea_​​village590"].geometry}
-        material={materials["low_poly_interior."]}
-        position={[-70.879, -69.255, -154.177]}
-        rotation={[0, 1.412, 0]}
-      />
-      <mesh
-        geometry={nodes["sea_​​village589"].geometry}
-        material={materials["low_poly_interior."]}
-        position={[-70.879, -69.255, -154.177]}
-        rotation={[0, 1.412, 0]}
-      />
-      <mesh
-        geometry={nodes["sea_​​village543"].geometry}
-        material={materials["low_poly_interior."]}
-        position={[-70.879, -69.255, -154.177]}
-        rotation={[0, 1.412, 0]}
-      />
-      <mesh
-        geometry={nodes["sea_​​village542"].geometry}
-        material={materials["low_poly_interior."]}
-        position={[-70.879, -69.255, -154.177]}
-        rotation={[0, 1.412, 0]}
-      />
-      <mesh
-        geometry={nodes["sea_​​village531"].geometry}
-        material={materials["low_poly_interior."]}
-        position={[-70.879, -69.255, -154.177]}
-        rotation={[0, 1.412, 0]}
-      />
-      <mesh
-        geometry={nodes["sea_​​village530"].geometry}
-        material={materials["low_poly_interior."]}
-        position={[-70.879, -69.255, -154.177]}
-        rotation={[0, 1.412, 0]}
-      />
-      <mesh
-        geometry={nodes["sea_​​village525"].geometry}
-        material={materials["low_poly_interior."]}
-        position={[-70.879, -69.255, -154.177]}
-        rotation={[0, 1.412, 0]}
-      />
-      <mesh
-        geometry={nodes["sea_​​village524"].geometry}
-        material={materials["low_poly_interior."]}
-        position={[-70.879, -69.255, -154.177]}
-        rotation={[0, 1.412, 0]}
-      />
-      <mesh
-        geometry={nodes["sea_​​village398"].geometry}
-        material={materials["low_poly_interior."]}
-        position={[-70.879, -69.255, -154.177]}
-        rotation={[0, 1.412, 0]}
-      />
-      <mesh
-        geometry={nodes["sea_​​village397"].geometry}
-        material={materials["low_poly_interior."]}
-        position={[-70.879, -69.255, -154.177]}
-        rotation={[0, 1.412, 0]}
-      />
-      <mesh
-        geometry={nodes["sea_​​village396"].geometry}
-        material={materials["low_poly_interior."]}
-        position={[-70.879, -69.255, -154.177]}
-        rotation={[0, 1.412, 0]}
-      />
-      <mesh
-        geometry={nodes["sea_​​village395"].geometry}
-        material={materials["low_poly_interior."]}
-        position={[-70.879, -69.255, -154.177]}
-        rotation={[0, 1.412, 0]}
-      />
-      <mesh
-        geometry={nodes["sea_​​village394"].geometry}
-        material={materials["low_poly_interior."]}
-        position={[-70.879, -69.255, -154.177]}
-        rotation={[0, 1.412, 0]}
-      />
-      <mesh
-        geometry={nodes["sea_​​village393"].geometry}
-        material={materials["low_poly_interior."]}
-        position={[-70.879, -69.255, -154.177]}
-        rotation={[0, 1.412, 0]}
-      />
-      <mesh
-        geometry={nodes["sea_​​village392"].geometry}
-        material={materials["low_poly_interior."]}
-        position={[-70.879, -69.255, -154.177]}
-        rotation={[0, 1.412, 0]}
-      />
-      <mesh
-        geometry={nodes["sea_​​village391"].geometry}
-        material={materials["low_poly_interior."]}
-        position={[-70.879, -69.255, -154.177]}
-        rotation={[0, 1.412, 0]}
-      />
-      <mesh
-        geometry={nodes["sea_​​village390"].geometry}
-        material={materials["low_poly_interior."]}
-        position={[-70.879, -69.255, -154.177]}
-        rotation={[0, 1.412, 0]}
-      />
-      <mesh
-        geometry={nodes["sea_​​village389"].geometry}
-        material={materials["low_poly_interior."]}
-        position={[-70.879, -69.255, -154.177]}
-        rotation={[0, 1.412, 0]}
-      />
-      <mesh
-        geometry={nodes["sea_​​village388"].geometry}
-        material={materials["low_poly_interior."]}
-        position={[-70.879, -69.255, -154.177]}
-        rotation={[0, 1.412, 0]}
-      />
-      <mesh
-        geometry={nodes["sea_​​village387"].geometry}
-        material={materials["low_poly_interior."]}
-        position={[-70.879, -69.255, -154.177]}
-        rotation={[0, 1.412, 0]}
-      />
-      <mesh
-        geometry={nodes["sea_​​village386"].geometry}
-        material={materials["low_poly_interior."]}
-        position={[-70.879, -69.255, -154.177]}
-        rotation={[0, 1.412, 0]}
-      />
-      <mesh
-        geometry={nodes["sea_​​village385"].geometry}
-        material={materials["low_poly_interior."]}
-        position={[-70.879, -69.255, -154.177]}
-        rotation={[0, 1.412, 0]}
-      />
-      <mesh
-        geometry={nodes["sea_​​village384"].geometry}
-        material={materials["low_poly_interior."]}
-        position={[-70.879, -69.255, -154.177]}
-        rotation={[0, 1.412, 0]}
-      />
-      <mesh
-        geometry={nodes["sea_​​village383"].geometry}
-        material={materials["low_poly_interior."]}
-        position={[-70.879, -69.255, -154.177]}
-        rotation={[0, 1.412, 0]}
-      />
-      <mesh
-        geometry={nodes["sea_​​village382"].geometry}
-        material={materials["low_poly_interior."]}
-        position={[-70.879, -69.255, -154.177]}
-        rotation={[0, 1.412, 0]}
-      />
-      <mesh
-        geometry={nodes["sea_​​village381"].geometry}
-        material={materials["low_poly_interior."]}
-        position={[-70.879, -69.255, -154.177]}
-        rotation={[0, 1.412, 0]}
-      />
-      <mesh
-        geometry={nodes["sea_​​village380"].geometry}
-        material={materials["low_poly_interior."]}
-        position={[-70.879, -69.255, -154.177]}
-        rotation={[0, 1.412, 0]}
-      />
-      <mesh
-        geometry={nodes["sea_​​village379"].geometry}
-        material={materials["low_poly_interior."]}
-        position={[-70.879, -69.255, -154.177]}
-        rotation={[0, 1.412, 0]}
-      />
-      <mesh
-        geometry={nodes["sea_​​village378"].geometry}
-        material={materials["low_poly_interior."]}
-        position={[-70.879, -69.255, -154.177]}
-        rotation={[0, 1.412, 0]}
-      />
-      <mesh
-        geometry={nodes["sea_​​village377"].geometry}
-        material={materials["low_poly_interior."]}
-        position={[-70.879, -69.255, -154.177]}
-        rotation={[0, 1.412, 0]}
-      />
-      <mesh
-        geometry={nodes["sea_​​village376"].geometry}
-        material={materials["low_poly_interior."]}
-        position={[-70.879, -69.255, -154.177]}
-        rotation={[0, 1.412, 0]}
-      />
-      <mesh
-        geometry={nodes["sea_​​village375"].geometry}
-        material={materials["low_poly_interior."]}
-        position={[-70.879, -69.255, -154.177]}
-        rotation={[0, 1.412, 0]}
-      />
-      <mesh
-        geometry={nodes["sea_​​village374"].geometry}
-        material={materials["low_poly_interior."]}
-        position={[-70.879, -69.255, -154.177]}
-        rotation={[0, 1.412, 0]}
-      />
-      <mesh
-        geometry={nodes["sea_​​village373"].geometry}
-        material={materials["low_poly_interior."]}
-        position={[-70.879, -69.255, -154.177]}
-        rotation={[0, 1.412, 0]}
-      />
-      <mesh
-        geometry={nodes["sea_​​village372"].geometry}
-        material={materials["low_poly_interior."]}
-        position={[-70.879, -69.255, -154.177]}
-        rotation={[0, 1.412, 0]}
-      />
-      <mesh
-        geometry={nodes["sea_​​village371"].geometry}
-        material={materials["low_poly_interior."]}
-        position={[-70.879, -69.255, -154.177]}
-        rotation={[0, 1.412, 0]}
-      />
-      <mesh
-        geometry={nodes["sea_​​village370"].geometry}
-        material={materials["low_poly_interior."]}
-        position={[-70.879, -69.255, -154.177]}
-        rotation={[0, 1.412, 0]}
-      />
-      <mesh
-        geometry={nodes["sea_​​village342"].geometry}
-        material={materials["low_poly_interior."]}
-        position={[-70.879, -69.255, -154.177]}
-        rotation={[0, 1.412, 0]}
-      />
-      <mesh
-        geometry={nodes["sea_​​village341"].geometry}
-        material={materials["low_poly_interior."]}
-        position={[-70.879, -69.255, -154.177]}
-        rotation={[0, 1.412, 0]}
-      />
-      <mesh
-        geometry={nodes["sea_​​village340"].geometry}
-        material={materials["low_poly_interior."]}
-        position={[-70.879, -69.255, -154.177]}
-        rotation={[0, 1.412, 0]}
-      />
-      <mesh
-        geometry={nodes["sea_​​village339"].geometry}
-        material={materials["low_poly_interior."]}
-        position={[-70.879, -69.255, -154.177]}
-        rotation={[0, 1.412, 0]}
-      />
-      <mesh
-        geometry={nodes["sea_​​village338"].geometry}
-        material={materials["low_poly_interior."]}
-        position={[-70.879, -69.255, -154.177]}
-        rotation={[0, 1.412, 0]}
-      />
-      <mesh
-        geometry={nodes["sea_​​village337"].geometry}
-        material={materials["low_poly_interior."]}
-        position={[-70.879, -69.255, -154.177]}
-        rotation={[0, 1.412, 0]}
-      />
-      <mesh
-        geometry={nodes["sea_​​village336"].geometry}
-        material={materials["low_poly_interior."]}
-        position={[-70.879, -69.255, -154.177]}
-        rotation={[0, 1.412, 0]}
-      />
-      <mesh
-        geometry={nodes["sea_​​village335"].geometry}
-        material={materials["low_poly_interior."]}
-        position={[-70.879, -69.255, -154.177]}
-        rotation={[0, 1.412, 0]}
-      />
-      <mesh
-        geometry={nodes["sea_​​village334"].geometry}
-        material={materials["low_poly_interior."]}
-        position={[-70.879, -69.255, -154.177]}
-        rotation={[0, 1.412, 0]}
-      />
-      <mesh
-        geometry={nodes["sea_​​village333"].geometry}
-        material={materials["low_poly_interior."]}
-        position={[-70.879, -69.255, -154.177]}
-        rotation={[0, 1.412, 0]}
-      />
-      <mesh
-        geometry={nodes["sea_​​village332"].geometry}
-        material={materials["low_poly_interior."]}
-        position={[-70.879, -69.255, -154.177]}
-        rotation={[0, 1.412, 0]}
-      />
-      <mesh
-        geometry={nodes["sea_​​village331"].geometry}
-        material={materials["low_poly_interior."]}
-        position={[-70.879, -69.255, -154.177]}
-        rotation={[0, 1.412, 0]}
-      />
-      <mesh
-        geometry={nodes["sea_​​village330"].geometry}
-        material={materials["low_poly_interior."]}
-        position={[-70.879, -69.255, -154.177]}
-        rotation={[0, 1.412, 0]}
-      />
-      <mesh
-        geometry={nodes["sea_​​village329"].geometry}
-        material={materials["low_poly_interior."]}
-        position={[-70.879, -69.255, -154.177]}
-        rotation={[0, 1.412, 0]}
-      />
-      <mesh
-        geometry={nodes["sea_​​village327"].geometry}
-        material={materials["low_poly_interior."]}
-        position={[-70.879, -69.255, -154.177]}
-        rotation={[0, 1.412, 0]}
-      />
-      <mesh
-        geometry={nodes["sea_​​village326"].geometry}
-        material={materials["low_poly_interior."]}
-        position={[-70.879, -69.255, -154.177]}
-        rotation={[0, 1.412, 0]}
-      />
-      <mesh
-        geometry={nodes["sea_​​village325"].geometry}
-        material={materials["low_poly_interior."]}
-        position={[-70.879, -69.255, -154.177]}
-        rotation={[0, 1.412, 0]}
-      />
-      <mesh
-        geometry={nodes["sea_​​village324"].geometry}
-        material={materials["low_poly_interior."]}
-        position={[-70.879, -69.255, -154.177]}
-        rotation={[0, 1.412, 0]}
-      />
-      <mesh
-        geometry={nodes["sea_​​village323"].geometry}
-        material={materials["low_poly_interior."]}
-        position={[-70.879, -69.255, -154.177]}
-        rotation={[0, 1.412, 0]}
-      />
-      <mesh
-        geometry={nodes["sea_​​village322"].geometry}
-        material={materials["low_poly_interior."]}
-        position={[-70.879, -69.255, -154.177]}
-        rotation={[0, 1.412, 0]}
-      />
-      <mesh
-        geometry={nodes["sea_​​village321"].geometry}
-        material={materials["low_poly_interior."]}
-        position={[-70.879, -69.255, -154.177]}
-        rotation={[0, 1.412, 0]}
-      />
-      <mesh
-        geometry={nodes["sea_​​village320"].geometry}
-        material={materials["low_poly_interior."]}
-        position={[-70.879, -69.255, -154.177]}
-        rotation={[0, 1.412, 0]}
-      />
-      <mesh
-        geometry={nodes["sea_​​village319"].geometry}
-        material={materials["low_poly_interior."]}
-        position={[-70.879, -69.255, -154.177]}
-        rotation={[0, 1.412, 0]}
-      />
-      <mesh
-        geometry={nodes["sea_​​village318"].geometry}
-        material={materials["low_poly_interior."]}
-        position={[-70.879, -69.255, -154.177]}
-        rotation={[0, 1.412, 0]}
-      />
-      <mesh
-        geometry={nodes["sea_​​village317"].geometry}
-        material={materials["low_poly_interior."]}
-        position={[-70.879, -69.255, -154.177]}
-        rotation={[0, 1.412, 0]}
-      />
-      <mesh
-        geometry={nodes["sea_​​village316"].geometry}
-        material={materials["low_poly_interior."]}
-        position={[-70.879, -69.255, -154.177]}
-        rotation={[0, 1.412, 0]}
-      />
-      <mesh
-        geometry={nodes["sea_​​village315"].geometry}
-        material={materials["low_poly_interior."]}
-        position={[-70.879, -69.255, -154.177]}
-        rotation={[0, 1.412, 0]}
-      />
-      <mesh
-        geometry={nodes["sea_​​village314"].geometry}
-        material={materials["low_poly_interior."]}
-        position={[-70.879, -69.255, -154.177]}
-        rotation={[0, 1.412, 0]}
-      />
-      <mesh
-        geometry={nodes["sea_​​village313"].geometry}
-        material={materials["low_poly_interior."]}
-        position={[-70.879, -69.255, -154.177]}
-        rotation={[0, 1.412, 0]}
-      />
-      <mesh
-        geometry={nodes["sea_​​village312"].geometry}
-        material={materials["low_poly_interior."]}
-        position={[-70.879, -69.255, -154.177]}
-        rotation={[0, 1.412, 0]}
-      />
-      <mesh
-        geometry={nodes.island3_house_1.geometry}
-        material={materials["low_poly_interior."]}
-        position={[-70.879, -69.255, -154.177]}
-        rotation={[0, 1.412, 0]}
-      />
-      <mesh
-        geometry={nodes.island3_eglise.geometry}
-        material={materials["low_poly_interior."]}
-        position={[-70.879, -69.255, -154.177]}
-        rotation={[0, 1.412, 0]}
-      />
-      <mesh
-        geometry={nodes["sea_​​village214"].geometry}
-        material={materials["low_poly_interior."]}
-        position={[-70.879, -69.255, -154.177]}
-        rotation={[0, 1.412, 0]}
-      />
-      <mesh
-        geometry={nodes["sea_​​village213"].geometry}
-        material={materials["low_poly_interior."]}
-        position={[-70.879, -69.255, -154.177]}
-        rotation={[0, 1.412, 0]}
-      />
-      <mesh
-        geometry={nodes["sea_​​village212"].geometry}
-        material={materials["low_poly_interior."]}
-        position={[-70.879, -69.255, -154.177]}
-        rotation={[0, 1.412, 0]}
-      />
-      <mesh
-        geometry={nodes["sea_​​village211"].geometry}
-        material={materials["low_poly_interior."]}
-        position={[-70.879, -69.255, -154.177]}
-        rotation={[0, 1.412, 0]}
-      />
-      <mesh
-        geometry={nodes["sea_​​village210"].geometry}
-        material={materials["low_poly_interior."]}
-        position={[-70.879, -69.255, -154.177]}
-        rotation={[0, 1.412, 0]}
-      />
-      <mesh
-        geometry={nodes["sea_​​village208"].geometry}
-        material={materials["low_poly_interior."]}
-        position={[-70.879, -69.255, -154.177]}
-        rotation={[0, 1.412, 0]}
-      />
-      <mesh
-        geometry={nodes["sea_​​village207"].geometry}
-        material={materials["low_poly_interior."]}
-        position={[-70.879, -69.255, -154.177]}
-        rotation={[0, 1.412, 0]}
-      />
-      <mesh
-        geometry={nodes["sea_​​village206"].geometry}
-        material={materials["low_poly_interior."]}
-        position={[-70.879, -69.255, -154.177]}
-        rotation={[0, 1.412, 0]}
-      />
-      <mesh
-        geometry={nodes["sea_​​village122"].geometry}
-        material={materials["low_poly_interior."]}
-        position={[-70.879, -69.255, -154.177]}
-        rotation={[0, 1.412, 0]}
-      />
-      <mesh
-        geometry={nodes["sea_​​village121"].geometry}
-        material={materials["low_poly_interior."]}
-        position={[-70.879, -69.255, -154.177]}
-        rotation={[0, 1.412, 0]}
-      />
-      <mesh
-        geometry={nodes["sea_​​village120"].geometry}
-        material={materials["low_poly_interior."]}
-        position={[-70.879, -69.255, -154.177]}
-        rotation={[0, 1.412, 0]}
-      />
-      <mesh
-        geometry={nodes["sea_​​village119"].geometry}
-        material={materials["low_poly_interior."]}
-        position={[-70.879, -69.255, -154.177]}
-        rotation={[0, 1.412, 0]}
-      />
-      <mesh
-        geometry={nodes["sea_​​village117"].geometry}
-        material={materials["low_poly_interior."]}
-        position={[-70.879, -69.255, -154.177]}
-        rotation={[0, 1.412, 0]}
-      />
-      <mesh
-        geometry={nodes["sea_​​village116"].geometry}
-        material={materials["low_poly_interior."]}
-        position={[-70.879, -69.255, -154.177]}
-        rotation={[0, 1.412, 0]}
-      />
-      <mesh
-        geometry={nodes["sea_​​village115"].geometry}
-        material={materials["low_poly_interior."]}
-        position={[-70.879, -69.255, -154.177]}
-        rotation={[0, 1.412, 0]}
-      />
-      <mesh
-        geometry={nodes["sea_​​village114"].geometry}
-        material={materials["low_poly_interior."]}
-        position={[-70.879, -69.255, -154.177]}
-        rotation={[0, 1.412, 0]}
-      />
-      <mesh
-        geometry={nodes["sea_​​village113"].geometry}
-        material={materials["low_poly_interior."]}
-        position={[-70.879, -69.255, -154.177]}
-        rotation={[0, 1.412, 0]}
-      />
-      <mesh
-        geometry={nodes["sea_​​village112"].geometry}
-        material={materials["low_poly_interior."]}
-        position={[-70.879, -69.255, -154.177]}
-        rotation={[0, 1.412, 0]}
-      />
-      <mesh
-        geometry={nodes["sea_​​village111"].geometry}
-        material={materials["low_poly_interior."]}
-        position={[-70.879, -69.255, -154.177]}
-        rotation={[0, 1.412, 0]}
-      />
-      <mesh
-        geometry={nodes["sea_​​village090"].geometry}
-        material={materials["low_poly_interior."]}
-        position={[-70.879, -69.255, -154.177]}
-        rotation={[0, 1.412, 0]}
-      />
-      <mesh
-        geometry={nodes["sea_​​village079"].geometry}
-        material={materials["low_poly_interior."]}
-        position={[-70.879, -69.255, -154.177]}
-        rotation={[0, 1.412, 0]}
-      />
-      <mesh
-        geometry={nodes["sea_​​village078"].geometry}
-        material={materials["low_poly_interior."]}
-        position={[-70.879, -69.255, -154.177]}
-        rotation={[0, 1.412, 0]}
-      />
-      <mesh
-        geometry={nodes["sea_​​village045"].geometry}
-        material={materials["low_poly_interior."]}
-        position={[-70.879, -69.255, -154.177]}
-        rotation={[0, 1.412, 0]}
-      />
-      <mesh
-        geometry={nodes["sea_​​village039"].geometry}
-        material={materials["low_poly_interior."]}
-        position={[-70.879, -69.255, -154.177]}
-        rotation={[0, 1.412, 0]}
-      />
-      <mesh
-        geometry={nodes["sea_​​village724"].geometry}
-        material={materials["low_poly_interior..001"]}
-        position={[-63.813, -79.284, -37.77]}
-        rotation={[Math.PI, -1.371, Math.PI]}
-      />
-      <mesh
-        geometry={nodes["sea_​​village723"].geometry}
-        material={materials["low_poly_interior..001"]}
-        position={[-63.813, -79.284, -37.77]}
-        rotation={[Math.PI, -1.371, Math.PI]}
-      />
-      <mesh
-        geometry={nodes["sea_​​village722"].geometry}
-        material={materials["low_poly_interior..001"]}
-        position={[-63.813, -79.284, -37.77]}
-        rotation={[Math.PI, -1.371, Math.PI]}
-      />
-      <mesh
-        geometry={nodes["sea_​​village721"].geometry}
-        material={materials["low_poly_interior..001"]}
-        position={[-63.813, -79.284, -37.77]}
-        rotation={[Math.PI, -1.371, Math.PI]}
-      />
-      <mesh
-        geometry={nodes["sea_​​village720"].geometry}
-        material={materials["low_poly_interior..001"]}
-        position={[-63.813, -79.284, -37.77]}
-        rotation={[Math.PI, -1.371, Math.PI]}
-      />
-      <mesh
-        geometry={nodes["sea_​​village719"].geometry}
-        material={materials["low_poly_interior..001"]}
-        position={[-63.813, -79.284, -37.77]}
-        rotation={[Math.PI, -1.371, Math.PI]}
-      />
-      <mesh
-        geometry={nodes["sea_​​village416"].geometry}
-        material={materials["low_poly_interior..001"]}
-        position={[-63.813, -79.284, -37.77]}
-        rotation={[Math.PI, -1.371, Math.PI]}
-      />
-      <mesh
-        geometry={nodes["sea_​​village415"].geometry}
-        material={materials["low_poly_interior..001"]}
-        position={[-63.813, -79.284, -37.77]}
-        rotation={[Math.PI, -1.371, Math.PI]}
-      />
-      <mesh
-        geometry={nodes.island1_house_1.geometry}
-        material={materials["low_poly_interior..001"]}
-        position={[-63.813, -79.284, -37.77]}
-        rotation={[Math.PI, -1.371, Math.PI]}
-      />
-      <mesh
-        geometry={nodes.island1_house_2.geometry}
-        material={materials["low_poly_interior..001"]}
-        position={[-63.813, -79.284, -37.77]}
-        rotation={[Math.PI, -1.371, Math.PI]}
-      />
-      <mesh
-        geometry={nodes["sea_​​village222"].geometry}
-        material={materials["low_poly_interior..001"]}
-        position={[-63.813, -79.284, -37.77]}
-        rotation={[Math.PI, -1.371, Math.PI]}
-      />
-      <mesh
-        geometry={nodes["sea_​​village167"].geometry}
-        material={materials["low_poly_interior..001"]}
-        position={[-63.813, -79.284, -37.77]}
-        rotation={[Math.PI, -1.371, Math.PI]}
-      />
-      <mesh
-        geometry={nodes["sea_​​village166"].geometry}
-        material={materials["low_poly_interior..001"]}
-        position={[-63.813, -79.284, -37.77]}
-        rotation={[Math.PI, -1.371, Math.PI]}
-      />
-      <mesh
-        geometry={nodes["sea_​​village165"].geometry}
-        material={materials["low_poly_interior..001"]}
-        position={[-63.813, -79.284, -37.77]}
-        rotation={[Math.PI, -1.371, Math.PI]}
-      />
-      <mesh
-        geometry={nodes["sea_​​village164"].geometry}
-        material={materials["low_poly_interior..001"]}
-        position={[-63.813, -79.284, -37.77]}
-        rotation={[Math.PI, -1.371, Math.PI]}
-      />
-      <mesh
-        geometry={nodes["sea_​​village163"].geometry}
-        material={materials["low_poly_interior..001"]}
-        position={[-63.813, -79.284, -37.77]}
-        rotation={[Math.PI, -1.371, Math.PI]}
-      />
-      <mesh
-        geometry={nodes["sea_​​village162"].geometry}
-        material={materials["low_poly_interior..001"]}
-        position={[-63.813, -79.284, -37.77]}
-        rotation={[Math.PI, -1.371, Math.PI]}
-      />
-      <mesh
-        geometry={nodes["sea_​​village161"].geometry}
-        material={materials["low_poly_interior..001"]}
-        position={[-63.813, -79.284, -37.77]}
-        rotation={[Math.PI, -1.371, Math.PI]}
-      />
-      <mesh
-        geometry={nodes["sea_​​village160"].geometry}
-        material={materials["low_poly_interior..001"]}
-        position={[-63.813, -79.284, -37.77]}
-        rotation={[Math.PI, -1.371, Math.PI]}
-      />
-      <mesh
-        geometry={nodes["sea_​​village159"].geometry}
-        material={materials["low_poly_interior..001"]}
-        position={[-63.813, -79.284, -37.77]}
-        rotation={[Math.PI, -1.371, Math.PI]}
-      />
-      <mesh
-        geometry={nodes["sea_​​village158"].geometry}
-        material={materials["low_poly_interior..001"]}
-        position={[-63.813, -79.284, -37.77]}
-        rotation={[Math.PI, -1.371, Math.PI]}
-      />
-      <mesh
-        geometry={nodes["sea_​​village157"].geometry}
-        material={materials["low_poly_interior..001"]}
-        position={[-63.813, -79.284, -37.77]}
-        rotation={[Math.PI, -1.371, Math.PI]}
-      />
-      <mesh
-        geometry={nodes["sea_​​village156"].geometry}
-        material={materials["low_poly_interior..001"]}
-        position={[-63.813, -79.284, -37.77]}
-        rotation={[Math.PI, -1.371, Math.PI]}
-      />
-      <mesh
-        geometry={nodes["sea_​​village027"].geometry}
-        material={materials["low_poly_interior..001"]}
-        position={[-63.813, -79.284, -37.77]}
-        rotation={[Math.PI, -1.371, Math.PI]}
-      />
-      <mesh
-        geometry={nodes["sea_​​village026"].geometry}
-        material={materials["low_poly_interior..001"]}
-        position={[-63.813, -79.284, -37.77]}
-        rotation={[Math.PI, -1.371, Math.PI]}
-      />
-      <mesh
-        geometry={nodes["sea_​​village025"].geometry}
-        material={materials["low_poly_interior..001"]}
-        position={[-63.813, -79.284, -37.77]}
-        rotation={[Math.PI, -1.371, Math.PI]}
-      />
-      <mesh
-        geometry={nodes["sea_​​village024"].geometry}
-        material={materials["low_poly_interior..001"]}
-        position={[-63.813, -79.284, -37.77]}
-        rotation={[Math.PI, -1.371, Math.PI]}
+      <mesh geometry={nodes["sea_​​village588"].geometry} material={materials["low_poly_interior..004"]} />
+      <mesh geometry={nodes["sea_​​village587"].geometry} material={materials["low_poly_interior..004"]} />
+      <mesh geometry={nodes["sea_​​village586"].geometry} material={materials["low_poly_interior..004"]} />
+      <mesh geometry={nodes["sea_​​village585"].geometry} material={materials["low_poly_interior..004"]} />
+      <mesh geometry={nodes["sea_​​village584"].geometry} material={materials["low_poly_interior..004"]} />
+      <mesh geometry={nodes["sea_​​village583"].geometry} material={materials["low_poly_interior..004"]} />
+      <mesh geometry={nodes["sea_​​village582"].geometry} material={materials["low_poly_interior..004"]} />
+      <mesh geometry={nodes["sea_​​village581"].geometry} material={materials["low_poly_interior..004"]} />
+      <mesh geometry={nodes["sea_​​village580"].geometry} material={materials["low_poly_interior..004"]} />
+      <mesh geometry={nodes["sea_​​village578"].geometry} material={materials["low_poly_interior..004"]} />
+      <mesh geometry={nodes["sea_​​village577"].geometry} material={materials["low_poly_interior..004"]} />
+      <mesh geometry={nodes["sea_​​village576"].geometry} material={materials["low_poly_interior..004"]} />
+      <mesh geometry={nodes["sea_​​village575"].geometry} material={materials["low_poly_interior..004"]} />
+      <mesh geometry={nodes["sea_​​village574"].geometry} material={materials["low_poly_interior..004"]} />
+      <mesh geometry={nodes["sea_​​village573"].geometry} material={materials["low_poly_interior..004"]} />
+      <mesh geometry={nodes["sea_​​village572"].geometry} material={materials["low_poly_interior..004"]} />
+      <mesh geometry={nodes["sea_​​village571"].geometry} material={materials["low_poly_interior..004"]} />
+      <mesh geometry={nodes["sea_​​village570"].geometry} material={materials["low_poly_interior..004"]} />
+      <mesh geometry={nodes["sea_​​village569"].geometry} material={materials["low_poly_interior..004"]} />
+      <mesh geometry={nodes["sea_​​village568"].geometry} material={materials["low_poly_interior..004"]} />
+      <mesh geometry={nodes["sea_​​village567"].geometry} material={materials["low_poly_interior..004"]} />
+      <mesh geometry={nodes["sea_​​village566"].geometry} material={materials["low_poly_interior..004"]} />
+      <mesh geometry={nodes["sea_​​village565"].geometry} material={materials["low_poly_interior..004"]} />
+      <mesh geometry={nodes["sea_​​village564"].geometry} material={materials["low_poly_interior..004"]} />
+      <mesh geometry={nodes["sea_​​village563"].geometry} material={materials["low_poly_interior..004"]} />
+      <mesh
+        geometry={nodes["sea_​​village562"].geometry}
+        material={materials["low_poly_interior..004"]}
+        position={[0, -0.667, 0]}
+      />
+      <mesh geometry={nodes["sea_​​village561"].geometry} material={materials["low_poly_interior..004"]} />
+      <mesh geometry={nodes["sea_​​village560"].geometry} material={materials["low_poly_interior..004"]} />
+      <mesh geometry={nodes["sea_​​village559"].geometry} material={materials["low_poly_interior..004"]} />
+      <mesh
+        geometry={nodes["sea_​​village558"].geometry}
+        material={materials["low_poly_interior..004"]}
+        position={[0, -0.685, 0]}
+      />
+      <mesh
+        geometry={nodes["sea_​​village557"].geometry}
+        material={materials["low_poly_interior..004"]}
+        position={[0, -0.685, 0]}
+      />
+      <mesh
+        geometry={nodes["sea_​​village556"].geometry}
+        material={materials["low_poly_interior..004"]}
+        position={[0, -0.685, 0]}
+      />
+      <mesh geometry={nodes["sea_​​village555"].geometry} material={materials["low_poly_interior..004"]} />
+      <mesh
+        geometry={nodes["sea_​​village554"].geometry}
+        material={materials["low_poly_interior..004"]}
+        position={[0, -0.685, 0]}
+      />
+      <mesh geometry={nodes["sea_​​village553"].geometry} material={materials["low_poly_interior..004"]} />
+      <mesh
+        geometry={nodes["sea_​​village552"].geometry}
+        material={materials["low_poly_interior..004"]}
+        position={[0, -0.667, 0]}
+      />
+      <mesh
+        geometry={nodes["sea_​​village551"].geometry}
+        material={materials["low_poly_interior..004"]}
+        position={[0, -0.667, 0]}
+      />
+      <mesh geometry={nodes["sea_​​village550"].geometry} material={materials["low_poly_interior..004"]} />
+      <mesh geometry={nodes["sea_​​village549"].geometry} material={materials["low_poly_interior..004"]} />
+      <mesh
+        geometry={nodes["sea_​​village548"].geometry}
+        material={materials["low_poly_interior..004"]}
+        position={[0, -0.685, 0]}
+      />
+      <mesh
+        geometry={nodes["sea_​​village547"].geometry}
+        material={materials["low_poly_interior..004"]}
+        position={[0, -0.685, 0]}
+      />
+      <mesh geometry={nodes["sea_​​village546"].geometry} material={materials["low_poly_interior..004"]} />
+      <mesh geometry={nodes["sea_​​village545"].geometry} material={materials["low_poly_interior..004"]} />
+      <mesh geometry={nodes["sea_​​village544"].geometry} material={materials["low_poly_interior..004"]} />
+      <mesh geometry={nodes["sea_​​village539"].geometry} material={materials["low_poly_interior..004"]} />
+      <mesh geometry={nodes["sea_​​village538"].geometry} material={materials["low_poly_interior..004"]} />
+      <mesh geometry={nodes["sea_​​village537"].geometry} material={materials["low_poly_interior..004"]} />
+      <mesh geometry={nodes["sea_​​village536"].geometry} material={materials["low_poly_interior..004"]} />
+      <mesh geometry={nodes["sea_​​village535"].geometry} material={materials["low_poly_interior..004"]} />
+      <mesh geometry={nodes["sea_​​village534"].geometry} material={materials["low_poly_interior..004"]} />
+      <mesh geometry={nodes["sea_​​village533"].geometry} material={materials["low_poly_interior..004"]} />
+      <mesh geometry={nodes["sea_​​village532"].geometry} material={materials["low_poly_interior..004"]} />
+      <mesh geometry={nodes["sea_​​village529"].geometry} material={materials["low_poly_interior..004"]} />
+      <mesh geometry={nodes["sea_​​village528"].geometry} material={materials["low_poly_interior..004"]} />
+      <mesh geometry={nodes["sea_​​village523"].geometry} material={materials["low_poly_interior..004"]} />
+      <mesh geometry={nodes["sea_​​village522"].geometry} material={materials["low_poly_interior..004"]} />
+      <mesh geometry={nodes["sea_​​village521"].geometry} material={materials["low_poly_interior..004"]} />
+      <mesh geometry={nodes["sea_​​village520"].geometry} material={materials["low_poly_interior..004"]} />
+      <mesh geometry={nodes["sea_​​village519"].geometry} material={materials["low_poly_interior..004"]} />
+      <mesh geometry={nodes["sea_​​village518"].geometry} material={materials["low_poly_interior..004"]} />
+      <mesh geometry={nodes["sea_​​village517"].geometry} material={materials["low_poly_interior..004"]} />
+      <mesh geometry={nodes["sea_​​village516"].geometry} material={materials["low_poly_interior..004"]} />
+      <mesh geometry={nodes["sea_​​village515"].geometry} material={materials["low_poly_interior..004"]} />
+      <mesh geometry={nodes["sea_​​village514"].geometry} material={materials["low_poly_interior..004"]} />
+      <mesh geometry={nodes["sea_​​village513"].geometry} material={materials["low_poly_interior..004"]} />
+      <mesh geometry={nodes["sea_​​village512"].geometry} material={materials["low_poly_interior..004"]} />
+      <mesh geometry={nodes["sea_​​village511"].geometry} material={materials["low_poly_interior..004"]} />
+      <mesh geometry={nodes["sea_​​village510"].geometry} material={materials["low_poly_interior..004"]} />
+      <mesh geometry={nodes["sea_​​village509"].geometry} material={materials["low_poly_interior..004"]} />
+      <mesh geometry={nodes["sea_​​village508"].geometry} material={materials["low_poly_interior..004"]} />
+      <mesh geometry={nodes["sea_​​village507"].geometry} material={materials["low_poly_interior..004"]} />
+      <mesh geometry={nodes["sea_​​village506"].geometry} material={materials["low_poly_interior..004"]} />
+      <mesh geometry={nodes["sea_​​village505"].geometry} material={materials["low_poly_interior..004"]} />
+      <mesh geometry={nodes["sea_​​village504"].geometry} material={materials["low_poly_interior..004"]} />
+      <mesh geometry={nodes["sea_​​village503"].geometry} material={materials["low_poly_interior..004"]} />
+      <mesh geometry={nodes["sea_​​village502"].geometry} material={materials["low_poly_interior..004"]} />
+      <mesh geometry={nodes["sea_​​village501"].geometry} material={materials["low_poly_interior..004"]} />
+      <mesh geometry={nodes["sea_​​village500"].geometry} material={materials["low_poly_interior..004"]} />
+      <mesh geometry={nodes["sea_​​village499"].geometry} material={materials["low_poly_interior..004"]} />
+      <mesh geometry={nodes["sea_​​village498"].geometry} material={materials["low_poly_interior..004"]} />
+      <mesh geometry={nodes["sea_​​village497"].geometry} material={materials["low_poly_interior..004"]} />
+      <mesh geometry={nodes["sea_​​village496"].geometry} material={materials["low_poly_interior..004"]} />
+      <mesh geometry={nodes["sea_​​village495"].geometry} material={materials["low_poly_interior..004"]} />
+      <mesh geometry={nodes["sea_​​village494"].geometry} material={materials["low_poly_interior..004"]} />
+      <mesh geometry={nodes["sea_​​village493"].geometry} material={materials["low_poly_interior..004"]} />
+      <mesh geometry={nodes["sea_​​village492"].geometry} material={materials["low_poly_interior..004"]} />
+      <mesh geometry={nodes["sea_​​village491"].geometry} material={materials["low_poly_interior..004"]} />
+      <mesh geometry={nodes["sea_​​village490"].geometry} material={materials["low_poly_interior..004"]} />
+      <mesh geometry={nodes["sea_​​village489"].geometry} material={materials["low_poly_interior..004"]} />
+      <mesh geometry={nodes["sea_​​village488"].geometry} material={materials["low_poly_interior..004"]} />
+      <mesh geometry={nodes["sea_​​village487"].geometry} material={materials["low_poly_interior..004"]} />
+      <mesh geometry={nodes["sea_​​village486"].geometry} material={materials["low_poly_interior..004"]} />
+      <mesh geometry={nodes["sea_​​village485"].geometry} material={materials["low_poly_interior..004"]} />
+      <mesh geometry={nodes["sea_​​village484"].geometry} material={materials["low_poly_interior..004"]} />
+      <mesh geometry={nodes["sea_​​village483"].geometry} material={materials["low_poly_interior..004"]} />
+      <mesh geometry={nodes["sea_​​village482"].geometry} material={materials["low_poly_interior..004"]} />
+      <mesh geometry={nodes["sea_​​village481"].geometry} material={materials["low_poly_interior..004"]} />
+      <mesh geometry={nodes["sea_​​village480"].geometry} material={materials["low_poly_interior..004"]} />
+      <mesh geometry={nodes["sea_​​village479"].geometry} material={materials["low_poly_interior..004"]} />
+      <mesh geometry={nodes["sea_​​village478"].geometry} material={materials["low_poly_interior..004"]} />
+      <mesh geometry={nodes["sea_​​village477"].geometry} material={materials["low_poly_interior..004"]} />
+      <mesh geometry={nodes["sea_​​village476"].geometry} material={materials["low_poly_interior..004"]} />
+      <mesh geometry={nodes["sea_​​village475"].geometry} material={materials["low_poly_interior..004"]} />
+      <mesh geometry={nodes["sea_​​village474"].geometry} material={materials["low_poly_interior..004"]} />
+      <mesh geometry={nodes["sea_​​village472"].geometry} material={materials["low_poly_interior..004"]} />
+      <mesh geometry={nodes["sea_​​village471"].geometry} material={materials["low_poly_interior..004"]} />
+      <mesh geometry={nodes["sea_​​village470"].geometry} material={materials["low_poly_interior..004"]} />
+      <mesh geometry={nodes["sea_​​village469"].geometry} material={materials["low_poly_interior..004"]} />
+      <mesh
+        geometry={nodes["sea_​​village468"].geometry}
+        material={materials["low_poly_interior..004"]}
+        position={[0, -0.685, 0]}
+      />
+      <mesh
+        geometry={nodes["sea_​​village467"].geometry}
+        material={materials["low_poly_interior..004"]}
+        position={[0, -0.685, 0]}
+      />
+      <mesh geometry={nodes["sea_​​village466"].geometry} material={materials["low_poly_interior..004"]} />
+      <mesh
+        geometry={nodes["sea_​​village465"].geometry}
+        material={materials["low_poly_interior..004"]}
+        position={[0, -0.667, 0]}
+      />
+      <mesh
+        geometry={nodes["sea_​​village464"].geometry}
+        material={materials["low_poly_interior..004"]}
+        position={[0, -0.464, 0]}
+      />
+      <mesh geometry={nodes["sea_​​village463"].geometry} material={materials["low_poly_interior..004"]} />
+      <mesh
+        geometry={nodes["sea_​​village462"].geometry}
+        material={materials["low_poly_interior..004"]}
+        position={[0, -0.464, 0]}
+      />
+      <mesh geometry={nodes["sea_​​village461"].geometry} material={materials["low_poly_interior..004"]} />
+      <mesh
+        geometry={nodes["sea_​​village460"].geometry}
+        material={materials["low_poly_interior..004"]}
+        position={[0, -0.685, 0]}
+      />
+      <mesh geometry={nodes["sea_​​village459"].geometry} material={materials["low_poly_interior..004"]} />
+      <mesh
+        geometry={nodes["sea_​​village458"].geometry}
+        material={materials["low_poly_interior..004"]}
+        position={[0, -0.685, 0]}
+      />
+      <mesh
+        geometry={nodes["sea_​​village457"].geometry}
+        material={materials["low_poly_interior..004"]}
+        position={[0, -0.685, 0]}
+      />
+      <mesh
+        geometry={nodes["sea_​​village456"].geometry}
+        material={materials["low_poly_interior..004"]}
+        position={[0, -0.464, 0]}
+      />
+      <mesh geometry={nodes["sea_​​village455"].geometry} material={materials["low_poly_interior..004"]} />
+      <mesh
+        geometry={nodes["sea_​​village454"].geometry}
+        material={materials["low_poly_interior..004"]}
+        position={[0, -0.581, 0]}
+      />
+      <mesh
+        geometry={nodes["sea_​​village453"].geometry}
+        material={materials["low_poly_interior..004"]}
+        position={[0, -0.667, 0]}
+      />
+      <mesh
+        geometry={nodes["sea_​​village452"].geometry}
+        material={materials["low_poly_interior..004"]}
+        position={[0, -0.581, 0]}
+      />
+      <mesh
+        geometry={nodes["sea_​​village451"].geometry}
+        material={materials["low_poly_interior..004"]}
+        position={[0, -0.685, 0]}
+      />
+      <mesh geometry={nodes["sea_​​village450"].geometry} material={materials["low_poly_interior..004"]} />
+      <mesh geometry={nodes["sea_​​village447"].geometry} material={materials["low_poly_interior..004"]} />
+      <mesh geometry={nodes["sea_​​village446"].geometry} material={materials["low_poly_interior..004"]} />
+      <mesh geometry={nodes["sea_​​village445"].geometry} material={materials["low_poly_interior..004"]} />
+      <mesh geometry={nodes["sea_​​village444"].geometry} material={materials["low_poly_interior..004"]} />
+      <mesh geometry={nodes["sea_​​village443"].geometry} material={materials["low_poly_interior..004"]} />
+      <mesh geometry={nodes["sea_​​village442"].geometry} material={materials["low_poly_interior..004"]} />
+      <mesh geometry={nodes["sea_​​village441"].geometry} material={materials["low_poly_interior..004"]} />
+      <mesh geometry={nodes["sea_​​village440"].geometry} material={materials["low_poly_interior..004"]} />
+      <mesh geometry={nodes["sea_​​village439"].geometry} material={materials["low_poly_interior..004"]} />
+      <mesh geometry={nodes["sea_​​village369"].geometry} material={materials["low_poly_interior..004"]} />
+      <mesh geometry={nodes["sea_​​village368"].geometry} material={materials["low_poly_interior..004"]} />
+      <mesh geometry={nodes["sea_​​village367"].geometry} material={materials["low_poly_interior..004"]} />
+      <mesh geometry={nodes["sea_​​village366"].geometry} material={materials["low_poly_interior..004"]} />
+      <mesh geometry={nodes["sea_​​village365"].geometry} material={materials["low_poly_interior..004"]} />
+      <mesh geometry={nodes["sea_​​village364"].geometry} material={materials["low_poly_interior..004"]} />
+      <mesh geometry={nodes["sea_​​village363"].geometry} material={materials["low_poly_interior..004"]} />
+      <mesh geometry={nodes["sea_​​village362"].geometry} material={materials["low_poly_interior..004"]} />
+      <mesh geometry={nodes["sea_​​village361"].geometry} material={materials["low_poly_interior..004"]} />
+      <mesh geometry={nodes["sea_​​village360"].geometry} material={materials["low_poly_interior..004"]} />
+      <mesh geometry={nodes["sea_​​village359"].geometry} material={materials["low_poly_interior..004"]} />
+      <mesh geometry={nodes["sea_​​village358"].geometry} material={materials["low_poly_interior..004"]} />
+      <mesh geometry={nodes["sea_​​village357"].geometry} material={materials["low_poly_interior..004"]} />
+      <mesh geometry={nodes["sea_​​village356"].geometry} material={materials["low_poly_interior..004"]} />
+      <mesh geometry={nodes["sea_​​village355"].geometry} material={materials["low_poly_interior..004"]} />
+      <mesh geometry={nodes["sea_​​village354"].geometry} material={materials["low_poly_interior..004"]} />
+      <mesh geometry={nodes["sea_​​village353"].geometry} material={materials["low_poly_interior..004"]} />
+      <mesh geometry={nodes["sea_​​village352"].geometry} material={materials["low_poly_interior..004"]} />
+      <mesh geometry={nodes["sea_​​village351"].geometry} material={materials["low_poly_interior..004"]} />
+      <mesh geometry={nodes["sea_​​village350"].geometry} material={materials["low_poly_interior..004"]} />
+      <mesh geometry={nodes["sea_​​village349"].geometry} material={materials["low_poly_interior..004"]} />
+      <mesh geometry={nodes["sea_​​village348"].geometry} material={materials["low_poly_interior..004"]} />
+      <mesh geometry={nodes["sea_​​village347"].geometry} material={materials["low_poly_interior..004"]} />
+      <mesh geometry={nodes["sea_​​village346"].geometry} material={materials["low_poly_interior..004"]} />
+      <mesh geometry={nodes["sea_​​village345"].geometry} material={materials["low_poly_interior..004"]} />
+      <mesh geometry={nodes["sea_​​village344"].geometry} material={materials["low_poly_interior..004"]} />
+      <mesh geometry={nodes["sea_​​village343"].geometry} material={materials["low_poly_interior..004"]} />
+      <mesh geometry={nodes["sea_​​village328"].geometry} material={materials["low_poly_interior..004"]} />
+      <mesh geometry={nodes["sea_​​village308"].geometry} material={materials["low_poly_interior..004"]} />
+      <mesh geometry={nodes["sea_​​village307"].geometry} material={materials["low_poly_interior..004"]} />
+      <mesh geometry={nodes["sea_​​village306"].geometry} material={materials["low_poly_interior..004"]} />
+      <mesh geometry={nodes["sea_​​village305"].geometry} material={materials["low_poly_interior..004"]} />
+      <mesh geometry={nodes["sea_​​village304"].geometry} material={materials["low_poly_interior..004"]} />
+      <mesh geometry={nodes["sea_​​village303"].geometry} material={materials["low_poly_interior..004"]} />
+      <mesh geometry={nodes["sea_​​village302"].geometry} material={materials["low_poly_interior..004"]} />
+      <mesh geometry={nodes["sea_​​village301"].geometry} material={materials["low_poly_interior..004"]} />
+      <mesh geometry={nodes["sea_​​village300"].geometry} material={materials["low_poly_interior..004"]} />
+      <mesh geometry={nodes["sea_​​village299"].geometry} material={materials["low_poly_interior..004"]} />
+      <mesh geometry={nodes["sea_​​village298"].geometry} material={materials["low_poly_interior..004"]} />
+      <mesh geometry={nodes["sea_​​village297"].geometry} material={materials["low_poly_interior..004"]} />
+      <mesh geometry={nodes["sea_​​village296"].geometry} material={materials["low_poly_interior..004"]} />
+      <mesh geometry={nodes["sea_​​village295"].geometry} material={materials["low_poly_interior..004"]} />
+      <mesh geometry={nodes["sea_​​village294"].geometry} material={materials["low_poly_interior..004"]} />
+      <mesh geometry={nodes["sea_​​village293"].geometry} material={materials["low_poly_interior..004"]} />
+      <mesh geometry={nodes["sea_​​village292"].geometry} material={materials["low_poly_interior..004"]} />
+      <mesh geometry={nodes["sea_​​village291"].geometry} material={materials["low_poly_interior..004"]} />
+      <mesh geometry={nodes["sea_​​village290"].geometry} material={materials["low_poly_interior..004"]} />
+      <mesh geometry={nodes["sea_​​village289"].geometry} material={materials["low_poly_interior..004"]} />
+      <mesh geometry={nodes["sea_​​village288"].geometry} material={materials["low_poly_interior..004"]} />
+      <mesh geometry={nodes["sea_​​village287"].geometry} material={materials["low_poly_interior..004"]} />
+      <mesh geometry={nodes["sea_​​village285"].geometry} material={materials["low_poly_interior..004"]} />
+      <mesh geometry={nodes["sea_​​village284"].geometry} material={materials["low_poly_interior..004"]} />
+      <mesh geometry={nodes["sea_​​village283"].geometry} material={materials["low_poly_interior..004"]} />
+      <mesh geometry={nodes["sea_​​village282"].geometry} material={materials["low_poly_interior..004"]} />
+      <mesh geometry={nodes["sea_​​village281"].geometry} material={materials["low_poly_interior..004"]} />
+      <mesh geometry={nodes["sea_​​village280"].geometry} material={materials["low_poly_interior..004"]} />
+      <mesh geometry={nodes["sea_​​village279"].geometry} material={materials["low_poly_interior..004"]} />
+      <mesh geometry={nodes["sea_​​village278"].geometry} material={materials["low_poly_interior..004"]} />
+      <mesh geometry={nodes["sea_​​village277"].geometry} material={materials["low_poly_interior..004"]} />
+      <mesh geometry={nodes["sea_​​village276"].geometry} material={materials["low_poly_interior..004"]} />
+      <mesh geometry={nodes["sea_​​village275"].geometry} material={materials["low_poly_interior..004"]} />
+      <mesh geometry={nodes["sea_​​village273"].geometry} material={materials["low_poly_interior..004"]} />
+      <mesh geometry={nodes["sea_​​village272"].geometry} material={materials["low_poly_interior..004"]} />
+      <mesh geometry={nodes["sea_​​village267"].geometry} material={materials["low_poly_interior..004"]} />
+      <mesh geometry={nodes["sea_​​village266"].geometry} material={materials["low_poly_interior..004"]} />
+      <mesh geometry={nodes["sea_​​village265"].geometry} material={materials["low_poly_interior..004"]} />
+      <mesh geometry={nodes["sea_​​village264"].geometry} material={materials["low_poly_interior..004"]} />
+      <mesh geometry={nodes["sea_​​village263"].geometry} material={materials["low_poly_interior..004"]} />
+      <mesh geometry={nodes["sea_​​village262"].geometry} material={materials["low_poly_interior..004"]} />
+      <mesh geometry={nodes["sea_​​village261"].geometry} material={materials["low_poly_interior..004"]} />
+      <mesh geometry={nodes["sea_​​village260"].geometry} material={materials["low_poly_interior..004"]} />
+      <mesh geometry={nodes["sea_​​village257"].geometry} material={materials["low_poly_interior..004"]} />
+      <mesh geometry={nodes["sea_​​village256"].geometry} material={materials["low_poly_interior..004"]} />
+      <mesh geometry={nodes["sea_​​village253"].geometry} material={materials["low_poly_interior..004"]} />
+      <mesh geometry={nodes.big_island_maison1.geometry} material={materials["low_poly_interior..004"]} />
+      <mesh geometry={nodes["sea_​​village251"].geometry} material={materials["low_poly_interior..004"]} />
+      <mesh geometry={nodes.big_island_maison3.geometry} material={materials["low_poly_interior..004"]} />
+      <mesh geometry={nodes.big_island_maison2.geometry} material={materials["low_poly_interior..004"]} />
+      <mesh geometry={nodes["sea_​​village248"].geometry} material={materials["low_poly_interior..004"]} />
+      <mesh geometry={nodes["sea_​​village247"].geometry} material={materials["low_poly_interior..004"]} />
+      <mesh geometry={nodes.big_island_maison5.geometry} material={materials["low_poly_interior..004"]} />
+      <mesh geometry={nodes["sea_​​village245"].geometry} material={materials["low_poly_interior..004"]} />
+      <mesh geometry={nodes["sea_​​village244"].geometry} material={materials["low_poly_interior..004"]} />
+      {/* eslint-disable-next-line no-irregular-whitespace */}
+      {/* <mesh geometry={nodes["sea_​​village243"].geometry} material={materials["low_poly_interior..004"]} /> */}
+      <mesh geometry={nodes.big_island_maison3001.geometry} material={materials["low_poly_interior..004"]} />
+      <mesh geometry={nodes.island2_maison2.geometry} material={materials["low_poly_interior..004"]} />
+      <mesh geometry={nodes.island2_maison1.geometry} material={materials["low_poly_interior..004"]} />
+      <mesh geometry={nodes.big_island_eglise.geometry} material={materials["low_poly_interior..004"]} />
+      <mesh
+        geometry={nodes["sea_​​village238"].geometry}
+        material={materials["low_poly_interior..004"]}
+        position={[0, -0.685, 0]}
+      />
+      <mesh geometry={nodes["sea_​​village237"].geometry} material={materials["low_poly_interior..004"]} />
+      <mesh
+        geometry={nodes["sea_​​village236"].geometry}
+        material={materials["low_poly_interior..004"]}
+        position={[0, -0.739, 0]}
+      />
+      <mesh geometry={nodes.island1_barque.geometry} material={materials["low_poly_interior..004"]} />
+      <mesh geometry={nodes.island4_maison.geometry} material={materials["low_poly_interior..004"]} />
+      <mesh geometry={nodes["sea_​​village233"].geometry} material={materials["low_poly_interior..004"]} />
+      <mesh geometry={nodes["sea_​​village232"].geometry} material={materials["low_poly_interior..004"]} />
+      <mesh geometry={nodes["sea_​​village231"].geometry} material={materials["low_poly_interior..004"]} />
+      <mesh geometry={nodes["sea_​​village230"].geometry} material={materials["low_poly_interior..004"]} />
+      <mesh geometry={nodes["sea_​​village229"].geometry} material={materials["low_poly_interior..004"]} />
+      <mesh geometry={nodes["sea_​​village228"].geometry} material={materials["low_poly_interior..004"]} />
+      <mesh geometry={nodes["sea_​​village227"].geometry} material={materials["low_poly_interior..004"]} />
+      <mesh geometry={nodes.island5_maison.geometry} material={materials["low_poly_interior..004"]} />
+      <mesh geometry={nodes["sea_​​village225"].geometry} material={materials["low_poly_interior..004"]} />
+      <mesh geometry={nodes["sea_​​village215"].geometry} material={materials["low_poly_interior..004"]} />
+      <mesh geometry={nodes["sea_​​village204"].geometry} material={materials["low_poly_interior..004"]} />
+      <mesh geometry={nodes.island1_pont.geometry} material={materials["low_poly_interior..004"]} />
+      <mesh geometry={nodes.island_center_pont3.geometry} material={materials["low_poly_interior..004"]} />
+      <mesh geometry={nodes.island_center_pont1.geometry} material={materials["low_poly_interior..004"]} />
+      <mesh geometry={nodes.island5_pont.geometry} material={materials["low_poly_interior..004"]} />
+      <mesh geometry={nodes["sea_​​village199"].geometry} material={materials["low_poly_interior..004"]} />
+      <mesh geometry={nodes["sea_​​village198"].geometry} material={materials["low_poly_interior..004"]} />
+      <mesh geometry={nodes["sea_​​village197"].geometry} material={materials["low_poly_interior..004"]} />
+      <mesh geometry={nodes["sea_​​village196"].geometry} material={materials["low_poly_interior..004"]} />
+      <mesh geometry={nodes["sea_​​village195"].geometry} material={materials["low_poly_interior..004"]} />
+      <mesh geometry={nodes["sea_​​village194"].geometry} material={materials["low_poly_interior..004"]} />
+      <mesh geometry={nodes["sea_​​village193"].geometry} material={materials["low_poly_interior..004"]} />
+      <mesh geometry={nodes["sea_​​village192"].geometry} material={materials["low_poly_interior..004"]} />
+      <mesh geometry={nodes["sea_​​village190"].geometry} material={materials["low_poly_interior..004"]} />
+      <mesh geometry={nodes["sea_​​village189"].geometry} material={materials["low_poly_interior..004"]} />
+      <mesh geometry={nodes["sea_​​village188"].geometry} material={materials["low_poly_interior..004"]} />
+      <mesh geometry={nodes["sea_​​village141"].geometry} material={materials["low_poly_interior..004"]} />
+      <mesh geometry={nodes["sea_​​village140"].geometry} material={materials["low_poly_interior..004"]} />
+      <mesh geometry={nodes["sea_​​village139"].geometry} material={materials["low_poly_interior..004"]} />
+      <mesh geometry={nodes["sea_​​village135"].geometry} material={materials["low_poly_interior..004"]} />
+      <mesh geometry={nodes["sea_​​village134"].geometry} material={materials["low_poly_interior..004"]} />
+      <mesh geometry={nodes["sea_​​village133"].geometry} material={materials["low_poly_interior..004"]} />
+      <mesh geometry={nodes["sea_​​village132"].geometry} material={materials["low_poly_interior..004"]} />
+      <mesh geometry={nodes["sea_​​village131"].geometry} material={materials["low_poly_interior..004"]} />
+      <mesh geometry={nodes["sea_​​village128"].geometry} material={materials["low_poly_interior..004"]} />
+      <mesh
+        geometry={nodes["sea_​​village118"].geometry}
+        material={materials["low_poly_interior..004"]}
+        position={[0, -0.685, 0]}
+      />
+      <mesh geometry={nodes["sea_​​village108"].geometry} material={materials["low_poly_interior..004"]} />
+      <mesh geometry={nodes["sea_​​village107"].geometry} material={materials["low_poly_interior..004"]} />
+      <mesh geometry={nodes["sea_​​village106"].geometry} material={materials["low_poly_interior..004"]} />
+      <mesh geometry={nodes["sea_​​village105"].geometry} material={materials["low_poly_interior..004"]} />
+      <mesh geometry={nodes["sea_​​village104"].geometry} material={materials["low_poly_interior..004"]} />
+      <mesh
+        geometry={nodes["sea_​​village103"].geometry}
+        material={materials["low_poly_interior..004"]}
+        position={[0.351, -0.685, -0.208]}
+      />
+      <mesh
+        geometry={nodes["sea_​​village102"].geometry}
+        material={materials["low_poly_interior..004"]}
+        position={[0, -0.685, 0]}
+      />
+      <mesh geometry={nodes["sea_​​village101"].geometry} material={materials["low_poly_interior..004"]} />
+      <mesh geometry={nodes["sea_​​village100"].geometry} material={materials["low_poly_interior..004"]} />
+      <mesh geometry={nodes["sea_​​village099"].geometry} material={materials["low_poly_interior..004"]} />
+      <mesh geometry={nodes["sea_​​village098"].geometry} material={materials["low_poly_interior..004"]} />
+      <mesh geometry={nodes.island4_pont.geometry} material={materials["low_poly_interior..004"]} />
+      <mesh geometry={nodes["sea_​​village094"].geometry} material={materials["low_poly_interior..004"]} />
+      <mesh geometry={nodes["sea_​​village093"].geometry} material={materials["low_poly_interior..004"]} />
+      <mesh geometry={nodes["sea_​​village091"].geometry} material={materials["low_poly_interior..004"]} />
+      <mesh geometry={nodes["sea_​​village087"].geometry} material={materials["low_poly_interior..004"]} />
+      <mesh geometry={nodes["sea_​​village086"].geometry} material={materials["low_poly_interior..004"]} />
+      <mesh geometry={nodes["sea_​​village085"].geometry} material={materials["low_poly_interior..004"]} />
+      <mesh geometry={nodes["sea_​​village084"].geometry} material={materials["low_poly_interior..004"]} />
+      <mesh geometry={nodes.island_center_pont2.geometry} material={materials["low_poly_interior..004"]} />
+      <mesh geometry={nodes.center_pont2.geometry} material={materials["low_poly_interior..004"]} />
+      <mesh geometry={nodes.center_pont3001.geometry} material={materials["low_poly_interior..004"]} />
+      <mesh geometry={nodes.center_pont3.geometry} material={materials["low_poly_interior..004"]} />
+      <mesh geometry={nodes["sea_​​village077"].geometry} material={materials["low_poly_interior..004"]} />
+      <mesh geometry={nodes["sea_​​village076"].geometry} material={materials["low_poly_interior..004"]} />
+      <mesh geometry={nodes["sea_​​village074"].geometry} material={materials["low_poly_interior..004"]} />
+      <mesh geometry={nodes["sea_​​village073"].geometry} material={materials["low_poly_interior..004"]} />
+      <mesh geometry={nodes["sea_​​village070"].geometry} material={materials["low_poly_interior..004"]} />
+      <mesh
+        geometry={nodes["sea_​​village068"].geometry}
+        material={materials["low_poly_interior..004"]}
+        position={[0, -0.685, 0]}
+      />
+      <mesh geometry={nodes["sea_​​village067"].geometry} material={materials["low_poly_interior..004"]} />
+      <mesh geometry={nodes["sea_​​village066"].geometry} material={materials["low_poly_interior..004"]} />
+      <mesh geometry={nodes["sea_​​village065"].geometry} material={materials["low_poly_interior..004"]} />
+      <mesh geometry={nodes.island7_maison.geometry} material={materials["low_poly_interior..004"]} />
+      <mesh geometry={nodes["sea_​​village063"].geometry} material={materials["low_poly_interior..004"]} />
+      <mesh geometry={nodes["sea_​​village062"].geometry} material={materials["low_poly_interior..004"]} />
+      <mesh geometry={nodes["sea_​​village061"].geometry} material={materials["low_poly_interior..004"]} />
+      <mesh geometry={nodes["sea_​​village060"].geometry} material={materials["low_poly_interior..004"]} />
+      <mesh geometry={nodes["sea_​​village059"].geometry} material={materials["low_poly_interior..004"]} />
+      <mesh geometry={nodes["sea_​​village058"].geometry} material={materials["low_poly_interior..004"]} />
+      <mesh geometry={nodes["sea_​​village057"].geometry} material={materials["low_poly_interior..004"]} />
+      <mesh geometry={nodes["sea_​​village056"].geometry} material={materials["low_poly_interior..004"]} />
+      <mesh geometry={nodes["sea_​​village055"].geometry} material={materials["low_poly_interior..004"]} />
+      <mesh geometry={nodes["sea_​​village054"].geometry} material={materials["low_poly_interior..004"]} />
+      <mesh geometry={nodes["sea_​​village053"].geometry} material={materials["low_poly_interior..004"]} />
+      <mesh geometry={nodes["sea_​​village052"].geometry} material={materials["low_poly_interior..004"]} />
+      <mesh geometry={nodes["sea_​​village051"].geometry} material={materials["low_poly_interior..004"]} />
+      <mesh geometry={nodes["sea_​​village050"].geometry} material={materials["low_poly_interior..004"]} />
+      <mesh geometry={nodes["sea_​​village049"].geometry} material={materials["low_poly_interior..004"]} />
+      <mesh geometry={nodes["sea_​​village048"].geometry} material={materials["low_poly_interior..004"]} />
+      <mesh geometry={nodes["sea_​​village047"].geometry} material={materials["low_poly_interior..004"]} />
+      <mesh geometry={nodes["sea_​​village046"].geometry} material={materials["low_poly_interior..004"]} />
+      <mesh geometry={nodes["sea_​​village043"].geometry} material={materials["low_poly_interior..004"]} />
+      <mesh geometry={nodes["sea_​​village042"].geometry} material={materials["low_poly_interior..004"]} />
+      <mesh geometry={nodes["sea_​​village041"].geometry} material={materials["low_poly_interior..004"]} />
+      <mesh geometry={nodes["sea_​​village040"].geometry} material={materials["low_poly_interior..004"]} />
+      <mesh geometry={nodes["sea_​​village037"].geometry} material={materials["low_poly_interior..004"]} />
+      <mesh geometry={nodes["sea_​​village036"].geometry} material={materials["low_poly_interior..004"]} />
+      <mesh geometry={nodes["sea_​​village035"].geometry} material={materials["low_poly_interior..004"]} />
+      <mesh geometry={nodes.island3_maison.geometry} material={materials["low_poly_interior..004"]} />
+      <mesh geometry={nodes["sea_​​village017"].geometry} material={materials["low_poly_interior..004"]} />
+      <mesh geometry={nodes["sea_​​village016"].geometry} material={materials["low_poly_interior..004"]} />
+      <mesh geometry={nodes["sea_​​village015"].geometry} material={materials["low_poly_interior..004"]} />
+      <mesh geometry={nodes["sea_​​village014"].geometry} material={materials["low_poly_interior..004"]} />
+      <mesh geometry={nodes["sea_​​village013"].geometry} material={materials["low_poly_interior..004"]} />
+      <mesh geometry={nodes["sea_​​village012"].geometry} material={materials["low_poly_interior..004"]} />
+      <mesh geometry={nodes["sea_​​village011"].geometry} material={materials["low_poly_interior..004"]} />
+      <mesh geometry={nodes["sea_​​village010"].geometry} material={materials["low_poly_interior..004"]} />
+      <mesh geometry={nodes["sea_​​village009"].geometry} material={materials["low_poly_interior..004"]} />
+      <mesh geometry={nodes["sea_​​village008"].geometry} material={materials["low_poly_interior..004"]} />
+      <mesh geometry={nodes.island1_tonneau2.geometry} material={materials["low_poly_interior..004"]} />
+      <mesh geometry={nodes.island1_tonneau1.geometry} material={materials["low_poly_interior..004"]} />
+      <mesh geometry={nodes["sea_​​village004"].geometry} material={materials["low_poly_interior..004"]} />
+      <mesh geometry={nodes["sea_​​village003"].geometry} material={materials["low_poly_interior..004"]} />
+      <mesh geometry={nodes["sea_​​village002"].geometry} material={materials["low_poly_interior..004"]} />
+      <mesh
+        geometry={nodes.island1_phare.geometry}
+        material={materials["low_poly_interior..004"]}
+        onClick={() => onClick("phare")}
+      />
+      <mesh
+        geometry={nodes.island2_pont2.geometry}
+        material={materials["low_poly_interior..011"]}
+        position={[-38.433, -66.689, 3.662]}
+        rotation={[0, -0.553, 0]}
+        scale={0.836}
+      />
+      <mesh
+        geometry={nodes["sea_​​village435"].geometry}
+        material={materials["low_poly_interior..012"]}
+        position={[-84.432, -69.985, 63.079]}
+      />
+      <mesh
+        geometry={nodes["sea_​​village005"].geometry}
+        material={materials["low_poly_interior..013"]}
+        position={[-83.414, -69.985, 65.787]}
+      />
+      <mesh
+        geometry={nodes["sea_​​village018"].geometry}
+        material={materials["low_poly_interior..014"]}
+        position={[-83.919, -69.985, 64.503]}
+      />
+      <mesh
+        geometry={nodes["sea_​​village019"].geometry}
+        material={materials["low_poly_interior..015"]}
+        position={[-84.432, -69.985, 63.079]}
+      />
+      <mesh
+        geometry={nodes["sea_​​village020"].geometry}
+        material={materials["low_poly_interior..016"]}
+        position={[-81.782, -69.97, 65.939]}
+      />
+      <mesh
+        geometry={nodes["sea_​​village431"].geometry}
+        material={materials["low_poly_interior..018"]}
+        position={[-13.228, -59.88, 55.975]}
+      />
+      <mesh
+        geometry={nodes["sea_​​village430"].geometry}
+        material={materials["low_poly_interior..018"]}
+        position={[-13.24, -59.876, 55.975]}
+      />
+      <mesh
+        geometry={nodes["sea_​​village021"].geometry}
+        material={materials["low_poly_interior..020"]}
+        position={[65.391, -58.261, -46.772]}
+        rotation={[3.093, -1.156, 3.121]}
+        scale={0.704}
+      />
+      <mesh
+        geometry={nodes["sea_​​village022"].geometry}
+        material={materials["low_poly_interior..022"]}
+        position={[-11.315, 0.308, 8.178]}
+      />
+      <mesh
+        geometry={nodes["sea_​​village023"].geometry}
+        material={materials["low_poly_interior..023"]}
+        position={[-8.967, 0, 9.431]}
+      />
+      <mesh
+        geometry={nodes["sea_​​village028"].geometry}
+        material={materials["low_poly_interior..024"]}
+        position={[-22.39, 0.189, -9.806]}
+      />
+      <mesh
+        geometry={nodes["sea_​​village029"].geometry}
+        material={materials["low_poly_interior..025"]}
+        position={[-93.24, -69.876, 56.958]}
+      />
+      <mesh
+        geometry={nodes["sea_​​village030"].geometry}
+        material={materials["low_poly_interior..026"]}
+        position={[-97.144, -69.876, 55.665]}
+      />
+      <mesh
+        geometry={nodes["sea_​​village427"].geometry}
+        material={materials["low_poly_interior..027"]}
+        position={[-62.368, -80.738, 49.688]}
+      />
+      <mesh
+        geometry={nodes["sea_​​village426"].geometry}
+        material={materials["low_poly_interior..027"]}
+        position={[-62.368, -80.738, 49.688]}
+      />
+      <mesh
+        geometry={nodes.island6_pont.geometry}
+        material={materials["low_poly_interior..027"]}
+        position={[-62.368, -80.939, 50.653]}
+      />
+      <mesh
+        geometry={nodes.island7_pont.geometry}
+        material={materials["low_poly_interior..028"]}
+        position={[-119.781, -67.55, -10.126]}
+        rotation={[0, -0.553, 0]}
+        scale={0.836}
       />
       <mesh
         geometry={nodes["sea_​​village733"].geometry}
-        material={materials["low_poly_interior..002"]}
-        position={[-66.483, -79.117, -37.61]}
+        material={materials["low_poly_interior..029"]}
+        position={[-2.711, -80.407, 51.302]}
       />
       <mesh
         geometry={nodes["sea_​​village732"].geometry}
-        material={materials["low_poly_interior..002"]}
-        position={[-66.483, -79.117, -37.61]}
-      />
-      <mesh
-        geometry={nodes["sea_​​village731"].geometry}
-        material={materials["low_poly_interior..002"]}
-        position={[-66.483, -79.117, -37.61]}
+        material={materials["low_poly_interior..029"]}
+        position={[-2.711, -80.491, 51.302]}
       />
       <mesh
         geometry={nodes["sea_​​village730"].geometry}
-        material={materials["low_poly_interior..002"]}
-        position={[-66.483, -79.117, -37.61]}
+        material={materials["low_poly_interior..029"]}
+        position={[-2.711, -80.441, 51.302]}
       />
       <mesh
         geometry={nodes["sea_​​village729"].geometry}
-        material={materials["low_poly_interior..002"]}
-        position={[-66.483, -79.117, -37.61]}
-      />
-      <mesh
-        geometry={nodes["sea_​​village728"].geometry}
-        material={materials["low_poly_interior..002"]}
-        position={[-66.483, -79.117, -37.61]}
-      />
-      <mesh
-        geometry={nodes["sea_​​village727"].geometry}
-        material={materials["low_poly_interior..002"]}
-        position={[-66.483, -79.117, -37.61]}
-      />
-      <mesh
-        geometry={nodes["sea_​​village726"].geometry}
-        material={materials["low_poly_interior..002"]}
-        position={[-66.483, -79.117, -37.61]}
-      />
-      <mesh
-        geometry={nodes["sea_​​village725"].geometry}
-        material={materials["low_poly_interior..002"]}
-        position={[-66.483, -79.117, -37.61]}
+        material={materials["low_poly_interior..029"]}
+        position={[-2.711, -80.34, 51.302]}
       />
       <mesh
         geometry={nodes["sea_​​village425"].geometry}
-        material={materials["low_poly_interior..002"]}
-        position={[-66.483, -79.117, -37.61]}
+        material={materials["low_poly_interior..029"]}
+        position={[-2.995, -81.326, 50.642]}
       />
       <mesh
         geometry={nodes["sea_​​village424"].geometry}
-        material={materials["low_poly_interior..002"]}
-        position={[-66.483, -79.117, -37.61]}
-      />
-      <mesh
-        geometry={nodes["sea_​​village423"].geometry}
-        material={materials["low_poly_interior..002"]}
-        position={[-66.483, -79.117, -37.61]}
+        material={materials["low_poly_interior..029"]}
+        position={[-3.145, -81.326, 50.691]}
       />
       <mesh
         geometry={nodes["sea_​​village422"].geometry}
-        material={materials["low_poly_interior..002"]}
-        position={[-66.483, -79.117, -37.61]}
+        material={materials["low_poly_interior..029"]}
+        position={[-2.711, -81.326, 51.302]}
       />
       <mesh
         geometry={nodes["sea_​​village421"].geometry}
-        material={materials["low_poly_interior..002"]}
-        position={[-66.483, -79.117, -37.61]}
+        material={materials["low_poly_interior..029"]}
+        position={[-2.711, -81.326, 51.302]}
       />
       <mesh
         geometry={nodes["sea_​​village420"].geometry}
-        material={materials["low_poly_interior..002"]}
-        position={[-66.483, -79.117, -37.61]}
+        material={materials["low_poly_interior..029"]}
+        position={[-2.711, -81.326, 51.302]}
       />
       <mesh
         geometry={nodes["sea_​​village419"].geometry}
-        material={materials["low_poly_interior..002"]}
-        position={[-66.483, -79.117, -37.61]}
+        material={materials["low_poly_interior..029"]}
+        position={[-2.711, -81.326, 51.302]}
       />
       <mesh
         geometry={nodes["sea_​​village418"].geometry}
-        material={materials["low_poly_interior..002"]}
-        position={[-66.483, -79.117, -37.61]}
+        material={materials["low_poly_interior..029"]}
+        position={[-2.711, -81.326, 51.302]}
       />
       <mesh
         geometry={nodes["sea_​​village417"].geometry}
-        material={materials["low_poly_interior..002"]}
-        position={[-66.483, -79.117, -37.61]}
+        material={materials["low_poly_interior..029"]}
+        position={[-2.711, -80.541, 51.302]}
       />
       <mesh
-        geometry={nodes.island_center_house.geometry}
-        material={materials["low_poly_interior..007"]}
-        position={[38.4, -69.311, -70.078]}
-        rotation={[-Math.PI, 0.048, -Math.PI]}
-        scale={1.004}
-        onClick={() => onClick("island_center_house")}
+        geometry={nodes["sea_​​village181"].geometry}
+        material={materials["low_poly_interior..030"]}
+        position={[-90.775, -70.696, 122.004]}
+        rotation={[0, 0.577, 0]}
       />
       <mesh
-        geometry={nodes.island1_2_pont.geometry}
-        material={materials["low_poly_interior..008"]}
-        position={[-162.061, -79.359, -36.503]}
+        geometry={nodes["sea_​​village025"].geometry}
+        material={materials["low_poly_interior..031"]}
+        position={[-86.846, -70.696, 119.466]}
+        rotation={[0, 0.577, 0]}
       />
       <mesh
-        geometry={nodes.island2_3_pont.geometry}
-        material={materials["low_poly_interior..009"]}
-        position={[-193.981, -79.152, -37.845]}
+        geometry={nodes["sea_​​village026"].geometry}
+        material={materials["low_poly_interior..032"]}
+        position={[-82.946, -70.701, 116.955]}
+        rotation={[0, 0.577, 0]}
+      />
+      <mesh
+        geometry={nodes["sea_​​village172"].geometry}
+        material={materials["low_poly_interior..033"]}
+        position={[-103.698, -70.486, 53.36]}
+      />
+      <mesh
+        geometry={nodes["sea_​​village027"].geometry}
+        material={materials["low_poly_interior..034"]}
+        position={[-102.531, -70.486, 54.779]}
+      />
+      <mesh
+        geometry={nodes["sea_​​village179"].geometry}
+        material={materials["low_poly_interior..035"]}
+        position={[-104.292, -70.596, 52.543]}
+      />
+      <mesh
+        geometry={nodes["sea_​​village178"].geometry}
+        material={materials["low_poly_interior..035"]}
+        position={[-104.292, -70.596, 52.543]}
+      />
+      <mesh
+        geometry={nodes["sea_​​village177"].geometry}
+        material={materials["low_poly_interior..035"]}
+        position={[-104.292, -70.596, 52.543]}
+      />
+      <mesh
+        geometry={nodes["sea_​​village176"].geometry}
+        material={materials["low_poly_interior..035"]}
+        position={[-104.292, -70.596, 52.543]}
+      />
+      <mesh
+        geometry={nodes["sea_​​village175"].geometry}
+        material={materials["low_poly_interior..035"]}
+        position={[-104.292, -70.596, 52.543]}
+      />
+      <mesh
+        geometry={nodes.island6_maison.geometry}
+        material={materials["low_poly_interior..036"]}
+        position={[-91.206, -70.568, 45.717]}
+      />
+      <mesh
+        geometry={nodes["sea_​​village433"].geometry}
+        material={materials["low_poly_interior..037"]}
+        position={[-151.765, -69.976, 49.029]}
+        scale={0.989}
+      />
+      <mesh
+        geometry={nodes["sea_​​village031"].geometry}
+        material={materials["low_poly_interior..038"]}
+        position={[-99.944, -54.837, 49.637]}
       />
     </group>
   );

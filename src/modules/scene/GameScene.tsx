@@ -8,8 +8,8 @@ import { AnimatePresence } from "framer-motion";
 import { Dialog } from "@modules/Dialog";
 import { LoadingScene } from "@modules/scene/LoadingScene";
 import { GameLevelModel } from "@modules/scene/model/GameLevelModel";
-import { useCommandStore } from "@src/stores/useCommandStore";
-import { useDialogStore } from "@src/stores/useDialogStore";
+import { useCommandStore } from "@stores/useCommandStore";
+import { useDialogStore } from "@stores/useDialogStore";
 
 export type GameSceneProps = React.DetailedHTMLProps<React.HTMLAttributes<HTMLCanvasElement>, HTMLCanvasElement>;
 
@@ -27,7 +27,7 @@ export const GameScene: React.FC<GameSceneProps> = () => {
 
   return (
     <>
-      <Canvas className="bg-blue-300" camera={{ position: [-60, 10, -70], fov: 70 }}>
+      <Canvas className="bg-blue-300" camera={{ position: [70, 10, 100], fov: 70 }}>
         <ambientLight intensity={0.8} />
         <directionalLight position={[0, 10, 0]} />
         <CameraControls ref={controls} enabled={true} verticalDragToForward={true} />

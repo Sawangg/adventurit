@@ -1,7 +1,7 @@
 "use client";
 
 import { AnimatePresence, motion } from "framer-motion";
-import { useCommandStore } from "@src/stores/useCommandStore";
+import { useCommandStore } from "@stores/useCommandStore";
 
 export type GameDialogProps = React.DetailedHTMLProps<React.HTMLAttributes<HTMLDivElement>, HTMLDivElement> & {
   text: string;

@@ -14,7 +14,9 @@ import {
 export const difficultyEnum = pgEnum("difficulty", ["easy", "medium", "hard"]);
 export const typeEnum = pgEnum("type", ["qcm", "program", "personality"]);
 
-// Auth tables
+// TODO: change auth table names for consistency once https://github.com/nextauthjs/next-auth/pull/8344 is merged
+
+// Auth tables needed for @authjs
 export const users = pgTable("user", {
   id: uuid("id").notNull().primaryKey(),
   name: text("name"),
@@ -75,7 +77,7 @@ export const games = pgTable(
     userId: uuid("userId")
       .notNull()
       .references(() => users.id, { onDelete: "cascade" }),
-    progress: integer("progress").default(0).notNull(), // -1 if done else X where X is the question number
+    progress: integer("progress").default(0).notNull(),
   },
   (table) => {
     return {
@@ -85,22 +87,33 @@ export const games = pgTable(
 );
 
 // Answers table
-export const answers = pgTable(
-  "answers",
+export const answers = pgTable("answers", {
+  id: serial("id").primaryKey().notNull(),
+  questionId: integer("questionId")
+    .references(() => questions.id)
+    .notNull(),
+  answer: text("answer").notNull(),
+});
+
+export const usersAnswers = pgTable(
+  "users_answers",
   {
-    id: serial("id").primaryKey().notNull(),
-    answer: text("answer").notNull(),
-    grade: integer("grade"),
-    questionId: integer("question_id")
+    userId: uuid("userId")
+      .notNull()
+      .references(() => users.id, { onDelete: "cascade" }),
+    questionId: integer("questionId")
       .references(() => questions.id)
       .notNull(),
-    gameId: uuid("game_id")
+    gameId: uuid("gameId")
       .references(() => games.id)
       .notNull(),
+    answerId: integer("answerId").references(() => answers.id),
+    freeAnswer: text("freeAnswer"),
+    grade: integer("grade"),
   },
   (table) => {
     return {
-      gameId: index("game_idx").on(table.gameId),
+      compoundKey: primaryKey({ columns: [table.userId, table.questionId, table.gameId] }),
     };
   },
 );

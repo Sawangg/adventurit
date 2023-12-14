@@ -1,6 +1,6 @@
 import Link from "next/link";
 import { redirect } from "next/navigation";
-import { getGameNumber } from "@actions/getGames";
+import { getGameNumber } from "@actions/game/getGames";
 import { getUsers } from "@actions/getUsers";
 import { isAdmin } from "@actions/isAdmin";
 import { auth } from "@lib/auth";

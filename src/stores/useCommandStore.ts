@@ -47,6 +47,14 @@ const commandHandler = (command: Command) => {
       break;
     case "question":
       {
+        // TODO: Implement a better system after presentation
+        // const question = await getRandomQuestion();
+        // if (!question) return;
+        // const dialogStore = useDialogStore.getState();
+        // dialogStore.setText(question.statement);
+        // const options = command.args[1] as string[];
+        // dialogStore.setOptions(options);
+
         const dialogStore = useDialogStore.getState();
         dialogStore.setText(command.args[0] as string);
         const options = command.args[1] as string[];
