@@ -4,13 +4,13 @@ import { AnimatePresence, motion } from "framer-motion";
 import { useCommandStore } from "@src/stores/useCommandStore";
 import { Textarea } from "@src/ui/textarea";
 
-export type GameDialogProps = React.DetailedHTMLProps<React.HTMLAttributes<HTMLDivElement>, HTMLDivElement> & {
+export type CodingGameProps = React.DetailedHTMLProps<React.HTMLAttributes<HTMLDivElement>, HTMLDivElement> & {
   consigne: string;
   outpout: string;
   code?: string;
 };
 
-export const CodingGame: React.FC<GameDialogProps> = ({ consigne, outpout, code }) => {
+export const CodingGame: React.FC<CodingGameProps> = ({ consigne, outpout, code }) => {
   const { remove } = useCommandStore();
 
   return (
@@ -39,7 +39,7 @@ export const CodingGame: React.FC<GameDialogProps> = ({ consigne, outpout, code 
           </AnimatePresence>
         </motion.div>
       </div>
-      <div className="absolute  right-[2.5%]  top-8 flex h-3/5 w-3/5 flex-col items-center gap-2">
+      <div className="absolute right-[2.5%] top-8 flex h-3/5 w-3/5 flex-col items-center gap-2">
         <motion.div
           className="flex h-full w-full flex-wrap rounded-md border bg-black/80 p-8"
           initial={{ opacity: 0, y: 200 }}
@@ -51,7 +51,7 @@ export const CodingGame: React.FC<GameDialogProps> = ({ consigne, outpout, code 
           <Textarea placeholder={code} />
         </motion.div>
       </div>
-      <div className="absolute  bottom-4  right-[2.5%] flex h-1/3 w-[60%] flex-col items-center gap-2">
+      <div className="absolute bottom-4 right-[2.5%] flex h-1/3 w-[60%] flex-col items-center gap-2">
         <motion.div
           className="flex h-full w-full flex-wrap rounded-md border bg-black/80 p-8"
           initial={{ opacity: 0, y: 200 }}
