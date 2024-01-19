@@ -3,11 +3,37 @@
     "login": {
       "github": "Github",
       "google": "Google",
+      "apple": "Apple",
       "choice": "Choisissez un moyen de connection",
       "connection" : "Se connecter",
       "division": "ou connectez-vous avec",
       "pass" : "Mot de passe"
     },
-    "signout": "Déconnexion"
+    "user_detail": {
+      "all_games": "Toutes les parties :",
+      "in_progress": "En cours...",
+      "question": "Question ",
+      "statement": "Intitulé :",
+      "answer": "Réponse :",
+      "grade": "Note : "
+    },
+    "signout": "Déconnexion",
+    "dashboard": "Tableau de bord",
+    "users": "Tout les utilisateurs",
+    "game_nb": "Nombre de parties",
+    "game_played": "parties jouées",
+    "easy": "Facile",
+    "easy_desc": "de bonnes réponses sur les questions faciles (1 point)",
+    "medium": "Moyen",
+    "medium_desc": "de bonnes réponses sur les questions moyennes (2 points)",
+    "hard": "Difficile",
+    "hard_desc": "de bonnes réponses sur les questions difficiles (3 points)",
+    "top_5": "Top 5 des utilisateurs",
+    "top_5_desc": "Voici les 5 meilleurs utilisateurs",
+    "rank": "Rang",
+    "user": "Utilisateur",
+    "see": "Voir",
+    "users_desc": "Voici la liste de tout les utilisateurs",
+    "email": "E-mail"
   }
 }
