@@ -4,6 +4,7 @@ import { Suspense, useEffect, useRef } from "react";
 import { CameraControls } from "@react-three/drei";
 import { Canvas } from "@react-three/fiber";
 import { AnimatePresence } from "framer-motion";
+// import { CodingGame } from "@modules/CodingGame";
 // import { CubeTextureLoader } from "three";
 import { Dialog } from "@modules/Dialog";
 import { LoadingScene } from "@modules/scene/LoadingScene";
@@ -44,6 +45,7 @@ export const GameScene: React.FC<GameSceneProps> = () => {
                     ["1) is_even = num % 2 == 1", "2) is_even = num % 2 == 0"],
                   ],
                 },
+                { type: "coding", args: ["les consigne s'afficheront ici"] },
               ]);
             }}
           />
