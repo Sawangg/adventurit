@@ -24,7 +24,9 @@ export const Dialog: React.FC<GameDialogProps> = ({ text, options }) => {
         animate={{ opacity: 1, y: 0 }}
         exit={{ opacity: 0, y: 200 }}
         transition={{ duration: 0.3 }}
-        onClick={remove}
+        onClick={() => {
+          if (!options) remove();
+        }}
       >
         <AnimatePresence>
           {text.split("").map((char, i) => (

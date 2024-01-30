@@ -833,7 +833,11 @@ export const GameLevelModel: React.FC<GameLevelModelProps> = ({ onClick }) => {
       <mesh geometry={nodes.big_island_maison3001.geometry} material={materials["low_poly_interior..004"]} />
       <mesh geometry={nodes.island2_maison2.geometry} material={materials["low_poly_interior..004"]} />
       <mesh geometry={nodes.island2_maison1.geometry} material={materials["low_poly_interior..004"]} />
-      <mesh geometry={nodes.big_island_eglise.geometry} material={materials["low_poly_interior..004"]} />
+      <mesh
+        geometry={nodes.big_island_eglise.geometry}
+        material={materials["low_poly_interior..004"]}
+        onClick={() => onClick("big_island_eglise")}
+      />
       <mesh
         geometry={nodes["sea_​​village238"].geometry}
         material={materials["low_poly_interior..004"]}

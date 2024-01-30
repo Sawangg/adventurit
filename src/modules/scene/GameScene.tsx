@@ -4,6 +4,7 @@ import { Suspense, useEffect, useRef } from "react";
 import { CameraControls } from "@react-three/drei";
 import { Canvas } from "@react-three/fiber";
 import { AnimatePresence } from "framer-motion";
+import { gameflow } from "@lib/gameflow";
 import { CodingGame } from "@modules/CodingGame";
 // import { CodingGame } from "@modules/CodingGame";
 // import { CubeTextureLoader } from "three";
@@ -33,22 +34,7 @@ export const GameScene: React.FC<GameSceneProps> = () => {
         <directionalLight position={[0, 10, 0]} />
         <CameraControls ref={controls} enabled={true} verticalDragToForward={true} />
         <Suspense fallback={<LoadingScene />}>
-          <GameLevelModel
-            position={[0, 0, 0]}
-            onClick={(_e) => {
-              add([
-                { type: "dialog", args: [`Answer the next question`] },
-                {
-                  type: "question",
-                  args: [
-                    "What is the Python code to check if a number is even",
-                    ["1) is_even = num % 2 == 1", "2) is_even = num % 2 == 0"],
-                  ],
-                },
-                { type: "coding", args: ["vos consigne ici"] },
-              ]);
-            }}
-          />
+          <GameLevelModel position={[0, 0, 0]} onClick={(e) => gameflow(add, e as string)} />
         </Suspense>
         {/* <SkyBox /> */}
       </Canvas>
