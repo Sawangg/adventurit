@@ -4,6 +4,7 @@ import { Suspense, useEffect, useRef } from "react";
 import { CameraControls } from "@react-three/drei";
 import { Canvas } from "@react-three/fiber";
 import { AnimatePresence } from "framer-motion";
+import { CodingGame } from "@modules/CodingGame";
 // import { CodingGame } from "@modules/CodingGame";
 // import { CubeTextureLoader } from "three";
 import { Dialog } from "@modules/Dialog";
@@ -17,8 +18,7 @@ export type GameSceneProps = React.DetailedHTMLProps<React.HTMLAttributes<HTMLCa
 export const GameScene: React.FC<GameSceneProps> = () => {
   const controls = useRef<CameraControls>(null);
   const { add } = useCommandStore();
-  const { text, options } = useDialogStore();
-
+  const { text, guideline, options } = useDialogStore();
   useEffect(() => {
     add([
       { type: "dialog", args: ["Welcome to Adventur'IT !"] },
@@ -45,7 +45,7 @@ export const GameScene: React.FC<GameSceneProps> = () => {
                     ["1) is_even = num % 2 == 1", "2) is_even = num % 2 == 0"],
                   ],
                 },
-                { type: "coding", args: ["les consigne s'afficheront ici"] },
+                { type: "coding", args: ["vos consigne ici"] },
               ]);
             }}
           />
@@ -53,6 +53,7 @@ export const GameScene: React.FC<GameSceneProps> = () => {
         {/* <SkyBox /> */}
       </Canvas>
       <AnimatePresence>{text && <Dialog text={text} options={options} />}</AnimatePresence>
+      <AnimatePresence>{guideline && <CodingGame guideline={guideline} />}</AnimatePresence>
     </>
   );
 };

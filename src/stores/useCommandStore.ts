@@ -64,9 +64,7 @@ const commandHandler = (command: Command) => {
     case "coding":
       {
         const dialogStore = useDialogStore.getState();
-        dialogStore.setText(command.args[0] as string);
-        const options = command.args[1] as string[];
-        dialogStore.setOptions(options);
+        dialogStore.setGuideline(command.args[0] as string);
       }
       break;
     default:

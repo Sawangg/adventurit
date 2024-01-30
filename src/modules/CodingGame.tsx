@@ -5,12 +5,12 @@ import { useCommandStore } from "@src/stores/useCommandStore";
 import { Textarea } from "@src/ui/textarea";
 
 export type CodingGameProps = React.DetailedHTMLProps<React.HTMLAttributes<HTMLDivElement>, HTMLDivElement> & {
-  consigne: string;
-  outpout: string;
+  guideline: string;
+  output?: string;
   code?: string;
 };
 
-export const CodingGame: React.FC<CodingGameProps> = ({ consigne, outpout, code }) => {
+export const CodingGame: React.FC<CodingGameProps> = ({ guideline, code }) => {
   const { remove } = useCommandStore();
 
   return (
@@ -25,7 +25,7 @@ export const CodingGame: React.FC<CodingGameProps> = ({ consigne, outpout, code 
           onClick={remove}
         >
           <AnimatePresence>
-            {consigne.split("").map((char, i) => (
+            {guideline.split("").map((char, i) => (
               <motion.span
                 key={i}
                 initial={{ opacity: 0 }}
@@ -59,21 +59,7 @@ export const CodingGame: React.FC<CodingGameProps> = ({ consigne, outpout, code 
           exit={{ opacity: 0, y: 200 }}
           transition={{ duration: 0.3 }}
           onClick={remove}
-        >
-          <AnimatePresence>
-            {outpout.split("").map((char, i) => (
-              <motion.span
-                key={i}
-                initial={{ opacity: 0 }}
-                animate={{ opacity: 1 }}
-                transition={{ delay: i * 0.05, duration: 0.01 }}
-                className="h-fit select-none text-lg text-white"
-              >
-                {char === " " ? "\u00A0" : char}
-              </motion.span>
-            ))}
-          </AnimatePresence>
-        </motion.div>
+        ></motion.div>
       </div>
     </>
   );
