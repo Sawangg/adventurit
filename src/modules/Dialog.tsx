@@ -1,6 +1,6 @@
 "use client";
 
-import { AnimatePresence, motion } from "framer-motion";
+import { motion } from "framer-motion";
 import { useCommandStore } from "@stores/useCommandStore";
 
 export type GameDialogProps = React.DetailedHTMLProps<React.HTMLAttributes<HTMLDivElement>, HTMLDivElement> & {
@@ -25,22 +25,23 @@ export const Dialog: React.FC<GameDialogProps> = ({ text, options }) => {
         exit={{ opacity: 0, y: 200 }}
         transition={{ duration: 0.3 }}
         onClick={() => {
-          if (!options) remove();
+          if (options?.length === 0) remove();
         }}
       >
-        <AnimatePresence>
+        {/* Small key hack to force update */}
+        <div key={text}>
           {text.split("").map((char, i) => (
             <motion.span
               key={i}
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
-              transition={{ delay: i * 0.05, duration: 0.01 }}
+              transition={{ delay: i * 0.04, duration: 0.01 }}
               className="h-fit select-none text-lg text-black"
             >
               {char === " " ? "\u00A0" : char}
             </motion.span>
           ))}
-        </AnimatePresence>
+        </div>
       </motion.div>
     </div>
   );

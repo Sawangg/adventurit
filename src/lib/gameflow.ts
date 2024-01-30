@@ -12,7 +12,7 @@ export const gameflow = (add: (commands: Command[]) => void, element: string) =>
             ["1) is_even = num % 2 == 1", "2) is_even = num % 2 == 0"],
           ],
         },
-        { type: "dialog", args: ["Good job! Now go to the church for your next quest"] },
+        { type: "dialog", args: ["Good job! Now go to the church for your next question"] },
       ]);
       break;
     case "big_island_eglise":
