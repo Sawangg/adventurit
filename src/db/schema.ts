@@ -25,6 +25,7 @@ export const users = pgTable("user", {
   image: text("image"),
   password: text("password"),
   admin: boolean("admin").default(false).notNull(),
+  gameTokenNumber: integer("game_token_number").default(1).notNull(),
 });
 
 export const accounts = pgTable(
