@@ -1,3 +1,4 @@
+import type { Locale } from "@lib/getDictionnary";
 import "@styles/globals.css";
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
@@ -9,7 +10,7 @@ export const metadata: Metadata = {
   description: "Société Générale's Adventur'IT game",
 };
 
-export default function RootLayout({ children, params }: { children: React.ReactNode; params: { lang: string } }) {
+export default function RootLayout({ children, params }: { children: React.ReactNode; params: { lang: Locale } }) {
   return (
     <html
       lang={params.lang}

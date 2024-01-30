@@ -6,7 +6,6 @@ import { Canvas } from "@react-three/fiber";
 import { AnimatePresence } from "framer-motion";
 import { gameflow } from "@lib/gameflow";
 import { CodingGame } from "@modules/CodingGame";
-// import { CodingGame } from "@modules/CodingGame";
 // import { CubeTextureLoader } from "three";
 import { Dialog } from "@modules/Dialog";
 import { LoadingScene } from "@modules/scene/LoadingScene";
@@ -20,6 +19,7 @@ export const GameScene: React.FC<GameSceneProps> = () => {
   const controls = useRef<CameraControls>(null);
   const { add } = useCommandStore();
   const { text, guideline, options } = useDialogStore();
+
   useEffect(() => {
     add([
       { type: "dialog", args: ["Welcome to Adventur'IT !"] },
@@ -29,7 +29,7 @@ export const GameScene: React.FC<GameSceneProps> = () => {
 
   return (
     <>
-      <Canvas className="bg-blue-300" camera={{ position: [70, 10, 100], fov: 70 }}>
+      <Canvas className="bg-[#538db1]" camera={{ position: [70, 10, 100], fov: 70 }} shadows>
         <ambientLight intensity={0.8} />
         <directionalLight position={[0, 10, 0]} />
         <CameraControls ref={controls} enabled={true} verticalDragToForward={true} />

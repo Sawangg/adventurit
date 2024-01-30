@@ -3,8 +3,8 @@ import { getDictionnary, type Locale } from "@lib/getDictionnary";
 import { MainMenu } from "@modules/scene/menu/MainMenu";
 import { AspectRatio } from "@ui/AspectRatio";
 
-export default async function Page({ params }: { params: { lang: string } }) {
-  const dictionnary = await getDictionnary(params.lang as Locale);
+export default async function Page({ params }: { params: { lang: Locale } }) {
+  const dictionnary = await getDictionnary(params.lang);
 
   return (
     <body className="min-h-screen min-w-screen overflow-x-hidden">

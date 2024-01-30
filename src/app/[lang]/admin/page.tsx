@@ -10,12 +10,12 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@ui/c
 import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@ui/table";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@ui/tabs";
 
-export default async function AdminHomePage({ params }: { params: { lang: string } }) {
+export default async function AdminHomePage({ params }: { params: { lang: Locale } }) {
   const session = await auth();
   const admin = await isAdmin(session!.user!.email!);
   if (!admin) return redirect("/");
 
-  const dictionnary = await getDictionnary(params.lang as Locale);
+  const dictionnary = await getDictionnary(params.lang);
   const users = await getUsers();
   const gameNumber = await getGameNumber();
 
@@ -109,7 +109,7 @@ export default async function AdminHomePage({ params }: { params: { lang: string
                           <TableCell>{index + 1}</TableCell>
                           <TableCell>
                             <div className="flex items-center">
-                              <Avatar className="h-9 w-9">
+                              <Avatar className="size-9">
                                 <AvatarFallback>{user.email[0]}</AvatarFallback>
                               </Avatar>
                               <div className="ml-4 space-y-1">

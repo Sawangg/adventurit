@@ -17,7 +17,6 @@ export default async function Page({ params }: { params: { uuid: string } }) {
         <GameScene />
         <PauseScreen />
       </main>
-      <footer className="absolute inset-x-4 bottom-4 w-full">{/* <GameNavigation /> */}</footer>
     </body>
   );
 }

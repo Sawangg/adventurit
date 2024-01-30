@@ -12,7 +12,9 @@ export const env = createEnv({
     DB_URL: z.string(),
     NODE_ENV: z.enum(["development", "test", "production"]).default("development"),
   },
-  client: {},
+  client: {
+    NEXT_PUBLIC_DEBUG: z.string().transform((value) => value === "true"),
+  },
   runtimeEnv: {
     AUTH_GITHUB_ID: process.env.AUTH_GITHUB_ID,
     AUTH_GITHUB_SECRET: process.env.AUTH_GITHUB_SECRET,
@@ -21,6 +23,7 @@ export const env = createEnv({
     AUTH_SECRET: process.env.AUTH_SECRET,
     BUNDLE_ANALYZE: process.env.BUNDLE_ANALYZE,
     DB_URL: process.env.DB_URL,
+    NEXT_PUBLIC_DEBUG: process.env.NEXT_PUBLIC_DEBUG,
     NODE_ENV: process.env.NODE_ENV,
   },
   skipValidation: !!process.env.SKIP_ENV_VALIDATION,

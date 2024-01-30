@@ -11,8 +11,8 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@ui/c
 import { Input } from "@ui/input";
 import { Label } from "@ui/label";
 
-export default async function AdminLoginPage({ params }: { params: { lang: string } }) {
-  const dictionnary = await getDictionnary(params.lang as Locale);
+export default async function AdminLoginPage({ params }: { params: { lang: Locale } }) {
+  const dictionnary = await getDictionnary(params.lang);
   const session = await auth();
   if (session) return redirect("/admin");
 

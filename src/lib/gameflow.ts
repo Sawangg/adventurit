@@ -1,10 +1,11 @@
 import type { Command } from "@stores/useCommandStore";
 
+// TODO: respect an order
 export const gameflow = (add: (commands: Command[]) => void, element: string) => {
   switch (element) {
     case "phare":
       add([
-        { type: "dialog", args: [`Answer the next question`] },
+        { type: "dialog", args: ["Answer the next question"] },
         {
           type: "question",
           args: [
@@ -17,10 +18,10 @@ export const gameflow = (add: (commands: Command[]) => void, element: string) =>
       break;
     case "big_island_eglise":
       add([
-        { type: "dialog", args: [`I hope you're ready! `] },
+        { type: "dialog", args: ["I hope you're ready!"] },
         {
           type: "coding",
-          args: [],
+          args: ["What is the Python code to check if a number is even", "is_even = num % 2 == 0"],
         },
       ]);
       break;

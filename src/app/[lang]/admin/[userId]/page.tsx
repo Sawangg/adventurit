@@ -8,12 +8,12 @@ import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@u
 import { Card, CardContent, CardFooter, CardHeader, CardTitle } from "@ui/card";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@ui/tabs";
 
-export default async function AdminUserPage({ params }: { params: { lang: string; userId: string } }) {
+export default async function AdminUserPage({ params }: { params: { lang: Locale; userId: string } }) {
   const session = await auth();
   const admin = await isAdmin(session!.user!.email!);
   if (!admin) return redirect("/");
 
-  const dictionnary = await getDictionnary(params.lang as Locale);
+  const dictionnary = await getDictionnary(params.lang);
   const user = await getUser(params.userId);
 
   return (

@@ -14,9 +14,9 @@ export default async function AdminLayout({
   params,
 }: {
   children: React.ReactNode;
-  params: { lang: string };
+  params: { lang: Locale };
 }) {
-  const dictionnary = await getDictionnary(params.lang as Locale);
+  const dictionnary = await getDictionnary(params.lang);
   const session = await auth();
   return (
     <body className="min-h-screen min-w-screen overflow-x-hidden bg-background text-white">
