@@ -3,6 +3,7 @@ import { getUser } from "@actions/getUser";
 import { isAdmin } from "@actions/isAdmin";
 import { auth } from "@lib/auth";
 import { getDictionnary, type Locale } from "@lib/getDictionnary";
+import { TokenButton } from "@modules/scene/menu/TokenButton";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@ui/accordion";
 import { Card, CardContent, CardFooter, CardHeader, CardTitle } from "@ui/card";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@ui/tabs";
@@ -19,7 +20,10 @@ export default async function AdminUserPage({ params }: { params: { lang: string
     <main className="p-4">
       <div className="flex-1 space-y-4 p-8 pt-6">
         <div className="flex items-center space-y-2">
-          <h2 className="text-3xl font-bold tracking-tight">{user.email} :</h2>
+          <h2 className="text-3xl font-bold tracking-tight">
+            {user.email} :
+            <TokenButton className={"flex items-center gap-x-2"} />
+          </h2>
         </div>
         {user.games && (
           <div className="flex-1 space-y-4 p-8 pt-6">

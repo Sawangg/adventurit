@@ -1,4 +1,4 @@
-import { PlusSquareIcon } from "lucide-react";
+import { PlusIcon } from "lucide-react";
 import { addToken } from "@actions/game/addToken";
 import { getToken } from "@actions/getUserTokens";
 import { auth } from "@lib/auth";
@@ -23,10 +23,10 @@ export const TokenButton: React.FC<SceneProps> = async ({ className }) => {
 
   return (
     <div className={cn(className)}>
-      <p className="text-center text-sm text-black">TOKEN : {userTokens}</p>
+      <p className="text-center text-sm">TOKEN : {userTokens}</p>
       <form action={submitHandler}>
         <Button size="icon" variant="link" type="submit">
-          <PlusSquareIcon className="h-4 w-4 text-black" />
+          <PlusIcon className="h-4 w-4" />
         </Button>
       </form>
     </div>
