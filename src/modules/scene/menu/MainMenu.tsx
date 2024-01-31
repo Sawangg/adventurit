@@ -44,8 +44,8 @@ export const MainMenu: React.FC<MainMenuProps> = () => {
 
       switch (menu) {
         case "anykey":
-          void controls.current?.dolly(3, true);
-          void controls.current?.truck(-5, 0, true);
+          // void controls.current?.dolly(3, true);
+          // void controls.current?.truck(-5, 0, true);
           break;
         case "main":
           // if (currentMenu === "settings") void controls.current?.truck(0, 0, true);

@@ -452,7 +452,7 @@ export const GameLevelModel: React.FC<GameLevelModelProps> = ({ onClick, ...prop
   const { nodes, materials } = useGLTF("/scene/scene.glb") as GLTFResult;
 
   return (
-    <group dispose={null} {...props}>
+    <group {...props}>
       <mesh geometry={nodes["sea_​​village752"].geometry} material={materials["low_poly_interior..004"]} />
       <mesh geometry={nodes["sea_​​village751"].geometry} material={materials["low_poly_interior..004"]} />
       <mesh geometry={nodes["sea_​​village750"].geometry} material={materials["low_poly_interior..004"]} />
@@ -962,7 +962,7 @@ export const GameLevelModel: React.FC<GameLevelModelProps> = ({ onClick, ...prop
       <motion.mesh
         initial={{ y: 0 }}
         animate={{ y: 7 }}
-        transition={{ duration: 4, repeat: Infinity, repeatType: "reverse" }}
+        transition={{ duration: 40, repeat: Infinity, repeatType: "reverse" }}
         geometry={nodes["sea_​​village016"].geometry}
         material={materials["low_poly_interior..004"]}
       />
@@ -972,7 +972,7 @@ export const GameLevelModel: React.FC<GameLevelModelProps> = ({ onClick, ...prop
       <motion.mesh
         initial={{ y: 0 }}
         animate={{ y: 30 }}
-        transition={{ duration: 10, repeat: Infinity, repeatType: "reverse" }}
+        transition={{ duration: 20, repeat: Infinity, repeatType: "reverse" }}
         geometry={nodes["sea_​​village012"].geometry}
         material={materials["low_poly_interior..004"]}
       />
@@ -1212,7 +1212,7 @@ export const GameLevelModel: React.FC<GameLevelModelProps> = ({ onClick, ...prop
       />
       <motion.mesh
         animate={{ y: -40 }}
-        transition={{ duration: 10, repeat: Infinity, repeatType: "reverse" }}
+        transition={{ duration: 20, repeat: Infinity, repeatType: "reverse" }}
         geometry={nodes["sea_​​village031"].geometry}
         material={materials["low_poly_interior..038"]}
         position={[-99.944, -54.837, 49.637]}
