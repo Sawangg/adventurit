@@ -25,7 +25,8 @@ export type MainMenuProps = React.DetailedHTMLProps<React.HTMLAttributes<HTMLDiv
 export const MainMenu: React.FC<MainMenuProps> = () => {
   const { position } = useControls({
     position: {
-      value: [2, -9, -9],
+      // value: [2, -9, -9],
+      value: [-8, -8, -9],
       step: 1,
     },
   });
@@ -35,7 +36,7 @@ export const MainMenu: React.FC<MainMenuProps> = () => {
   const controls = useRef<CameraControls>(null);
   const [currentMenu, setCurrentMenu] = useState<string>("anykey");
   const [timeoutId, setTimeoutId] = useState<NodeJS.Timeout | null>(null);
-  const [state, formAction] = useFormState<{ message: string | null }>(startGame, { message: null });
+  const [state, startGameAction] = useFormState<{ message: string | null }>(startGame, { message: null });
 
   const handleMenus = useCallback(
     (menu: string) => {
@@ -43,12 +44,10 @@ export const MainMenu: React.FC<MainMenuProps> = () => {
 
       switch (menu) {
         case "anykey":
-          console.log("?");
           void controls.current?.dolly(3, true);
           void controls.current?.truck(-5, 0, true);
           break;
         case "main":
-          console.log("??");
           // if (currentMenu === "settings") void controls.current?.truck(0, 0, true);
           break;
         case "settings":
@@ -129,7 +128,7 @@ export const MainMenu: React.FC<MainMenuProps> = () => {
                 transition={{ delay: 0.5 }}
                 className="flex flex-col items-start gap-y-3"
               >
-                <form action={formAction}>
+                <form action={startGameAction}>
                   <MainMenuButton className="uppercase">Start Game</MainMenuButton>
                 </form>
                 {state?.message === "error" && <MainMenuLogin />}
