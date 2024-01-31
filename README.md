@@ -2,8 +2,8 @@
 
 The recrutment game sponsored by Société Générale
 
-[preview1](/public/assets/preview.png)
-[preview2](/public/assets/preview2.png)
+![preview1](/public/assets/preview.png)
+![preview2](/public/assets/preview2.png)
 
 ### Run localy
 
