@@ -23,6 +23,7 @@ export const gameflow = (add: (commands: Command[]) => void, element: string) =>
           type: "coding",
           args: ["What is the Python code to check if a number is even", "is_even = num % 2 == 0"],
         },
+        { type: "dialog", args: ["Wow! You've earned it! Here is your badge"] },
       ]);
       break;
     default:

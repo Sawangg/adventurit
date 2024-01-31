@@ -19,7 +19,7 @@ export const Dialog: React.FC<GameDialogProps> = ({ text, options }) => {
         </button>
       ))}
       <motion.div
-        className="flex h-32 w-full flex-wrap rounded-md border bg-white/80 p-4"
+        className="flex h-32 w-full flex-wrap rounded-md border-2 bg-white/80 p-4 shadow-2xl"
         initial={{ opacity: 0, y: 200 }}
         animate={{ opacity: 1, y: 0 }}
         exit={{ opacity: 0, y: 200 }}

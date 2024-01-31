@@ -30,7 +30,7 @@ export const CodingGame: React.FC<CodingGameProps> = ({ guideline, code }) => {
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
                 transition={{ delay: i * 0.05, duration: 0.01 }}
-                className="h-fit select-none text-lg text-white"
+                className="h-fit select-none text-lg"
               >
                 {char === " " ? "\u00A0" : char}
               </motion.span>

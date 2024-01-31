@@ -12,8 +12,8 @@ type DialogState = {
 export const useDialogStore = create<DialogState>()((set) => ({
   text: "",
   guideline: "",
+  options: [],
   setText: (text) => set(() => ({ text })),
   setGuideline: (guideline) => set(() => ({ guideline })),
-  options: [],
   setOptions: (options) => set(() => ({ options })),
 }));
