@@ -2,8 +2,8 @@ import type { Metadata } from "next";
 import Image from "next/image";
 import { auth, signOut } from "@lib/auth";
 import { getDictionnary, type Locale } from "@lib/getDictionnary";
-import { AspectRatio } from "@ui/AspectRatio";
 import { Button } from "@ui/button";
+import { AspectRatio } from "@ui/hera/primitives/AspectRatio";
 
 export const metadata: Metadata = {
   title: "Adventur'IT — Admin",
@@ -14,9 +14,9 @@ export default async function AdminLayout({
   params,
 }: {
   children: React.ReactNode;
-  params: { lang: string };
+  params: { lang: Locale };
 }) {
-  const dictionnary = await getDictionnary(params.lang as Locale);
+  const dictionnary = await getDictionnary(params.lang);
   const session = await auth();
   return (
     <body className="min-h-screen min-w-screen overflow-x-hidden bg-background text-white">
@@ -36,11 +36,11 @@ export default async function AdminLayout({
       {children}
       <footer>
         <div className="fixed bottom-4 left-4 flex items-center gap-x-2">
-          <figure className="w-6">
+          <div className="size-6">
             <AspectRatio ratio={1 / 1}>
               <Image src="/assets/sg.png" sizes="24px" alt="" fill />
             </AspectRatio>
-          </figure>
+          </div>
           <p className="text-center text-sm">Sponsored by SG</p>
         </div>
         {session && (

@@ -1,24 +1,27 @@
 "use client";
 
-import { Suspense, useEffect, useRef } from "react";
-import { CameraControls } from "@react-three/drei";
+import { Suspense, useEffect } from "react";
+import { CameraControls, Stats } from "@react-three/drei";
 import { Canvas } from "@react-three/fiber";
 import { AnimatePresence } from "framer-motion";
-import { CodingGame } from "@modules/CodingGame";
-// import { CodingGame } from "@modules/CodingGame";
 // import { CubeTextureLoader } from "three";
+import { gameflow } from "@lib/gameflow";
+import { CodingGame } from "@modules/CodingGame";
 import { Dialog } from "@modules/Dialog";
 import { LoadingScene } from "@modules/scene/LoadingScene";
 import { GameLevelModel } from "@modules/scene/model/GameLevelModel";
+import { env } from "@src/env.mjs";
 import { useCommandStore } from "@stores/useCommandStore";
 import { useDialogStore } from "@stores/useDialogStore";
+import { useSettingsStore } from "@stores/useSettings";
 
 export type GameSceneProps = React.DetailedHTMLProps<React.HTMLAttributes<HTMLCanvasElement>, HTMLCanvasElement>;
 
 export const GameScene: React.FC<GameSceneProps> = () => {
-  const controls = useRef<CameraControls>(null);
   const { add } = useCommandStore();
   const { text, guideline, options } = useDialogStore();
+  const { graphics } = useSettingsStore();
+
   useEffect(() => {
     add([
       { type: "dialog", args: ["Welcome to Adventur'IT !"] },
@@ -28,27 +31,18 @@ export const GameScene: React.FC<GameSceneProps> = () => {
 
   return (
     <>
-      <Canvas className="bg-blue-300" camera={{ position: [70, 10, 100], fov: 70 }}>
-        <ambientLight intensity={0.8} />
-        <directionalLight position={[0, 10, 0]} />
-        <CameraControls ref={controls} enabled={true} verticalDragToForward={true} />
+      <Canvas className="bg-[#538db1]" camera={{ position: [70, 10, 100] }} shadows>
+        {env.NEXT_PUBLIC_DEBUG && <Stats />}
+
+        {graphics ? (
+          <directionalLight position={[75, 125, 40]} intensity={4} castShadow />
+        ) : (
+          <ambientLight intensity={1.5} />
+        )}
+
+        <CameraControls enabled={true} verticalDragToForward={true} />
         <Suspense fallback={<LoadingScene />}>
-          <GameLevelModel
-            position={[0, 0, 0]}
-            onClick={(_e) => {
-              add([
-                { type: "dialog", args: [`Answer the next question`] },
-                {
-                  type: "question",
-                  args: [
-                    "What is the Python code to check if a number is even",
-                    ["1) is_even = num % 2 == 1", "2) is_even = num % 2 == 0"],
-                  ],
-                },
-                { type: "coding", args: ["vos consigne ici"] },
-              ]);
-            }}
-          />
+          <GameLevelModel position={[0, 0, 0]} onClick={(e) => gameflow(add, e as string)} />
         </Suspense>
         {/* <SkyBox /> */}
       </Canvas>

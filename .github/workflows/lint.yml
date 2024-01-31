@@ -11,6 +11,7 @@ env:
   AUTH_SECRET: fake
   BUNDLE_ANALYZE: fake
   DB_URL: fake
+  NEXT_PUBLIC_DEBUG: fake
 
 jobs:
   format:

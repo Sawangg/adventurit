@@ -23,6 +23,7 @@ export const useCommandStore = create<CommandState>()((set) => ({
     set((state) => {
       const dialogStore = useDialogStore.getState();
       dialogStore.setText("");
+      dialogStore.setGuideline("");
       dialogStore.setOptions([]);
       const commands = state.commands.slice(1);
       if (commands[0]) commandHandler(commands[0]);
@@ -47,14 +48,6 @@ const commandHandler = (command: Command) => {
       break;
     case "question":
       {
-        // TODO: Implement a better system after presentation
-        // const question = await getRandomQuestion();
-        // if (!question) return;
-        // const dialogStore = useDialogStore.getState();
-        // dialogStore.setText(question.statement);
-        // const options = command.args[1] as string[];
-        // dialogStore.setOptions(options);
-
         const dialogStore = useDialogStore.getState();
         dialogStore.setText(command.args[0] as string);
         const options = command.args[1] as string[];
