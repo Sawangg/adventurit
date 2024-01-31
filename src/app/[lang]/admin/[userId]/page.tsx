@@ -22,7 +22,7 @@ export default async function AdminUserPage({ params }: { params: { lang: string
         <div className="flex items-center space-y-2">
           <h2 className="text-3xl font-bold tracking-tight">
             {user.email} :
-            <TokenButton className={"flex items-center gap-x-2"} />
+            <TokenButton className="flex items-center" />
           </h2>
         </div>
         {user.games && (

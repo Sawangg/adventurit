@@ -15,16 +15,10 @@ export const TokenButton: React.FC<SceneProps> = async ({ className }) => {
 
   const userTokens = await getToken(session);
 
-  const submitHandler = async () => {
-    "use server";
-
-    await addToken();
-  };
-
   return (
     <div className={cn(className)}>
       <p className="text-center text-sm">TOKEN : {userTokens}</p>
-      <form action={submitHandler}>
+      <form action={addToken}>
         <Button size="icon" variant="link" type="submit">
           <PlusIcon className="h-4 w-4" />
         </Button>
